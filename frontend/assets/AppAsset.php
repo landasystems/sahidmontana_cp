@@ -21,22 +21,18 @@ class AppAsset extends AssetBundle {
     public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
     public $js = [
 
-        'js/main.js',
+        'js/jquery-1.11.1.min.js',
+        'js/jquery.modernizr.min.js',
+        'js/bootstrap/tab.js',
+        'js/jquery.bxslider.min.js',
         'js/owl.carousel.min.js',
-        'js/echo.min.js',
-        'js/wow.min.js',
-        'js/jquery.customSelect.min.js',
-        'js/bootstrap-slider.min.js',
-        'js/scripts.js',
+        'js/jquery.magnific-popup.min.js',
+        'js/helper.js',
+        'js/init.js',
+        'js/template.js',
     ];
     public $css = [
-        'css/main.css',
-//        'css/style.css',
-        'css/color.css',
-        'css/owl.carousel.css',
-        'css/owl.transitions.css',
-        'css/animate.min.css',
-        'css/font-awesome.min.css',
+        'css/style.css',
     ];
     public $depends = [
         'yii\web\YiiAsset',

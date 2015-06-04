@@ -171,7 +171,6 @@ class ArticleCategoryController extends Controller {
 
         $session['ArticleCategory_records'] = ArticleCategory::model()->findAll($criteria);
 
-
         $this->render('index', array(
             'model' => $model,
         ));

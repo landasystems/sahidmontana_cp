@@ -73,21 +73,7 @@ class SiteController extends Controller {
     }
 
     public function actionIndex() {
-        $arrival = Product::find()->with(['brand', 'productPhoto', 'productCategory'])->limit(4)->orderBy('id desc')->all();
-
-        $bestSeller1 = Product::find()->with(['brand', 'productPhoto', 'productCategory'])->limit(3)->orderBy('RAND()')->all();
-        $bestSeller2 = Product::find()->with(['brand', 'productPhoto', 'productCategory'])->limit(3)->orderBy('RAND()')->all();
-        $featured = Product::find()->with(['brand', 'productPhoto', 'productCategory'])->limit(4)->orderBy('RAND()')->all();
-        $popular = Product::find()->with(['brand', 'productPhoto', 'productCategory'])->limit(4)->orderBy('hits desc')->all();
-        $recently = Product::find()->with(['brand', 'productPhoto', 'productCategory'])->limit(8)->orderBy('RAND()')->all();
-        $stock = ProductStock::find()->where(['departement_id' => 1]);
-        //product alone
-        $alone = Product::find()->with(['brand', 'productPhoto', 'productCategory'])->limit(1)->orderBy('RAND()')->one();
-        $photoAlone = ProductPhoto::findAll(['product_id' => $alone->id]);
-
-        return $this->render('index', ['bestSeller1' => $bestSeller1, 'bestSeller2' => $bestSeller2,
-                    'arrival' => $arrival, 'featured' => $featured, 'popular' => $popular, 'alone' => $alone,
-                    'photoAlone' => $photoAlone, 'recently' => $recently]);
+       return $this->render('index', []);
     }
 
     public function actionLogin() {

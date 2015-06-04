@@ -11,16 +11,24 @@ use yii\filters\VerbFilter;
 class ArticleController extends Controller {
 
     public function actionView() {
-        $this->layout = 'mainSingle';
-        $model = Article::findOne(['alias'=>$_GET['alias']]);
+        $this->layout = 'mainPost';
+        $model = Article::findOne(['alias' => $_GET['alias']]);
         if (empty($model)) {
             throw new NotFoundHttpException('The requested page does not exist.');
         } else {
             $this->addHits($model);
             return $this->render('view', [
-                'model'=>$model,
+                        'model' => $model,
             ]);
         }
+    }
+
+    public function actionNews() {
+        $this->layout = 'mainPost';
+        $model = Article::findAll(['article_category_id' => 5]);
+        return $this->render('news', [
+                    'model' => $model,
+        ]);
     }
 
     public function addHits($model) {

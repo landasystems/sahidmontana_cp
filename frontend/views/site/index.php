@@ -1,689 +1,334 @@
 <?php
-/* @var $this yii\web\View */
-$this->title = 'INDOMOBILECELL - toko GROSIR HANDPHONE terlaris, termurah, dan terpercaya';
+$this->title = 'Welcome To Sahid Montana Hotel';
 
-use common\models\ProductStock;
-use common\models\Product;
-
-$session = Yii::$app->session;
-
+use common\models\Article;
 ?>
-
-<div class="container">
-    <div class="col-xs-12 col-sm-4 col-md-3 sidemenu-holder">
-        <!-- ================================== TOP NAVIGATION ================================== -->
-        
-        
-        <div class="side-menu animate-dropdown">
-            <div class="head"><i class="fa fa-list"></i>Belanja Sekarang Juga</div>        
-            <nav class="yamm megamenu-horizontal" role="navigation">
-                <ul class="nav">
-                    <li class="dropdown menu-item">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Accesories</a>
-                        <ul class="dropdown-menu mega-menu">
-                            <li class="yamm-content">
-                                <div class="row">
-                                    <div class="col-xs-12 col-lg-4">
-                                        <ul >
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/81/accesories/handsfree') ?>">Handsfree</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/77/accesories/power-bank') ?>">Power Bank</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/75/accesories/bluetooth') ?>">Bluetooth</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/73/accesories/memory') ?>">Memory</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/68/accesories/leather-case') ?>">Letter Case</a></li>
-
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-12 col-lg-4">
-                                        <ul >
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/66/accesories/casing') ?>">Casing</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/62/accesories/charger') ?>">Charger</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/1/accesories/screen-protector') ?>">Screen Protector</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/70/accesories/soft-jacket') ?>">Soft Jacket</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/60/accesories/battery') ?>">Battery</a></li>
-
-                                        </ul>
-                                    </div>
-
-                                    <div class="dropdown-banner-holder">
-                                        <a href="#"><img alt="" src="images/banners/accesories.png" /></a>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </li><!-- /.menu-item -->
-                    <li class="dropdown menu-item">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Smartphone</a>
-                        <ul class="dropdown-menu mega-menu">
-                            <li class="yamm-content">
-                                <!-- ================================== MEGAMENU VERTICAL ================================== -->
-                                <div class="row">
-                                    <div class="col-xs-12 col-lg-4">
-                                        <ul>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/37/smartphone/iphone') ?>">Iphone</a></li>
-
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/47/smartphone/sony') ?>">Sony</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/46/smartphone/samsung') ?>">Samsung</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/45/smartphone/nokia') ?>">Nokia</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/41/smartphone/motorola') ?>">Motorola</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/39/smartphone/lg') ?>">LG</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/38/smartphone/lenovo') ?>">Lenovo</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/34/smartphone/huawei') ?>">Huawei</a></li>
-
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/26/smartphone/blackberry') ?>">Blackberry</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="col-xs-12 col-lg-4">
-                                        <ul>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/25/smartphone/asus') ?>">Asus</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/22/smartphone/acer') ?>">Acer</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/23/smartphone/advan') ?>">Advan</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/133/smartphone/smartfren') ?>">Smartfren</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/138/smartphone/evercoss') ?>">Evercoss</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/146/smartphone/oppo') ?>">Oppo</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/153/smartphone/blaupunkt') ?>">Blaupunkt</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="dropdown-banner-holder">
-                                        <a href="#"><img alt="" src="images/banners/smartphone.png" /></a>
-                                    </div>
-                                </div>
-                                <!-- ================================== MEGAMENU VERTICAL ================================== -->                        
-                            </li>
-                        </ul>
-                    </li><!-- /.menu-item -->
-
-                    <li class="dropdown menu-item">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tablet</a>
-                        <ul class="dropdown-menu mega-menu">
-                            <li class="yamm-content">
-                                <!-- ================================== MEGAMENU VERTICAL ================================== -->
-                                <div class="row">
-                                    <div class="col-xs-12 col-lg-4">
-                                        <ul>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/123/tablet/advan') ?>">Advan</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/125/tablet/lenovo') ?>">Lenovo</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/127/tablet/asus') ?>">Asus</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/128/tablet/ipad') ?>">Ipad</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/129/tablet/samsung') ?>">Samsung</a></li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-12 col-lg-4">
-                                        <ul>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/142/tablet/hp') ?>">HP</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/145/tablet/acer') ?>">Acer</a></li>
-                                        </ul>
-                                    </div>
-
-
-
-
-                                    <div class="dropdown-banner-holder">
-                                        <a href="#"><img alt="" src="images/banners/tablet.png" /></a>
-                                    </div>
-                                </div>
-                                <!-- ================================== MEGAMENU VERTICAL ================================== -->                    </li>
-                        </ul>
-                    </li><!-- /.menu-item -->
-                    <li class="dropdown menu-item">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handphone</a>
-                        <ul class="dropdown-menu mega-menu">
-                            <li class="yamm-content">
-                                <!-- ================================== MEGAMENU VERTICAL ================================== -->
-                                <div class="row">
-                                    <div class="col-xs-12 col-lg-4">
-                                        <ul>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/112/handphone/nokia') ?>">Nokia</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/117/handphone/samsung') ?>">Samsung</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/143/handphone/advan') ?>">Advan</a></li>
-                                            <li><a href="<?= Yii::$app->urlManager->createUrl('category/144/handphone/lg') ?>">LG</a></li>
-                                        </ul>
-                                    </div>
-
-
-                                    <div class="dropdown-banner-holder">
-                                        <a href="#"><img alt="" src="images/banners/handphone.png" /></a>
-                                    </div>
-                                </div>
-                                <!-- ================================== MEGAMENU VERTICAL ================================== -->    
-                            </li>
-                        </ul>
-                    </li><!-- /.menu-item -->
-                </ul><!-- /.nav -->
-            </nav><!-- /.megamenu-horizontal -->
-        </div><!-- /.side-menu -->
-        <!-- ================================== TOP NAVIGATION : END ================================== -->		</div><!-- /.sidemenu-holder -->
-
-    <div class="col-xs-12 col-sm-8 col-md-9 homebanner-holder hidden-xs">
-        <!-- ========================================== SECTION – HERO ========================================= -->
-
-        <div id="hero">
-            <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
-
-                <div class="item" style="background-image: url(http://app.indomobilecell.com/images/file/slider/slider1.jpg);  background-size: 876px 325px;">
-                </div><!-- /.item -->
-                <div class="item" style="background-image: url(http://app.indomobilecell.com/images/file/slider/slider2.jpg); background-size: 876px 325px;">
-                </div><!-- /.item -->
-                <div class="item" style="background-image: url(http://app.indomobilecell.com/images/file/slider/slider3.jpg); background-size: 876px 325px;">
-                </div><!-- /.item -->
-
-            </div><!-- /.owl-carousel -->
-        </div>
-
-        <!-- ========================================= SECTION – HERO : END ========================================= -->			
-    </div><!-- /.homebanner-holder -->
-
-</div><!-- /.container -->
-</div><!-- /#top-banner-and-menu -->
-
-<!-- ========================================= HOME BANNERS ========================================= -->
-<section id="banner-holder" class="wow fadeInUp">
-    <div class="container">
-        <div class="col-xs-12 col-lg-6 no-margin banner">
-           
-                <div class="banner-text theblue">
-                    <h1>Samsung Alpha 3</h1>
-                    <span class="tagline">Different Fells</span>
-                </div>
-                <img class="banner-image" alt="" src="images/blank.gif" data-echo="http://app.indomobilecell.com/images/file/banner1.png" />
-            
-        </div>
-        <div class="col-xs-12 col-lg-6 no-margin text-right banner">
-            
-                <div class="banner-text right">
-                    <h1>Apple Iphone 5</h1>
-                    <span class="tagline">Open the World</span>
-                </div>
-                <img class="banner-image" alt="" src="images/blank.gif" data-echo="http://app.indomobilecell.com/images/file/banner2.png" />
-            
-        </div>
-    </div><!-- /.container -->
-</section><!-- /#banner-holder -->
-<!-- ========================================= HOME BANNERS : END ========================================= -->
-<div id="products-tab" class="wow fadeInUp">
-    <div class="container">
-        <div class="tab-holder">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs" >
-                <li class="active"><a href="#new-arrivals" data-toggle="tab">New Arrival</a></li>
-                <li><a href="#popular" data-toggle="tab">Popular</a></li>
-                <li><a href="#featured" data-toggle="tab">Featured</a></li>
-            </ul>
-
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <div class="tab-pane active" id="new-arrivals">
-                    <div class="product-grid-holder">
-                        <?php
-                         
-                        foreach ($arrival as $data) {
-                            $sale = (!empty($data->discount)) ? '<div class="ribbon red"><span>sale</span></div>' : '';
-                            echo'<div class="col-sm-4 col-md-3  no-margin product-item-holder hover">
-                            <div class="product-item">
-                            ' . $sale . '
-                                <div class="ribbon blue"><span>new!</span></div> 
-                                <div class="image">
-                                    <img alt="" src="images/blank.gif" data-echo="' . $data->imgSmall . '" />
-                                </div>
-                                <div class="body">
-                               
-                                    <div class="title">
-                                        <a href="' . $data->url . '">' . $data->name . '</a>
-                                    </div>
-                                    <div class="brand">' . $data->brand_name . '</div>
-                                </div>
-                                <div class="prices">
-                                    <div class="price-prev">' . $data->discount_rp . '</div>
-                                    <div class="price-current pull-right">' . $data->price_sell_rp . '</div>
-                                </div>
-
-                                <div class="hover-area">';
-                            if ($data->realStock == 0) {
-                                echo' <div class="add-cart-button">
-                                        <a href="#" style="background-color: crimson;" class="le-button">Stock Habis</a>
-                                   </div>';
-                            } else {
-                              
-//                                if (in_array($data->id, $items)) {
-//                                    echo' <div class="add-cart-button">
-//                                        <a href="#"   class="le-button" style="background-color: chocolate;">Terbeli</a>
-//                                   </div>';
-//                                } else {
-                                    echo' <div class="add-cart-button">
-                                        <a href="#" id="' . $data->id . '"  class="le-button beli">Beli</a>
-                                   </div>';
-//                                }
-                            }
-
-                            echo' </div>
-                            </div>
-                        </div>';
-                        }
-                        ?>
-
-
-
-
-                    </div>
-
-                </div>
-                <div class="tab-pane" id="popular">
-                    <div class="product-grid-holder">
-                        <?php
-                        foreach ($popular as $data) {
-                            $sale = (!empty($data->discount)) ? '<div class="ribbon red"><span>sale</span></div>' : '';
-                            echo'<div class="col-sm-4 col-md-3  no-margin product-item-holder hover">
-                            <div class="product-item">
-                            ' . $sale . '
-                                <div class="image">
-                                    <img alt="" src="images/blank.gif" data-echo="' . $data->imgSmall . '" />
-                                </div>
-                                <div class="body">
-                               
-                                    <div class="title">
-                                        <a href="' . $data->url . '">' . $data->name . '</a>
-                                    </div>
-                                    <div class="brand">' . $data->brand_name . '</div>
-                                </div>
-                                <div class="prices">
-                                    <div class="price-prev">' . $data->discount_rp . '</div>
-                                    <div class="price-current pull-right">' . $data->price_sell_rp . '</div>
-                                </div>
-
-                                <div class="hover-area">';
-                            if ($data->realStock == 0) {
-                                echo' <div class="add-cart-button">
-                                        <a href="#" style="background-color: crimson;" class="le-button">Stock Habis</a>
-                                   </div>';
-                            } else {
-                                echo' <div class="add-cart-button">
-                                        <a href="#" id="' . $data->id . '"  class="le-button beli">Beli</a>
-                                   </div>';
-                            }
-
-                            echo' </div>
-                            </div>
-                        </div>';
-                        }
-                        ?>
-
-                    </div>
-
-                </div>
-
-                <div class="tab-pane" id="featured">
-                    <div class="product-grid-holder">
-
-
-                        <?php
-                        foreach ($featured as $data) {
-                            $sale = (!empty($data->discount)) ? '<div class="ribbon red"><span>sale</span></div>' : '';
-
-                            echo'<div class="col-sm-4 col-md-3  no-margin product-item-holder hover">
-                            <div class="product-item">
-                                ' . $sale . '
-                                <div class="image">
-                                    <img alt="" src="images/blank.gif" data-echo="' . $data->imgSmall . '" />
-                                </div>
-                                <div class="body">
-                               
-                                    <div class="title">
-                                        <a href="' . $data->url . '">' . $data->name . '</a>
-                                    </div>
-                                    <div class="brand">' . $data->brand_name . '</div>
-                                </div>
-                                <div class="prices">
-                                    <div class="price-prev">' . $data->discount_rp . '</div>
-                                    <div class="price-current pull-right">' . $data->price_sell_rp . '</div>
-                                </div>
-
-                                <div class="hover-area">';
-                            if ($data->realStock == 0) {
-                                echo' <div class="add-cart-button">
-                                        <a href="#" style="background-color: crimson;" class="le-button">Stock Habis</a>
-                                   </div>';
-                            } else {
-                                echo' <div class="add-cart-button">
-                                        <a href="#" id="' . $data->id . '"  class="le-button beli">Beli</a>
-                                   </div>';
-                            }
-
-                            echo' </div>
-                            </div>
-                        </div>';
-                        }
-                        ?>
-
-                    </div>
-                </div>
+<section id=slider>
+    <ul class=bxslider> 
+        <li> 
+            <div class=items> 
+                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/2.jpg" alt=2> 
+                <div class=caption-box>
+                    <h4> Be <b>Happy</b> in Our Luxury Rooms</h4> 
+                </div> 
             </div>
+        </li> 
+        <li> 
+            <div class=items> 
+                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/3.jpg" alt=3> 
+                <div class=caption-box><h4> <b>Enjoy</b> the Sea &amp; Sky
+                    </h4>
+                </div> 
+            </div>
+        </li> 
+        <li> <div class=items> 
+                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/4.jpg" alt=4> 
+                <div class=caption-box>
+                    <h4> <b>Relax</b> in Comfortable Environment</h4> 
+                </div> 
+            </div>
+        </li>
+    </ul> 
+</section>
+<section id=main-booking-form> 
+    <div id=main-booking-form-container>
+        <div class=search-row> 
+            <form class="search-form horizontal container" action=#>
+                <div class="search-fields col-xs-6 col-md-3"> 
+                    <input placeholder=Check-in class="datepicker-fields check-in" type=text>
+                    <i class="fa fa-calendar"></i>
+                </div>
+                <div class="search-fields col-xs-6 col-md-3"> 
+                    <input placeholder=Check-Out class="datepicker-fields check-out" type=text>
+                    <i class="fa fa-calendar"></i> 
+                </div>
+                <div class="search-fields col-xs-6 col-md-3">
+                    <select name=room-type id=search-field2> 
+                        <option value>Room Type</option>
+                        <option value=1>Single Room</option> 
+                        <option value=2>Double Room</option> 
+                        <option value=3>Deluxe One-bedroom Suite</option> 
+                        <option value=4>Deluxe Two-bedroom Suite</option>
+                        <option value=5>Royal Suite</option> 
+                        <option value=6>King Suite</option> 
+                    </select>
+                </div> 
+                <div class="search-fields col-xs-6 col-md-3"> 
+                    <select name=guest id=search-field3> 
+                        <option value=1>Guests</option>
+                        <option value=2>1</option> 
+                        <option value=3>2</option>
+                        <option value=4>3</option> 
+                        <option value=5>4</option> 
+                        <option value=6>5</option> 
+                        <option value=7>+6</option> 
+                    </select> </div> 
+                <div class=search-button-container> 
+                    <input value="Book Now" type=submit>
+                </div> 
+            </form> 
         </div>
+    </div> 
+</section>
+<section id=welcome> 
+    <h3><span>
+            <b>Welcome</b> to Sahid Montana Hotel</span>
+    </h3>
+    <div class=container> 
+        <div class="service-boxes welcome-text col-md-7 col-xs-12" data-animation=fadeInUp style="color: #000;">
+            <?php
+            $welcome = Article::find()->where(['article_category_id' => '2'])->one();
+            echo $welcome->content;
+            ?>
+        </div> 
+        <div class="service-boxes welcome-gallery col-md-5 col-xs-12" data-animation=fadeInUp> <!-- Welcome Slider --> 
+            <ul class=bxslider-welcome> 
+                <li> 
+                    <div class=items>
+                        <img src="<?php echo Yii::$app->params['urlImg'] ?>/service/1.jpg" alt=1>
+                    </div>
+                </li> 
+                <li> 
+                    <div class=items>
+                        <img src="<?php echo Yii::$app->params['urlImg'] ?>/service/2.jpg" alt=2>
+                    </div> 
+                </li> 
+                <li> 
+                    <div class=items>
+                        <img src="<?php echo Yii::$app->params['urlImg'] ?>/service/3.jpg" alt=3>
+                    </div> 
+                </li> 
+                <li> 
+                    <div class=items>
+                        <img src="<?php echo Yii::$app->params['urlImg'] ?>/service/4.jpg" alt=4>
+                    </div> 
+                </li> 
+                <li> 
+                    <div class=items>
+                        <img src="<?php echo Yii::$app->params['urlImg'] ?>/service/5.jpg" alt=5>
+                    </div> 
+                </li> 
+            </ul> 
+        </div> 
+    </div> 
+</section> 
+<section id=rooms class=luxury> 
+    <h3>
+        <span><b>MEETINGS & BANQUET</b></span>
+    </h3> 
+    <div id=roomLoader class=container>
+        <div class=loader></div>
+        <div class=close-icon></div>
+        <div id=roomLoader-container></div>
+
     </div>
-</div>
-<!-- ========================================= BEST SELLERS ========================================= -->
-<section id="bestsellers" class="color-bg wow fadeInUp">
-    <div class="container">
-        <h1 class="section-title">Best Sellers</h1>
+    <ul class="property-container container"> 
+        <?php
+        $meet = Article::find()->where(['article_category_id' => '4'])->orderBy('rand()')->limit(3)->all();
+        foreach ($meet as $val) {
+            echo '<li class="property-boxes col-xs-6 col-md-4" data-animation=fadeInLeft data-animation-delay=.2> 
+                        <div class=prp-img>
+                            <img src=' . $val->imgMedium . 'img/rooms/thumb/ev1.jpg alt="'.$val->title.'">
 
-        <div class="product-grid-holder medium">
-            <div class="col-xs-12 col-md-7 no-margin">
-
-                <div class="row no-margin">
-                    <?php
-                    foreach ($bestSeller1 as $arr) {
-                        $sale = (!empty($arr->discount)) ? '<div class="ribbon red"><span>sale</span></div>' : '';
-                        echo '<div class="col-xs-12 col-sm-4 no-margin product-item-holder size-medium hover">
-                        <div class="product-item">
-                            <div class="image">
-                                <img alt="" src="images/blank.gif" data-echo="' . $arr->imgSmall . '" style="height: 160px;" />
+                        </div> 
+                        <div class=prp-detail> 
+                            <div class=title>
+                                '.$val->title.'
                             </div>
-                            <div class="body">
-                                <div class="label-discount clear"></div>
-                                <div class="title">
-                                    <a href="' . $arr->url . '">' . $arr->name . '</a>
-                                </div>
-                                <div class="brand">' . $arr->brand_name . '</div>
-                            </div>
-                            <div class="prices">
-
-                                <div class="price-current text-right">' . $arr->price_sell_rp . '</div>
-                            </div>
-                            <div class="hover-area">';
-                        if ($arr->realStock == 0) {
-                            echo' <div class="add-cart-button">
-                                        <a href="#" style="background-color: crimson;" class="le-button">Stock Habis</a>
-                                   </div>';
-                        } else {
-                            echo' <div class="add-cart-button">
-                                        <a href="#" id="' . $arr->id . '"  class="le-button beli">Beli</a>
-                                   </div>';
-                        }
-                        echo'</div>
+                            <div class=description style="color:#000">
+                                '.  substr($val->content, 0, 100).'...
+                            </div> 
+                            <a href=pages/room-detail.html data-room-id=4 class="more-detail btn colored">
+                                Details
+                            </a>
                         </div>
-                    </div>';
-                    }
-                    ?>
-                </div><!-- /.row -->
-                <div class="row no-margin">
-                    <?php
-                    foreach ($bestSeller2 as $arr) {
-//                        $stock = ProductStock::departement($arr->stock, 1);
-                        echo '<div class="col-xs-12 col-sm-4 no-margin product-item-holder size-medium hover">
-                        <div class="product-item">
-                            <div class="image">
-                                <img alt="" src="images/blank.gif" data-echo="' . $arr->imgSmall . '" style="height: 160px;" />
-                            </div>
-                            <div class="body">
-                                <div class="label-discount clear"></div>
-                                <div class="title">
-                                    <a href="' . $arr->url . '">' . $arr->name . '</a>
-                                </div>
-                                <div class="brand">' . $arr->brand_name . '</div>
-                            </div>
-                            <div class="prices">
+                    </li>';
+        }
+        ?>
+    </ul> 
+</section> 
+<section id=testimonials data-background=parallax> 
+    <div id=testimonials-container> <h3>
+            <span><b>Other</b> Visitor's Experiences</span></h3> 
+        <div id=testimonials-content class=container data-animation=fadeInUp> 
+            <div id=testimonials-slider class="owl-carousel owl-theme"> 
+                <div class=item> 
+                    <div class=client-pic> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/1.jpg alt="Paul Bell"> 
+                    </div> 
+                    <cite>Eva Lambert</cite>
+                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet assumenda consequatur consequuntur cum dicta impedit minima natus necessitatibus nihil, nisi nobis officiis perferendis quo reiciendis rem sed totam, voluptatibus! </blockquote>
 
-                                <div class="price-current text-right">' . $arr->price_sell_rp . '</div>
-                            </div>
-                            <div class="hover-area">';
-                        if ($arr->realStock == 0) {
-                            echo' <div class="add-cart-button">
-                                        <a href="#" style="background-color: crimson;" class="le-button">Stock Habis</a>
-                                   </div>';
-                        } else {
-                            echo' <div class="add-cart-button">
-                                       <a href="#" id="' . $arr->id . '"  class="le-button beli">Beli</a>
-                                   </div>';
-                        }
-                        echo'</div>
-                        </div>
-                    </div>';
-                    }
-                    ?>
-                </div><!-- /.row -->
-
-
-            </div><!-- /.col -->
-            <div class="col-xs-12 col-md-5 no-margin">
-                <div class="product-item-holder size-big single-product-gallery small-gallery">
-                    <div class="product-item-holder size-big single-product-gallery small-gallery">
-
-                        <div id="owl-single-product">
-                            <?php
-                            foreach ($photoAlone as $arr) {
-                                echo '<div class="single-product-gallery-item" id="slide' . $arr->id . '">
-                                    <img class="img-responsive" alt="" src="images/blank.gif" data-echo="' . $arr->imgMedium . '" />
-                            </div>';
-                            }
-                            ?>
-                        </div><!-- /.single-product-slider -->
-
-
-                        <div class="single-product-gallery-thumbs gallery-thumbs">
-
-                            <div id="owl-single-product-thumbnails">
-                                <?php
-                                $no = 0;
-                                foreach ($photoAlone as $arr) {
-                                    echo '<a class="horizontal-thumb" data-target="#owl-single-product" data-slide="' . $no . '" href="#slide' . $arr->id . '">
-                                    <img width="67" alt="" src="images/blank.gif" data-echo="' . $arr->imgSmall . '" />
-                                </a>';
-                                    $no++;
-                                }
-                                ?>
-                            </div><!-- /#owl-single-product-thumbnails -->
-
-
-
-                        </div><!-- /.gallery-thumbs -->
-
-                    </div><!-- /.single-product-gallery -->
-                    <div class="body">
-                        <div class="label-discount clear"></div>
-                        <div class="<?= $alone->url ?>">
-                            <a href=><?= $alone->name ?></a>
-                        </div>
-                        <div class="brand"><?= $alone->brand_name ?></div>
+                </div>
+                <div class=item> 
+                    <div class=client-pic> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/2.jpg alt="Paul Bell"> 
+                    </div> 
+                    <cite>Paul Bell</cite> 
+                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, ad adipisci asperiores commodi dicta earum eligendi fugit maxime modi molestias nihil nisi numquam odit perspiciatis quam quas quos veritatis. Reprehenderit? </blockquote> 
+                </div> <div class=item> 
+                    <div class=client-pic> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/3.jpg alt="Lili Kids"> 
+                    </div> <cite>Lili Kids</cite> 
+                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nam ullam. Aperiam consequuntur dignissimos ex exercitationem hic iure. Aliquam architecto asperiores blanditiis cupiditate dolorem eligendi omnis quam qui sed tempora! </blockquote> 
+                </div> 
+                <div class=item> 
+                    <div class=client-pic> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/4.jpg alt="Brad Lopez">
                     </div>
-                    <div class="prices text-right">
-                        <div class="price-current inline"><?= $alone->price_sell_rp ?></div>
-                        <a href="#" class="le-button big inline">Beli</a>
+                    <cite>Brad Lopez</cite> 
+                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nam ullam. Aperiam consequuntur dignissimos ex exercitationem hic iure. Aliquam architecto asperiores blanditiis cupiditate dolorem eligendi omnis quam qui sed tempora! </blockquote> 
+                </div> 
+                <div class=item> 
+                    <div class=client-pic> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/5.jpg alt="Ryan Oswald"> 
+                    </div> 
+                    <cite>Ryan Oswald</cite> 
+                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore minus optio quibusdam saepe ullam! Consectetur eos explicabo facere, fugit in inventore ipsam optio perferendis praesentium ratione reiciendis sint tenetur unde. </blockquote> 
+                </div> <div class=item> 
+                    <div class=client-pic> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/6.jpg alt="John Barry"> 
+                    </div> <cite>John Barry</cite> 
+                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut expedita inventore itaque laborum molestiae nulla odit, pariatur quaerat totam, veritatis voluptate. Commodi doloremque dolorum exercitationem explicabo natus, nemo praesentium. </blockquote> 
+                </div> 
+                <div class=item> 
+                    <div class=client-pic> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/7.jpg alt="Kim Boyer"> 
+                    </div> <cite>Kim Boyer</cite> 
+                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eveniet ex ipsum magni natus omnis saepe veniam. Consectetur iure maiores odio odit vel! Consequuntur exercitationem iure perspiciatis possimus praesentium quam. </blockquote> 
+                </div> 
+                <div class=item> 
+                    <div class=client-pic> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/8.jpg alt="Leon River"> 
+                    </div> 
+                    <cite>Leon River</cite> 
+                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nobis provident? Accusamus aperiam debitis dignissimos enim esse ex fugiat harum incidunt itaque, minima nihil optio quas quidem, rem sapiente temporibus? </blockquote> 
+                </div> <div class=item> 
+                    <div class=client-pic> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/9.jpg alt="Zoe Pierre">
+                    </div> 
+                    <cite>Zoe Pierre</cite> 
+                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aperiam asperiores blanditiis consequatur eligendi eveniet ipsam laboriosam maiores officiis omnis possimus, quod saepe, similique sunt vel vero! Amet, distinctio? </blockquote> 
+                </div> <div class=item> 
+                    <div class=client-pic> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/10.jpg alt="Taylor Williams"> 
                     </div>
+                    <cite>Taylor Williams</cite> 
+                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab ad amet, aspernatur cupiditate deleniti dolorem doloribus ducimus error, ex ipsam laboriosam nemo perspiciatis quo repellendus veniam veritatis voluptate, voluptatem. </blockquote> 
+                </div>
+            </div> 
+        </div> 
+    </div> 
+</section> 
+<section id=events class=container> 
+    <h3><span><b>Upcoming</b> Events</span></h3> 
+    <ul class="nav nav-tabs nav-justified" id=tab-type-1>
+        <li data-animation=flipInY data-animation-delay=.2 class=active>
+            <a href=#event-1 data-toggle=tab> 
+                <span class=number>
+                    <img src=<?= Yii::$app->homeUrl ?>img/events/2.jpg alt="Event 1">
+                </span>
+                <span class=title>Jewelery Fair</span>
+            </a> 
+        </li> 
+        <li data-animation=flipInY data-animation-delay=.4> 
+            <a href=#event-2 data-toggle=tab> 
+                <span class=number>
+                    <img src=<?= Yii::$app->homeUrl ?>img/events/4.jpg alt="Event 1">
+                </span>
+                <span class=title>Conference</span> 
+            </a> 
+        </li>
+        <li data-animation=flipInY data-animation-delay=.6>
+            <a href=#event-3 data-toggle=tab> 
+                <span class=number>
+                    <img src=<?= Yii::$app->homeUrl ?>img/events/3.jpg alt="Event 1">
+                </span>
+                <span class=title>Music Concert</span> 
+            </a> 
+        </li> 
+        <li data-animation=flipInY data-animation-delay=.8> 
+            <a href=#event-4 data-toggle=tab> 
+                <span class=number>
+                    <img src=<?= Yii::$app->homeUrl ?>img/events/1.jpg alt="Event 1">
+                </span>
+                <span class=title>Fashion Show</span>
+            </a> 
+        </li> 
+    </ul>
+    <div id=event-tab-contents class=tab-content data-animation=fadeInUp>
+        <div class="tab-pane fade in active" id=event-1> 
+            <div class=event-boxes> 
+                <div class="event-box clearfix">
+                    <div class="event-pic col-xs-4 col-md-3"> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/events/2.jpg alt=Director>
+                    </div>
+                    <div class="event-right col-xs-8 col-md-9">
+                        <div class=name>Jewelery Fair</div>
+                        <div class=date>13 August - 20 August</div> 
+                        <div class=description> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquam, commodi corporis, doloremque eius facere ipsa maiores non nostrum quae, quas quod reprehenderit rerum sequi suscipit totam veniam vitae?</p> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque, dignissimos enim eum facere inventore sed velit! A assumenda doloremque dolores nesciunt reiciendis, repellat rerum soluta tenetur. Dignissimos hic, tenetur.</p> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus esse facere ipsam mollitia omnis quae sapiente voluptatibus! Aspernatur cupiditate debitis dolore facere harum ipsa necessitatibus odit rem unde voluptate?</p> </div> 
+                        <a href=forms/booking.html class="book-now btn btn-sm colored">Book Now</a>
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+        <div class="tab-pane fade" id=event-2> 
+            <div class=event-boxes> 
+                <div class="event-box clearfix">
+                    <div class="event-pic col-xs-4 col-md-3"> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/events/4.jpg alt=Director>
+                    </div> 
+                    <div class="event-right col-xs-8 col-md-9"> 
+                        <div class=name>Conference</div>
+                        <div class=date>13 August - 20 August</div>
+                        <div class=description>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium laborum maxime optio vel? Autem beatae dolore eum eveniet, expedita magni modi molestiae molestias neque porro quae qui vitae voluptates.</p> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, hic, provident? Harum impedit libero rerum ut vero. Consequatur dolores exercitationem illo minus nihil pariatur quae reiciendis. Consequatur rem sequi sint?</p> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto deleniti et ipsam itaque molestias necessitatibus neque similique voluptatem voluptatibus. At blanditiis ex expedita nostrum nulla quisquam rerum tenetur totam.</p> 
+                        </div> 
+                        <a href=forms/booking.html class="book-now btn btn-sm colored">Book Now</a><!-- event's Booking button --> 
+                    </div> 
                 </div>
             </div>
-
-        </div><!-- /.product-grid-holder -->
-    </div><!-- /.container -->
-</section><!-- /#bestsellers -->
-<!-- ========================================= BEST SELLERS : END ========================================= -->
-<!-- ========================================= RECENTLY VIEWED ========================================= -->
-<section id="recently-reviewd" class="wow fadeInUp">
-    <div class="container">
-        <div class="carousel-holder hover">
-
-            <div class="title-nav">
-                <h2 class="h1">Recently Viewed</h2>
-                <div class="nav-holder">
-                    <a href="#prev" data-target="#owl-recently-viewed" class="slider-prev btn-prev fa fa-angle-left"></a>
-                    <a href="#next" data-target="#owl-recently-viewed" class="slider-next btn-next fa fa-angle-right"></a>
+        </div>
+        <div class="tab-pane fade" id=event-3> 
+            <div class=event-boxes> 
+                <div class="event-box clearfix">
+                    <div class="event-pic col-xs-4 col-md-3"> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/events/3.jpg alt=Director>
+                    </div> 
+                    <div class="event-right col-xs-8 col-md-9"> 
+                        <div class=name>Music Concert</div>
+                        <div class=date>13 August - 20 August</div>
+                        <div class=description>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur debitis dignissimos eaque, et fugiat id magnam mollitia perspiciatis praesentium quibusdam sint temporibus totam voluptatibus. Aliquid eius numquam sint veritatis voluptatum!</p> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, corporis dolore eos eveniet id ipsa maiores modi molestias odit optio perferendis possimus quasi, quos sunt velit? Autem consequatur enim nostrum?</p> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi, at eius eum incidunt libero maxime minus, nesciunt nostrum officiis omnis quis, quod similique soluta vero. Corporis ea molestias omnis.</p> 
+                        </div> 
+                        <a href=forms/booking.html class="book-now btn btn-sm colored">Book Now</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="tab-pane fade" id=event-4> 
+            <div class=event-boxes> 
+                <div class="event-box clearfix">
+                    <div class="event-pic col-xs-4 col-md-3"> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/events/1.jpg alt=Director>
+                    </div> 
+                    <div class="event-right col-xs-8 col-md-9"> 
+                        <div class=name>Fashion Show</div>
+                        <div class=date>13 August - 20 August</div>
+                        <div class=description>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate distinctio dolorum exercitationem facilis illo, impedit magnam magni nesciunt nisi, nobis porro praesentium quisquam quod rerum velit veniam voluptas voluptatem.</p> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci maxime, voluptatibus. A accusantium aliquid aperiam cum dolore, earum esse hic iusto necessitatibus odit officia porro, repellendus sit suscipit ut voluptatum!</p> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem deserunt dicta illo ipsam libero necessitatibus possimus provident quia? Aut blanditiis doloribus et illum minus molestiae provident quibusdam quidem vel.</p> </div>
+                        <a href=forms/booking.html class="book-now btn btn-sm colored">Book Now</a><!-- event's Booking button --> </div> 
                 </div>
-            </div><!-- /.title-nav -->
-
-            <div id="owl-recently-viewed" class="owl-carousel product-grid-holder">
-                <?php
-                foreach ($recently as $data) {
-
-                    echo'<div class="no-margin carousel-item product-item-holder size-small hover">
-                    <div class="product-item">
-                        <div class="ribbon red"><span>sale</span></div> 
-                        <div class="image">
-                            <img alt="" src="images/blank.gif" data-echo="' . $data->imgSmall . '" style="height:160px" />
-                        </div>
-                        <div class="body">
-                            <div class="title">
-                                <a href="' . $data->url . '">' . $data->name . '</a>
-                            </div>
-                            <div class="brand">' . $data->brand_name . '</div>
-                        </div>
-                        <div class="prices">
-                            <div class="price-current text-right">' . $data->price_sell_rp . '</div>
-                        </div>
-                        <div class="hover-area">';
-                    if ($data->realStock == 0) {
-                        echo' <div class="add-cart-button">
-                                        <a href="#" style="background-color: crimson;" class="le-button">Stock Habis</a>
-                                   </div>';
-                    } else {
-                        echo' <div class="add-cart-button">
-                                        <a href="#" id="' . $data->id . '"  class="le-button beli">Beli</a>
-                                   </div>';
-                    }
-
-                    echo'</div>
-                    </div><!-- /.product-item -->
-                </div><!-- /.product-item-holder -->';
-                }
-                ?>
-
-
-
-
-
-
-
-            </div><!-- /#recently-carousel -->
-
-        </div><!-- /.carousel-holder -->
-    </div><!-- /.container -->
-</section><!-- /#recently-reviewd -->
-<!-- ========================================= RECENTLY VIEWED : END ========================================= -->
-<!-- ========================================= TOP BRANDS ========================================= -->
-<section id="top-brands" class="wow fadeInUp">
-    <div class="container">
-        <div class="carousel-holder" >
-
-            <div class="title-nav">
-                <h1>Top Brands</h1>
-                <div class="nav-holder">
-                    <a href="#prev" data-target="#owl-brands" class="slider-prev btn-prev fa fa-angle-left"></a>
-                    <a href="#next" data-target="#owl-brands" class="slider-next btn-next fa fa-angle-right"></a>
-                </div>
-            </div><!-- /.title-nav -->
-
-            <div id="owl-brands" class="owl-carousel brands-carousel">
-
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/apple.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/oppo.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/samsung.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/blackberry.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/motorola.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/sony.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-
-
-
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/lenovo.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/huawei.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/lg.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/advan.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/acer.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/asus.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/evercoss.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/nokia.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-                <div class="carousel-item">
-                    <a href="#">
-                        <img alt="" src="images/brands/smartfren.png" />
-                    </a>
-                </div><!-- /.carousel-item -->
-
-
-            </div><!-- /.brands-caresoul -->
-
-        </div><!-- /.carousel-holder -->
-    </div><!-- /.container -->
-</section><!-- /#top-brands -->
-<!-- ========================================= TOP BRANDS : END ========================================= -->		<!-- ============================================================= FOOTER ============================================================= -->
-<script>
-
-    $("body").on("click", ".beli", function() {
-        var id = $(this).attr("id");
-        var isi_cart = $(".cart-list").html();
-//        var terbeli  = $(this);
-        $.ajax({
-            type: 'POST',
-            data: {id: id},
-            url: "<?php echo Yii::$app->urlManager->createUrl('product/addcart') ?>",
-            success: function(data) {
-//                $('.basket').addClass('open');
-//                 terbeli.replaceWith("<a href='#' style='background-color: crimson;' class='le-button'>Stock Habis</a>");
-//                $(".cart-list").html(data + isi_cart);
-//                location.reload();
-                window.location.replace("<?= Yii::$app->urlManager->createUrl('cart') ?>");
-//                    alert(data);
-            },
-        });
-    });
-</script>
+            </div>
+        </div> 
+    </div> 
+</section>
