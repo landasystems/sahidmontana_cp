@@ -1,5 +1,5 @@
 <?php
-$this->title = "Sahid Montana Hotel | News";
+$this->title = "Sahid Montana Hotel | Room";
 
 use common\models\Article;
 use common\models\ArticleCategory;

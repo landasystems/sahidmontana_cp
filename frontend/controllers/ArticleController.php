@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use Yii;
 use common\models\Article;
+use common\models\ArticleCategory;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -25,8 +26,38 @@ class ArticleController extends Controller {
 
     public function actionNews() {
         $this->layout = 'mainPost';
-        $model = Article::findAll(['article_category_id' => 5]);
+        $category = ArticleCategory::findAll(['parent_id' => '5']);
+        $idTag = array();
+        foreach ($category as $id) {
+            $idTag[] = $id->id;
+        }
+        $in = implode(",", $idTag);
+        $model = Article::find()->where('article_category_id IN(' . $in . ')')->all();
         return $this->render('news', [
+                    'model' => $model,
+        ]);
+    }
+
+    public function actionPromotion() {
+        $this->layout = 'mainPost';
+        $model = Article::findAll(['article_category_id' => 26]);
+        return $this->render('promotion', [
+                    'model' => $model,
+        ]);
+    }
+    
+    public function actionRoom() {
+        $this->layout = 'mainPost';
+        $model = Article::findAll(['article_category_id' => 27]);
+        return $this->render('room', [
+                    'model' => $model,
+        ]);
+    }
+    
+    public function actionGallery() {
+        $this->layout = 'mainSingle';
+        $model = Article::findAll(['article_category_id' => 28]);
+        return $this->render('gallery', [
                     'model' => $model,
         ]);
     }

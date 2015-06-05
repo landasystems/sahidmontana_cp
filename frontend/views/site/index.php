@@ -128,7 +128,7 @@ use common\models\Article;
         foreach ($meet as $val) {
             echo '<li class="property-boxes col-xs-6 col-md-4" data-animation=fadeInLeft data-animation-delay=.2> 
                         <div class=prp-img>
-                            <img src=' . $val->imgMedium . 'img/rooms/thumb/ev1.jpg alt="'.$val->title.'">
+                            <img src="' . $val->imgMedium . '" alt="'.$val->title.'">
 
                         </div> 
                         <div class=prp-detail> 

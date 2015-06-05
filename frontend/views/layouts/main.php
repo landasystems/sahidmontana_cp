@@ -46,11 +46,11 @@ $this->beginPage();
                 <div class=menu-container>
                     <nav id=main-menu> 
                         <ul class=main-menu> 
-                            <li><a href="<?= Yii::$app->urlManager->createUrl('site/index') ?>">Home</a></li>
-                            <li><a href="<?= Yii::$app->urlManager->createUrl('article/news') ?>">News & Event</a></li> 
-                            <li><a href="<?= Yii::$app->urlManager->createUrl('article/promotion') ?>">Promotion</a></li> 
-                            <li class=margin-right><a href="<?= Yii::$app->urlManager->createUrl('article/room') ?>">Room</a></li> 
-                            <li class=margin-left><a href="<?= Yii::$app->urlManager->createUrl('site/gallery') ?>">Gallery</a></li> 
+                            <li><a href="<?= Yii::$app->urlManager->createUrl('home') ?>">Home</a></li>
+                            <li><a href="<?= Yii::$app->urlManager->createUrl('news') ?>">News & Event</a></li> 
+                            <li><a href="<?= Yii::$app->urlManager->createUrl('promotion') ?>">Promotion</a></li> 
+                            <li class=margin-right><a href="<?= Yii::$app->urlManager->createUrl('room') ?>">Room</a></li> 
+                            <li class=margin-left><a href="<?= Yii::$app->urlManager->createUrl('gallery') ?>">Gallery</a></li> 
                             <li class=has-sub-menu><a href=#>Facility</a> 
                                 <ul> 
                                     <li><a href="<?= Yii::$app->urlManager->createUrl('article/restaurant') ?>">Restaurant</a></li>

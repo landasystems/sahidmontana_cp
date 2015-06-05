@@ -1,11 +1,13 @@
 <?php
-$this->title = "Sahid Montana Hotel | News";
+
+$this->title = "Sahid Montana Hotel | Promotion";
 
 use common\models\Article;
 use common\models\ArticleCategory;
 ?>
 <section id="posts-list" class="col-md-9">
     <?php
+
     foreach ($model as $val) {
         echo '<div class="post-boxes row"> 
               <div class="col-lg-4">

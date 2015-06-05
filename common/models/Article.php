@@ -65,35 +65,35 @@ class Article extends \yii\db\ActiveRecord {
     }
 
     public function getImgSmall() {
-        if (empty($this->product_photo_id) || empty($this->productPhoto->img)) {
-            return Yii::$app->params['urlImg'] . '150x150-noimage.jpg';
+        if (empty($this->primary_image)) {
+            return Yii::$app->params['urlImg'] . '/150x150-noimage.jpg';
         } else {
-            return Yii::$app->params['urlImg'] . 'article/' . $this->product_photo_id . '-150x150-' . Yii::$app->landa->urlParsing($this->productPhoto->img);
+            return Yii::$app->params['urlImg'] . '/article/' . $this->id . '-150x150-' . Yii::$app->landa->urlParsing($this->primary_image);
         }
     }
 
     public function getImgMedium() {
-        if (empty($this->product_photo_id) || empty($this->productPhoto->img)) {
-            return Yii::$app->params['urlImg'] . '350x350-noimage.jpg';
+        if (empty($this->primary_image)) {
+            return Yii::$app->params['urlImg'] . '/350x350-noimage.jpg';
         } else {
-            return Yii::$app->params['urlImg'] . 'article/' . $this->product_photo_id . '-350x350-' . Yii::$app->landa->urlParsing($this->productPhoto->img);
+            return Yii::$app->params['urlImg'] . '/article/' . $this->id . '-350x350-' . Yii::$app->landa->urlParsing($this->primary_image);
         }
     }
 
     public function getImgBig() {
-        if (empty($this->product_photo_id) || empty($this->productPhoto->img)) {
-            return Yii::$app->params['urlImg'] . '650x650-noimage.jpg';
+        if (empty($this->primary_image)) {
+            return Yii::$app->params['urlImg'] . '/700x700-noimage.jpg';
         } else {
-            return Yii::$app->params['urlImg'] . 'article/' . $this->product_photo_id . '-650x650-' . Yii::$app->landa->urlParsing($this->productPhoto->img);
+            return Yii::$app->params['urlImg'] . '/article/' . $this->id . '-650x650-' . Yii::$app->landa->urlParsing($this->primary_image);
         }
     }
 
     public function getUrl() {
-        if (!isset($this->productCategory->alias)) {
-            return '#';
-        } else {
-            return Yii::$app->urlManager->createUrl('detail/' . $this->productCategory->alias . '/' . $this->alias);
-        }
+        return Yii::$app->urlManager->createUrl($this->alias);
+    }
+
+    public function getUser() {
+        return $this->hasOne(User::className(), ['id' => 'created_user_id']);
     }
 
 }

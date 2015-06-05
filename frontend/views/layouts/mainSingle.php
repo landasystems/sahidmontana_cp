@@ -21,7 +21,7 @@ $this->beginPage();
         <link rel=stylesheet id=main-style-file type=text/css href=<?= Yii::$app->homeUrl ?>css/styles.css>
         <link type="text/css" rel='stylesheet' href="<?= Yii::$app->homeUrl ?>css/styles.css">
     </head>
-    <body class="inner-page shortcodes">
+    <body class="inner-page agents">
         <div class=main-wrapper>
             <div id=main-header-top> 
                 <div position="center" class="main-header-top-container container">
@@ -86,37 +86,7 @@ $this->beginPage();
                 <li class="active">Single Post</li> 
             </ol> 
         </section>
-        <div id="post-pages" class="container padding-bottom"> 
-                <?= $content ?>
-            <aside class="col-md-3">
-                <div class="side-boxes"> 
-                    <h3 class="side-title">Archive</h3>
-                    <div class="side-contents"> 
-                        <ul> 
-                            <li><a href="#">Typography</a></li> 
-                            <li><a href="#">Columns</a></li> 
-                            <li><a href="#">Elements</a></li> 
-                            <li><a href="#">Timeline</a></li> 
-                            <li><a href="#">Staff boxes</a></li> 
-                            <li><a href="#">Breadcrumb &amp; Alerts</a></li> 
-                        </ul> 
-                    </div> 
-                </div> 
-                <div class="side-boxes">
-                    <h3 class="side-title">Tags</h3>
-                    <div class="side-contents">
-                        <a href="#" class="tags btn primary-colored">Restaurant</a>
-                        <a href="#" class="tags btn primary-colored">Sauna</a>
-                        <a href="#" class="tags btn primary-colored">Jacuzzi</a>
-                        <a href="#" class="tags btn primary-colored">Spa</a>
-                        <a href="#" class="tags btn primary-colored">Foods</a>
-                        <a href="#" class="tags btn primary-colored">Sunbathing</a>
-                        <a href="#" class="tags btn primary-colored">Drinks</a>
-                        <a href="#" class="tags btn primary-colored">beach</a>
-                    </div>
-                </div>
-            </aside>
-        </div>
+            <?= $content ?>
         <footer id=top-footer> 
             <div id=top-footer-content class=container>
                 <div class="widget col-md-3">
@@ -211,7 +181,7 @@ $this->beginPage();
     <!-- Include bootstrap tab scrip --> 
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/bootstrap/tab.js></script> 
     <!-- Include required js files --> 
-    <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery.bxslider.min.js></script> 
+    <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery.hovedir.min.js></script>
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/owl.carousel.min.js></script>
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery.magnific-popup.min.js></script>
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/helper.js></script>
@@ -255,6 +225,28 @@ $this->beginPage();
             document.write("&amp;sw=" + screen.width + "&amp;sh=" + screen.height);
             document.write("></scr" + "ipt>");
         }
+
+        jQuery(document).ready(function() {
+            "use strict";
+            jQuery('.gallery-img-container').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                removalDelay: 600,
+                mainClass: 'mfp-fade',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                },
+                image: {
+                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+                }
+            });
+            jQuery(' .gallery-img-container > li ').each(function() {
+                jQuery(this).hoverdir();
+            });
+        });
+
     </script>
 </body> 
 </html>
