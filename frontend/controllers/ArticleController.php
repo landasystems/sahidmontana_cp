@@ -45,7 +45,7 @@ class ArticleController extends Controller {
                     'model' => $model,
         ]);
     }
-    
+
     public function actionRoom() {
         $this->layout = 'mainPost';
         $model = Article::findAll(['article_category_id' => 27]);
@@ -53,7 +53,7 @@ class ArticleController extends Controller {
                     'model' => $model,
         ]);
     }
-    
+
     public function actionGallery() {
         $this->layout = 'mainSingle';
         $model = Article::findAll(['article_category_id' => 28]);
@@ -65,6 +65,17 @@ class ArticleController extends Controller {
     public function addHits($model) {
         $model->hits++;
         $model->save();
+    }
+
+    public function actionSahid() {
+        $this->layout = 'main';
+        $alias = strtoupper(str_replace("-", " ", $_GET['alias']));
+        $categori = ArticleCategory::findOne(['name' => $alias]);
+        $model = Article::findAll(['article_category_id' => $categori->id]);
+        return $this->render('sahid', [
+                    'model' => $model,
+                    'group' => $alias,
+        ]);
     }
 
 }

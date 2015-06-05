@@ -1,12 +1,11 @@
 <?php
+
 use yii\helpers\Html;
-use common\models\ArticleCategory;
 use frontend\assets\AppAsset;
+use common\models\ArticleCategory;
 
 $session = Yii::$app->session;
-
 AppAsset::register($this);
-
 $this->beginPage();
 ?>
 <!DOCTYPE html>
@@ -60,13 +59,13 @@ $this->beginPage();
                             <li class=has-sub-menu>
                                 <a href=#>Sahid Group</a>
                                 <ul>
-                                    <li><a href="pages/jatim.html">East Java</a></li>
-                                    <li><a href="pages/jateng.html">Central Java</a></li>
-                                    <li><a href="pages/jabar.html">West Java</a></li>
-                                    <li><a href="pages/sumatera.html">Sumatera</a></li>
-                                    <li><a href="pages/jakarta.html">Jakarta</a></li>
-                                    <li><a href="pages/lombok.html">Lombok</a></li>
-                                    <li><a href="pages/sulawesi.html">Sulawesi</a></li>
+                                    <?php
+                                    $sahid = ArticleCategory::findAll(['parent_id' => 16]);
+                                    foreach ($sahid as $val) {
+                                        $alias = strtolower(str_replace(" ", "-", $val->name));
+                                        echo '<li><a href="' . Yii::$app->urlManager->createUrl('sahid/' . $alias) . '">'.$val->name.'</a></li>';
+                                    }
+                                    ?>
                                 </ul>
                             </li>
                             <li><a href="<?= Yii::$app->urlManager->createUrl('site/contact') ?>">Contact</a></li>
