@@ -1,3 +1,6 @@
+<?php
+$this->title = "Sahid Group";
+?>
 <section id="agents-boxes" class="padding-bottom">
     <h3><span><b>Sahid Group</b> <?php echo ucwords(strtolower($group)); ?></span></h3> 
     <div class="container"> 
@@ -10,11 +13,6 @@
                             </div>
                             <div class="agent-bottom col-md-7"> 
                                 <div class="name">' . $val->title . '</div>
-                                <div class="title">
-                                    <i class="fa fa-star"></i> 
-                                    <i class="fa fa-star"></i> 
-                                    <i class="fa fa-star"></i>
-                                </div>
                                 <div class="description"> 
                                    ' . $val->content . '
                                 </div> 

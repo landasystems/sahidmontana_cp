@@ -1,7 +1,10 @@
 <?php
+
 use yii\helpers\Html;
 use frontend\assets\AppAsset;
+use common\models\Article;
 use common\models\ArticleCategory;
+
 $session = Yii::$app->session;
 AppAsset::register($this);
 $this->beginPage();
@@ -10,7 +13,7 @@ $this->beginPage();
 <html> 
     <head>
         <meta charset=utf-8>
-        <title><?= Html::encode($this->title) ?></title>
+        <title>Sahid Montana | <?= Html::encode($this->title) ?></title>
         <meta name=description content="Sahid Montana Hotel">
         <meta name=keywords content=Responsive,HTML5,CSS3,XML,JavaScript>
         <meta name=author content="Joseph a, ravistheme@gmail.com"><!-- End of Meta tags -->
@@ -29,7 +32,6 @@ $this->beginPage();
                                     <i class="fa fa-star"></i> 
                                     <i class="fa fa-star"></i> 
                                     <i class="fa fa-star"></i> 
-
                                 </span>
                             </a>
                         </div>
@@ -42,32 +44,10 @@ $this->beginPage();
             <div class="header-content container"> 
                 <div class=menu-container>
                     <nav id=main-menu> 
-                        <ul class=main-menu> 
-                            <li><a href="<?= Yii::$app->urlManager->createUrl('home') ?>">Home</a></li>
-                            <li><a href="<?= Yii::$app->urlManager->createUrl('news') ?>">News & Event</a></li> 
-                            <li><a href="<?= Yii::$app->urlManager->createUrl('promotion') ?>">Promotion</a></li> 
-                            <li class=margin-right><a href="<?= Yii::$app->urlManager->createUrl('room') ?>">Room</a></li> 
-                            <li class=margin-left><a href="<?= Yii::$app->urlManager->createUrl('gallery') ?>">Gallery</a></li> 
-                            <li class=has-sub-menu><a href=#>Facility</a> 
-                                <ul> 
-                                    <li><a href="<?= Yii::$app->urlManager->createUrl('article/restaurant') ?>">Restaurant</a></li>
-                                    <li><a href="<?= Yii::$app->urlManager->createUrl('article/meeting-room') ?>">Meeting room</a></li>
-                                </ul> 
-                            </li> 
-                            <li class=has-sub-menu>
-                                <a href=#>Sahid Group</a>
-                                <ul>
-                                    <?php
-                                    $sahid = ArticleCategory::findAll(['parent_id' => 16]);
-                                    foreach ($sahid as $val) {
-                                        $alias = strtolower(str_replace(" ", "-", $val->name));
-                                        echo '<li><a href="' . Yii::$app->urlManager->createUrl('sahid/' . $alias) . '">'.$val->name.'</a></li>';
-                                    }
-                                    ?>
-                                </ul>
-                            </li>
-                            <li><a href="<?= Yii::$app->urlManager->createUrl('site/contact') ?>">Contact</a></li>
-                        </ul>
+                        <?php
+                        $sahid = ArticleCategory::find()->where(['parent_id' => 16])->orderBy('name ASC')->all();
+                        echo $this->render('_menu', ['sahid' => $sahid]);
+                        ?>
                     </nav>
                     <div id=main-menu-handle>
                         <span></span>
@@ -76,7 +56,7 @@ $this->beginPage();
             </div>
         </header>
         <section id="internal-title" class="container" data-background="parallax" style="background-attachment: fixed; background-position: 50% 12px;"> 
-            <h1>Single Post</h1>
+            <h1><?php echo $this->title ?></h1>
             <ol class="breadcrumb">
                 <li><a href="../index.html">Home</a></li> 
                 <li><a href="#">Blog</a></li> 
@@ -84,123 +64,25 @@ $this->beginPage();
             </ol> 
         </section>
         <div id="post-pages" class="container padding-bottom"> 
-                <?= $content ?>
+            <?= $content ?>
             <aside class="col-md-3">
                 <div class="side-boxes"> 
-                    <h3 class="side-title">Archive</h3>
+                    <h3 class="side-title">Our Facility</h3>
                     <div class="side-contents"> 
                         <ul> 
-                            <li><a href="#">Typography</a></li> 
-                            <li><a href="#">Columns</a></li> 
-                            <li><a href="#">Elements</a></li> 
-                            <li><a href="#">Timeline</a></li> 
-                            <li><a href="#">Staff boxes</a></li> 
-                            <li><a href="#">Breadcrumb &amp; Alerts</a></li> 
+                            <li><a href="<?= Yii::$app->urlManager->createUrl('facility/room') ?>">Room</a></li> 
+                            <li><a href="<?= Yii::$app->urlManager->createUrl('facility/restaurant') ?>">Restaurant</a></li> 
+                            <li><a href="<?= Yii::$app->urlManager->createUrl('facility/meeting-and-banquest') ?>">Meeting Room</a></li> 
                         </ul> 
                     </div> 
                 </div> 
-                <div class="side-boxes">
-                    <h3 class="side-title">Tags</h3>
-                    <div class="side-contents">
-                        <a href="#" class="tags btn primary-colored">Restaurant</a>
-                        <a href="#" class="tags btn primary-colored">Sauna</a>
-                        <a href="#" class="tags btn primary-colored">Jacuzzi</a>
-                        <a href="#" class="tags btn primary-colored">Spa</a>
-                        <a href="#" class="tags btn primary-colored">Foods</a>
-                        <a href="#" class="tags btn primary-colored">Sunbathing</a>
-                        <a href="#" class="tags btn primary-colored">Drinks</a>
-                        <a href="#" class="tags btn primary-colored">beach</a>
-                    </div>
-                </div>
             </aside>
         </div>
-        <footer id=top-footer> 
-            <div id=top-footer-content class=container>
-                <div class="widget col-md-3">
-                    <h4>Text Widget</h4>
-                    <div class="content-box row"> 
-                        <div class=widget-content>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia modi at, rem quaerat et, voluptatibus esse quis earum itaque nesciunt, ullam fugiat error rerum amet quisquam minus aliquid est temporibus. </p> <!-- Footer Social icons --> 
-                            <div class=social-icons> 
-                                <a href=# class=facebook></a>
-                                <a href=# class=twitter></a>
-                                <a href=# class=google-plus></a>
-                            </div> 
-                        </div>
-                    </div> 
-                </div> 
-                <div class="widget col-md-3">
-                    <h4>Recent Posts</h4>
-                    <div class="content-box row"> 
-                        <div class=widget-content>
-                            <ul> 
-                                <li>
-                                    <a href=pages/single-post.html>
-                                        <img src=<?= Yii::$app->homeUrl ?>img/blog/1.jpg alt="post 1" class=post-img></a>
-                                    <a href=pages/single-post.html class=post-title>Sunbathing in beautiful beach</a> 
-                                    <div class=date>May 28, 2014</div> 
-                                </li> 
-                                <li> 
-                                    <a href=pages/single-post.html>
-                                        <img src=<?= Yii::$app->homeUrl ?>img/blog/2.jpg alt="post 1" class=post-img></a>
-                                    <a href=pages/single-post.html class=post-title>Sauna / Jacuzzi / Spa</a> 
-                                    <div class=date>Feb 18, 2014</div> 
-                                </li> 
-                                <li> 
-                                    <a href=pages/single-post.html>
-                                        <img src=<?= Yii::$app->homeUrl ?>img/blog/3.jpg alt="post 1" class=post-img></a>
-                                    <a href=pages/single-post.html class=post-title>International foods in Yoona Restaurants</a> 
-                                    <div class=date>Jan 20, 2014</div> 
-                                </li> 
-                            </ul> 
-                        </div>
-                    </div>
-                </div> 
-                <div class="widget col-md-3">
-                    <h4>Tags</h4>
-                    <div class="content-box row"> 
-                        <div class=widget-content>
-                            <a href=# class="tags btn colored">Restaurant</a>
-                            <a href=# class="tags btn colored">Sauna</a> 
-                            <a href=# class="tags btn colored">Jacuzzi</a> 
-                            <a href=# class="tags btn colored">Spa</a> 
-                            <a href=# class="tags btn colored">Foods</a> 
-                            <a href=# class="tags btn colored">Sunbathing</a> 
-                            <a href=# class="tags btn colored">Drinks</a> 
-                            <a href=# class="tags btn colored">beach</a> 
-                        </div> </div> 
-                </div> 
-                <div class="widget col-md-3">
-                    <h4>Newsletter Subscribe</h4>
-                    <div class="content-box row"> 
-                        <div class=widget-content>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, at reiciendis officiis. </p> 
-                            <form class="sign-up-form clearfix" action=#> 
-                                <div class=fields> 
-                                    <input placeholder=Email type=email>
-                                </div> 
-                                <div class=button-container>
-                                    <input class="btn colored" value="Sign Up Now" type=submit></div> 
-                            </form> 
-                        </div> 
-                    </div> 
-                </div>
-            </div> 
-        </footer> 
-        <footer id=footer>
-            <div id=go-up></div>
-            <ul class="footer-menu container"> 
-                <li><a href=#>Home</a></li> 
-                <li><a href=pages/rooms.html>Rooms</a></li> 
-                <li><a href=pages/about.html>News & Events</a></li> 
-                <li><a href=#>Promotion</a></li> 
-                <li><a href=pages/contact.html>Rooms</a></li>
-                <li><a href=pages/about.html>Gallery</a></li> 
-                <li><a href=#>Facility</a></li> 
-                <li><a href=pages/contact.html>Contact</a></li>
-            </ul> 
-            <div class=copyright> &copy; 2014 Yoona. All Rights Reserved. </div> 
-        </footer> 
+        <?php
+        $model = Article::find()->where('article_category_id = 5')->orderBy('created DESC')->limit(3)->all();
+        $popular = Article::find()->orderBy('hits DESC')->limit(3)->all();
+        echo $this->render('_footer', ['model' => $model, 'popular' => $popular]);
+        ?> 
     </div> 
     <!-- JS Includes --> <!-- Essential JS files ( DO NOT REMOVE THEM ) --> 
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery-1.11.1.min.js></script> 

@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use frontend\assets\AppAsset;
+use common\models\Article;
 use common\models\ArticleCategory;
 
 $session = Yii::$app->session;
@@ -12,7 +13,7 @@ $this->beginPage();
 <html> 
     <head>
         <meta charset=utf-8>
-        <title><?= Html::encode($this->title) ?></title>
+        <title>Sahid Montana | <?= Html::encode($this->title) ?></title>
         <meta name=description content="Sahid Montana Hotel">
         <meta name=keywords content=Responsive,HTML5,CSS3,XML,JavaScript>
         <meta name=author content="Joseph a, ravistheme@gmail.com"><!-- End of Meta tags -->
@@ -44,32 +45,10 @@ $this->beginPage();
             <div class="header-content container"> 
                 <div class=menu-container>
                     <nav id=main-menu> 
-                        <ul class=main-menu> 
-                            <li><a href="<?= Yii::$app->urlManager->createUrl('home') ?>">Home</a></li>
-                            <li><a href="<?= Yii::$app->urlManager->createUrl('news') ?>">News & Event</a></li> 
-                            <li><a href="<?= Yii::$app->urlManager->createUrl('promotion') ?>">Promotion</a></li> 
-                            <li class=margin-right><a href="<?= Yii::$app->urlManager->createUrl('room') ?>">Room</a></li> 
-                            <li class=margin-left><a href="<?= Yii::$app->urlManager->createUrl('gallery') ?>">Gallery</a></li> 
-                            <li class=has-sub-menu><a href=#>Facility</a> 
-                                <ul> 
-                                    <li><a href="<?= Yii::$app->urlManager->createUrl('article/restaurant') ?>">Restaurant</a></li>
-                                    <li><a href="<?= Yii::$app->urlManager->createUrl('article/meeting-room') ?>">Meeting room</a></li>
-                                </ul> 
-                            </li> 
-                            <li class=has-sub-menu>
-                                <a href=#>Sahid Group</a>
-                                <ul>
-                                    <?php
-                                    $sahid = ArticleCategory::findAll(['parent_id' => 16]);
-                                    foreach ($sahid as $val) {
-                                        $alias = strtolower(str_replace(" ", "-", $val->name));
-                                        echo '<li><a href="' . Yii::$app->urlManager->createUrl('sahid/' . $alias) . '">'.$val->name.'</a></li>';
-                                    }
-                                    ?>
-                                </ul>
-                            </li>
-                            <li><a href="<?= Yii::$app->urlManager->createUrl('site/contact') ?>">Contact</a></li>
-                        </ul>
+                        <?php
+                         $sahid = ArticleCategory::find()->where(['parent_id' => 16])->orderBy('name ASC')->all();
+                        echo $this->render('_menu', ['sahid' => $sahid]);
+                        ?>
                     </nav>
                     <div id=main-menu-handle>
                         <span></span>
@@ -78,92 +57,11 @@ $this->beginPage();
             </div>
         </header>
         <?= $content ?>
-        <footer id=top-footer> 
-            <div id=top-footer-content class=container>
-                <div class="widget col-md-3">
-                    <h4>Text Widget</h4>
-                    <div class="content-box row"> 
-                        <div class=widget-content>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia modi at, rem quaerat et, voluptatibus esse quis earum itaque nesciunt, ullam fugiat error rerum amet quisquam minus aliquid est temporibus. </p> <!-- Footer Social icons --> 
-                            <div class=social-icons> 
-                                <a href=# class=facebook></a>
-                                <a href=# class=twitter></a>
-                                <a href=# class=google-plus></a>
-                            </div> 
-                        </div>
-                    </div> 
-                </div> 
-                <div class="widget col-md-3">
-                    <h4>Recent Posts</h4>
-                    <div class="content-box row"> 
-                        <div class=widget-content>
-                            <ul> 
-                                <li>
-                                    <a href=pages/single-post.html>
-                                        <img src=<?= Yii::$app->homeUrl ?>img/blog/1.jpg alt="post 1" class=post-img></a>
-                                    <a href=pages/single-post.html class=post-title>Sunbathing in beautiful beach</a> 
-                                    <div class=date>May 28, 2014</div> 
-                                </li> 
-                                <li> 
-                                    <a href=pages/single-post.html>
-                                        <img src=<?= Yii::$app->homeUrl ?>img/blog/2.jpg alt="post 1" class=post-img></a>
-                                    <a href=pages/single-post.html class=post-title>Sauna / Jacuzzi / Spa</a> 
-                                    <div class=date>Feb 18, 2014</div> 
-                                </li> 
-                                <li> 
-                                    <a href=pages/single-post.html>
-                                        <img src=<?= Yii::$app->homeUrl ?>img/blog/3.jpg alt="post 1" class=post-img></a>
-                                    <a href=pages/single-post.html class=post-title>International foods in Yoona Restaurants</a> 
-                                    <div class=date>Jan 20, 2014</div> 
-                                </li> 
-                            </ul> 
-                        </div>
-                    </div>
-                </div> 
-                <div class="widget col-md-3">
-                    <h4>Tags</h4>
-                    <div class="content-box row"> 
-                        <div class=widget-content>
-                            <a href=# class="tags btn colored">Restaurant</a>
-                            <a href=# class="tags btn colored">Sauna</a> 
-                            <a href=# class="tags btn colored">Jacuzzi</a> 
-                            <a href=# class="tags btn colored">Spa</a> 
-                            <a href=# class="tags btn colored">Foods</a> 
-                            <a href=# class="tags btn colored">Sunbathing</a> 
-                            <a href=# class="tags btn colored">Drinks</a> 
-                            <a href=# class="tags btn colored">beach</a> 
-                        </div> </div> 
-                </div> 
-                <div class="widget col-md-3">
-                    <h4>Newsletter Subscribe</h4>
-                    <div class="content-box row"> 
-                        <div class=widget-content>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, at reiciendis officiis. </p> 
-                            <form class="sign-up-form clearfix" action=#> 
-                                <div class=fields> 
-                                    <input placeholder=Email type=email>
-                                </div> 
-                                <div class=button-container>
-                                    <input class="btn colored" value="Sign Up Now" type=submit></div> 
-                            </form> 
-                        </div> 
-                    </div> 
-                </div>
-            </div> 
-        </footer> 
-        <footer id=footer>
-            <div id=go-up></div>
-            <ul class="footer-menu container"> 
-                <li><a href="<?= Yii::$app->urlManager->createUrl('site/index') ?>">Home</a></li> 
-                <li><a href="<?= Yii::$app->urlManager->createUrl('article/news') ?>">News & Events</a></li> 
-                <li><a href="<?= Yii::$app->urlManager->createUrl('article/promotion') ?>">Promotion</a></li> 
-                <li><a href="<?= Yii::$app->urlManager->createUrl('article/room') ?>">Rooms</a></li>
-                <li><a href="<?= Yii::$app->urlManager->createUrl('site/gallery') ?>">Gallery</a></li> 
-                <li><a href="<?= Yii::$app->urlManager->createUrl('article/facility') ?>">Facility</a></li> 
-                <li><a href="<?= Yii::$app->urlManager->createUrl('site/contact') ?>">Contact</a></li>
-            </ul> 
-            <div class=copyright> &copy; 2014 Yoona. All Rights Reserved. </div> 
-        </footer> 
+        <?php
+        $model = Article::find()->where('article_category_id = 5')->orderBy('created DESC')->limit(3)->all();
+        $popular = Article::find()->orderBy('hits DESC')->limit(3)->all();
+        echo $this->render('_footer', ['model' => $model, 'popular' => $popular]);
+        ?> 
     </div> 
     <!-- JS Includes --> <!-- Essential JS files ( DO NOT REMOVE THEM ) --> 
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery-1.11.1.min.js></script> 
@@ -177,6 +75,37 @@ $this->beginPage();
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/helper.js></script>
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/init.js></script>
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/template.js></script>
+    <script type=text/javascript src=http://maps.googleapis.com/maps/api/js?sensor=false></script>
+    <script>
+        function initialize() {
+            var myLatLng = new google.maps.LatLng(-7.976965, 112.632215);
+            var mapOptions = {
+                zoom: 12,
+                center: myLatLng,
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{featureType: "landscape", stylers: [{saturation: -100}, {lightness: 65}, {visibility: "on"}]}, {featureType: "poi", stylers: [{saturation: -100}, {lightness: 51}, {visibility: "simplified"}]}, {featureType: "road.highway", stylers: [{saturation: -100}, {visibility: "simplified"}]}, {featureType: "road.arterial", stylers: [{saturation: -100}, {lightness: 30}, {visibility: "on"}]}, {featureType: "road.local", stylers: [{saturation: -100}, {lightness: 40}, {visibility: "on"}]}, {featureType: "transit", stylers: [{saturation: -100}, {visibility: "simplified"}]}, {featureType: "administrative.province", stylers: [{visibility: "off"}]}, {featureType: "administrative.locality", stylers: [{visibility: "off"}]}, {featureType: "administrative.neighborhood", stylers: [{visibility: "on"}]}, {featureType: "water", elementType: "labels", stylers: [{visibility: "off"}, {lightness: -25}, {saturation: -100}]}, {featureType: "water", elementType: "geometry", stylers: [{hue: "#ffff00"}, {lightness: -25}, {saturation: -97}]}],
+                // Extra options
+                scrollwheel: false,
+                mapTypeControl: false,
+                panControl: false,
+                zoomControlOptions: {
+                    style: google.maps.ZoomControlStyle.SMALL,
+                    position: google.maps.ControlPosition.LEFT_BOTTOM
+                }
+            }
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            var image = '../assets/img/marker.png';
+
+            var beachMarker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                icon: image
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
     <script type=text/javascript>
         jQuery(document).ready(function() {
             "use strict";

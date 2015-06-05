@@ -1,5 +1,5 @@
 <?php
-$this->title = "Sahid Montana | Gallery"
+$this->title = "Gallery"
 ?>
 <section id="gallery-page" style="margin-top: 0px;" class="container">
     <ul class="gallery-img-container clearfix">

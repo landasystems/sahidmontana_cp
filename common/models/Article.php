@@ -84,7 +84,7 @@ class Article extends \yii\db\ActiveRecord {
         if (empty($this->primary_image)) {
             return Yii::$app->params['urlImg'] . '/700x700-noimage.jpg';
         } else {
-            return Yii::$app->params['urlImg'] . '/article/' . $this->id . '-650x650-' . Yii::$app->landa->urlParsing($this->primary_image);
+            return Yii::$app->params['urlImg'] . '/article/' . $this->id . '-700x700-' . Yii::$app->landa->urlParsing($this->primary_image);
         }
     }
 
