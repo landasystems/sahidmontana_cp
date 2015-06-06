@@ -27,12 +27,10 @@ $this->beginPage();
                 <div position="center" class="main-header-top-container container">
                     <center> 
                         <div id=top-logo data-logo-letter=>
-                            <a href=#><span class="s">Sahid</span><span class="m">Montana</span>
-                                <span class=five-stars>
-                                    <i class="fa fa-star"></i> 
-                                    <i class="fa fa-star"></i> 
-                                    <i class="fa fa-star"></i> 
-
+                            <a href=#>
+                                <br>
+                                <span style="margin-left: -10px;margin-top: -20px" class=five-stars><!-- Star Box ( you can add / remove the Stars by delete or add the "<i class="fa fa-star"></i>") --> 
+                                    <img width="120px" height="40px" src="img/text.png">
                                 </span>
                             </a>
                         </div>
