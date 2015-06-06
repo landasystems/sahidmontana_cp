@@ -157,68 +157,64 @@ use common\models\Article;
             <div id=testimonials-slider class="owl-carousel owl-theme"> 
                 <div class=item> 
                     <div class=client-pic> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/clients/1.jpg alt="Paul Bell"> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/citra.jpg width="100px" height="100px" alt="Paul Bell"> 
                     </div> 
-                    <cite>Eva Lambert</cite>
-                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet assumenda consequatur consequuntur cum dicta impedit minima natus necessitatibus nihil, nisi nobis officiis perferendis quo reiciendis rem sed totam, voluptatibus! </blockquote>
+                    <cite>Citra I.</cite>
+                    <blockquote> 
+                    Sangat menyenangkan karena staff nya sangat membantu dan letaknya strategis. Hotel nya tidak terlalu mahal, rapi dan bagus.
+                    </blockquote>
 
                 </div>
                 <div class=item> 
                     <div class=client-pic> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/clients/2.jpg alt="Paul Bell"> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/edi.jpg width="100px" height="100px" alt="Paul Bell"> 
                     </div> 
-                    <cite>Paul Bell</cite> 
-                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, ad adipisci asperiores commodi dicta earum eligendi fugit maxime modi molestias nihil nisi numquam odit perspiciatis quam quas quos veritatis. Reprehenderit? </blockquote> 
+                    <cite>Eddy R.</cite> 
+                    <blockquote> 
+                    Berlibur dengan 4 keluarga besar di Montana saat lebaran tahun ini, merupakan suatu yang luar biasa. Apalagi kami berasal dari berbagai kota dan bertemu di Malang. Sungguh hal yang indah.
+                    </blockquote> 
                 </div> <div class=item> 
                     <div class=client-pic> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/clients/3.jpg alt="Lili Kids"> 
-                    </div> <cite>Lili Kids</cite> 
-                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nam ullam. Aperiam consequuntur dignissimos ex exercitationem hic iure. Aliquam architecto asperiores blanditiis cupiditate dolorem eligendi omnis quam qui sed tempora! </blockquote> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/nur.jpg width="100px" height="100px" alt="Lili Kids"> 
+                    </div> <cite>Nur I.</cite> 
+                    <blockquote>
+                    Dekat dengan stasiun kereta & bandara abdul rachman saleh,kamar bersih,tapi pintu kamar mandi agak rusak,makanan cukup enak,dekat dengan Batu, harga kamar terjangkau, suasana hotel nyaman.
+                    </blockquote> 
                 </div> 
                 <div class=item> 
                     <div class=client-pic> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/clients/4.jpg alt="Brad Lopez">
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/erwin.jpg width="100px" height="100px" alt="Brad Lopez">
                     </div>
-                    <cite>Brad Lopez</cite> 
-                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nam ullam. Aperiam consequuntur dignissimos ex exercitationem hic iure. Aliquam architecto asperiores blanditiis cupiditate dolorem eligendi omnis quam qui sed tempora! </blockquote> 
+                    <cite>Erwin H.</cite> 
+                    <blockquote> 
+                    Secara menyeluruh, hotel ini baik.  Kelebihan lain adalah hotel ini sangat artistik pada bagian front office, cafe dengan life musik yang cukup baik.
+                    </blockquote> 
                 </div> 
                 <div class=item> 
                     <div class=client-pic> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/clients/5.jpg alt="Ryan Oswald"> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/diddy.jpg  width="100px" height="100px" alt="Ryan Oswald"> 
                     </div> 
-                    <cite>Ryan Oswald</cite> 
-                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore minus optio quibusdam saepe ullam! Consectetur eos explicabo facere, fugit in inventore ipsam optio perferendis praesentium ratione reiciendis sint tenetur unde. </blockquote> 
+                    <cite>Diddy B</cite> 
+                    <blockquote> 
+                    hotel yang tenang , nyaman dan hening sehingga kita bisa lebih relax dan menikmati suasana kota malang yang sejuk dan nyaman untuk menjalankan aktivitas studi.  
+                    </blockquote> 
                 </div> <div class=item> 
                     <div class=client-pic> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/clients/6.jpg alt="John Barry"> 
-                    </div> <cite>John Barry</cite> 
-                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut expedita inventore itaque laborum molestiae nulla odit, pariatur quaerat totam, veritatis voluptate. Commodi doloremque dolorum exercitationem explicabo natus, nemo praesentium. </blockquote> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/heru.jpg width="100px" height="100px" alt="John Barry"> 
+                    </div> <cite>Heru B</cite> 
+                    <blockquote> 
+                    Pengalaman menginap di hotel ini rasanya cukup mengesankan, karena sambutan karyawan dan kebersihan serta tata letak ruangan cukup "apik". Dan enak dipandang mata
+                    </blockquote> 
                 </div> 
                 <div class=item> 
                     <div class=client-pic> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/clients/7.jpg alt="Kim Boyer"> 
-                    </div> <cite>Kim Boyer</cite> 
-                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eveniet ex ipsum magni natus omnis saepe veniam. Consectetur iure maiores odio odit vel! Consequuntur exercitationem iure perspiciatis possimus praesentium quam. </blockquote> 
+                        <img src=<?= Yii::$app->homeUrl ?>img/clients/ririn.jpg width="100px" height="100px"  alt="Kim Boyer"> 
+                    </div> <cite>Ririn S</cite> 
+                    <blockquote> 
+                    saya menginap di Hotel Sahid Montana selama 3Hari 2Malam, Tempatnya sangat strategis karena dekat dengan pasar burung dan pasar bunga, di parkiran belakang banyak kuliner yang dapat kita tetemukan
+                    </blockquote> 
                 </div> 
-                <div class=item> 
-                    <div class=client-pic> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/clients/8.jpg alt="Leon River"> 
-                    </div> 
-                    <cite>Leon River</cite> 
-                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nobis provident? Accusamus aperiam debitis dignissimos enim esse ex fugiat harum incidunt itaque, minima nihil optio quas quidem, rem sapiente temporibus? </blockquote> 
-                </div> <div class=item> 
-                    <div class=client-pic> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/clients/9.jpg alt="Zoe Pierre">
-                    </div> 
-                    <cite>Zoe Pierre</cite> 
-                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aperiam asperiores blanditiis consequatur eligendi eveniet ipsam laboriosam maiores officiis omnis possimus, quod saepe, similique sunt vel vero! Amet, distinctio? </blockquote> 
-                </div> <div class=item> 
-                    <div class=client-pic> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/clients/10.jpg alt="Taylor Williams"> 
-                    </div>
-                    <cite>Taylor Williams</cite> 
-                    <blockquote> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab ad amet, aspernatur cupiditate deleniti dolorem doloribus ducimus error, ex ipsam laboriosam nemo perspiciatis quo repellendus veniam veritatis voluptate, voluptatem. </blockquote> 
-                </div>
+               
             </div> 
         </div> 
     </div> 
