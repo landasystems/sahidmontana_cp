@@ -39,6 +39,7 @@ class ArticleController extends Controller {
         return $this->render('news', [
                     'model' => $model,
                     'alias' => $alias,
+                    'pagination' => $pagination,
         ]);
     }
 
