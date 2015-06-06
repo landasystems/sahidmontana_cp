@@ -128,15 +128,15 @@ use common\models\Article;
         foreach ($meet as $val) {
             echo '<li class="property-boxes col-xs-6 col-md-4" data-animation=fadeInLeft data-animation-delay=.2> 
                         <div class=prp-img>
-                            <img src="' . $val->imgMedium . '" alt="'.$val->title.'">
+                            <img src="' . $val->imgMedium . '" alt="' . $val->title . '">
 
                         </div> 
                         <div class=prp-detail> 
                             <div class=title>
-                                '.$val->title.'
+                                ' . $val->title . '
                             </div>
                             <div class=description style="color:#000">
-                                '.  substr($val->content, 0, 100).'...
+                                ' . substr($val->content, 0, 100) . '...
                             </div> 
                             <a href=pages/room-detail.html data-room-id=4 class="more-detail btn colored">
                                 Details
@@ -221,114 +221,54 @@ use common\models\Article;
     </div> 
 </section> 
 <section id=events class=container> 
-    <h3><span><b>Upcoming</b> Events</span></h3> 
+    <h3><span><b>Sahid</b> Events</span></h3> 
     <ul class="nav nav-tabs nav-justified" id=tab-type-1>
-        <li data-animation=flipInY data-animation-delay=.2 class=active>
-            <a href=#event-1 data-toggle=tab> 
-                <span class=number>
-                    <img src=<?= Yii::$app->homeUrl ?>img/events/2.jpg alt="Event 1">
-                </span>
-                <span class=title>Jewelery Fair</span>
-            </a> 
-        </li> 
-        <li data-animation=flipInY data-animation-delay=.4> 
-            <a href=#event-2 data-toggle=tab> 
-                <span class=number>
-                    <img src=<?= Yii::$app->homeUrl ?>img/events/4.jpg alt="Event 1">
-                </span>
-                <span class=title>Conference</span> 
-            </a> 
-        </li>
-        <li data-animation=flipInY data-animation-delay=.6>
-            <a href=#event-3 data-toggle=tab> 
-                <span class=number>
-                    <img src=<?= Yii::$app->homeUrl ?>img/events/3.jpg alt="Event 1">
-                </span>
-                <span class=title>Music Concert</span> 
-            </a> 
-        </li> 
-        <li data-animation=flipInY data-animation-delay=.8> 
-            <a href=#event-4 data-toggle=tab> 
-                <span class=number>
-                    <img src=<?= Yii::$app->homeUrl ?>img/events/1.jpg alt="Event 1">
-                </span>
-                <span class=title>Fashion Show</span>
-            </a> 
-        </li> 
+        <?php
+        $event = Article::find()->where('article_category_id = 32')->orderBy('created DESC')->limit(4)->all();
+        $delay = 2;
+        foreach ($event as $val) {
+            echo '<li data-animation=flipInY data-animation-delay=.'.$delay.'>
+                        <a href=#event-' . $val->id . ' data-toggle=tab> 
+                            <span class=number>
+                                <img src="'.$val->imgSmall.'" alt="' . $val->title . '" style="height: 155px;">
+                            </span>
+                            <span class=title>' . $val->title . '</span>
+                        </a> 
+                    </li>';
+            $delay += 2;
+        }
+        ?>
     </ul>
     <div id=event-tab-contents class=tab-content data-animation=fadeInUp>
-        <div class="tab-pane fade in active" id=event-1> 
-            <div class=event-boxes> 
-                <div class="event-box clearfix">
-                    <div class="event-pic col-xs-4 col-md-3"> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/events/2.jpg alt=Director>
-                    </div>
-                    <div class="event-right col-xs-8 col-md-9">
-                        <div class=name>Jewelery Fair</div>
-                        <div class=date>13 August - 20 August</div> 
-                        <div class=description> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquam, commodi corporis, doloremque eius facere ipsa maiores non nostrum quae, quas quod reprehenderit rerum sequi suscipit totam veniam vitae?</p> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque, dignissimos enim eum facere inventore sed velit! A assumenda doloremque dolores nesciunt reiciendis, repellat rerum soluta tenetur. Dignissimos hic, tenetur.</p> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus esse facere ipsam mollitia omnis quae sapiente voluptatibus! Aspernatur cupiditate debitis dolore facere harum ipsa necessitatibus odit rem unde voluptate?</p> </div> 
-                        <a href=forms/booking.html class="book-now btn btn-sm colored">Book Now</a>
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
-        <div class="tab-pane fade" id=event-2> 
-            <div class=event-boxes> 
-                <div class="event-box clearfix">
-                    <div class="event-pic col-xs-4 col-md-3"> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/events/4.jpg alt=Director>
-                    </div> 
-                    <div class="event-right col-xs-8 col-md-9"> 
-                        <div class=name>Conference</div>
-                        <div class=date>13 August - 20 August</div>
-                        <div class=description>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium laborum maxime optio vel? Autem beatae dolore eum eveniet, expedita magni modi molestiae molestias neque porro quae qui vitae voluptates.</p> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, hic, provident? Harum impedit libero rerum ut vero. Consequatur dolores exercitationem illo minus nihil pariatur quae reiciendis. Consequatur rem sequi sint?</p> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto deleniti et ipsam itaque molestias necessitatibus neque similique voluptatem voluptatibus. At blanditiis ex expedita nostrum nulla quisquam rerum tenetur totam.</p> 
+        <?php
+        $no = 1;
+        foreach ($event as $val) {
+            if($no == 1){
+                $class = "tab-pane fade in active";
+            }else{
+                $class = "tab-pane fade";
+            }
+            echo '<div class="'.$class.'" id=event-' . $val->id . '> 
+                    <div class=event-boxes> 
+                        <div class="event-box clearfix">
+                            <div class="event-pic col-xs-4 col-md-3"> 
+                                <img src="'.$val->imgMedium.'" alt="'.$val->title.'">
+                            </div>
+                            <div class="event-right col-xs-8 col-md-9" style="padding-top:10px;">
+                                <div class=name>'.$val->title.'</div>
+                                <div class=date></div> 
+                                <div class=description> 
+                                    ' . strip_tags(substr($val->content, 0, 200)) . '...
+                                </div> 
+                                <div align="right">
+                                <a href="'.Yii::$app->urlManager->createUrl('article/'.$val->alias).'" class="read-more btn colored">More Details</a>
+                                </div>
+                            </div> 
                         </div> 
-                        <a href=forms/booking.html class="book-now btn btn-sm colored">Book Now</a><!-- event's Booking button --> 
                     </div> 
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id=event-3> 
-            <div class=event-boxes> 
-                <div class="event-box clearfix">
-                    <div class="event-pic col-xs-4 col-md-3"> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/events/3.jpg alt=Director>
-                    </div> 
-                    <div class="event-right col-xs-8 col-md-9"> 
-                        <div class=name>Music Concert</div>
-                        <div class=date>13 August - 20 August</div>
-                        <div class=description>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur debitis dignissimos eaque, et fugiat id magnam mollitia perspiciatis praesentium quibusdam sint temporibus totam voluptatibus. Aliquid eius numquam sint veritatis voluptatum!</p> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, corporis dolore eos eveniet id ipsa maiores modi molestias odit optio perferendis possimus quasi, quos sunt velit? Autem consequatur enim nostrum?</p> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi, at eius eum incidunt libero maxime minus, nesciunt nostrum officiis omnis quis, quod similique soluta vero. Corporis ea molestias omnis.</p> 
-                        </div> 
-                        <a href=forms/booking.html class="book-now btn btn-sm colored">Book Now</a>
-                    </div>
-                </div> 
-            </div>
-        </div>
-        <div class="tab-pane fade" id=event-4> 
-            <div class=event-boxes> 
-                <div class="event-box clearfix">
-                    <div class="event-pic col-xs-4 col-md-3"> 
-                        <img src=<?= Yii::$app->homeUrl ?>img/events/1.jpg alt=Director>
-                    </div> 
-                    <div class="event-right col-xs-8 col-md-9"> 
-                        <div class=name>Fashion Show</div>
-                        <div class=date>13 August - 20 August</div>
-                        <div class=description>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate distinctio dolorum exercitationem facilis illo, impedit magnam magni nesciunt nisi, nobis porro praesentium quisquam quod rerum velit veniam voluptas voluptatem.</p> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci maxime, voluptatibus. A accusantium aliquid aperiam cum dolore, earum esse hic iusto necessitatibus odit officia porro, repellendus sit suscipit ut voluptatum!</p> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem deserunt dicta illo ipsam libero necessitatibus possimus provident quia? Aut blanditiis doloribus et illum minus molestiae provident quibusdam quidem vel.</p> </div>
-                        <a href=forms/booking.html class="book-now btn btn-sm colored">Book Now</a><!-- event's Booking button --> </div> 
-                </div>
-            </div>
-        </div> 
+                </div>';
+            $no++;
+        }
+        ?>
     </div> 
 </section>

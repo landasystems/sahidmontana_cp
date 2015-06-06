@@ -72,9 +72,9 @@
     <div id=go-up></div>
     <ul class="footer-menu container"> 
         <li><a href="<?= Yii::$app->urlManager->createUrl('home') ?>">Home</a></li> 
-        <li><a href="<?= Yii::$app->urlManager->createUrl('news') ?>">News & Events</a></li> 
-        <li><a href="<?= Yii::$app->urlManager->createUrl('promotion') ?>">Promotion</a></li> 
-        <li><a href="<?= Yii::$app->urlManager->createUrl('room') ?>">Rooms</a></li>
+        <li><a href="<?= Yii::$app->urlManager->createUrl('facility/room') ?>">Room</a></li> 
+        <li><a href="<?= Yii::$app->urlManager->createUrl('facility/restaurant') ?>">Restaurant</a></li> 
+        <li><a href="<?= Yii::$app->urlManager->createUrl('facility/meeting-and-banquest') ?>">Meeting Room</a></li>
         <li><a href="<?= Yii::$app->urlManager->createUrl('gallery') ?>">Gallery</a></li> 
         <li><a href="<?= Yii::$app->urlManager->createUrl('contact') ?>">Contact</a></li>
     </ul> 
