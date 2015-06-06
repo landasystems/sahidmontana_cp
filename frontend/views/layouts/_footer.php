@@ -6,9 +6,9 @@
                 <div class=widget-content>
                     <p> Find us on social media to get more information and update about our service </p>
                     <div class=social-icons> 
-                        <a href=# class=facebook></a>
+                        <a href="https://www.facebook.com/pages/Hotel-Sahid-Montana-Malang/530933503633338" class="facebook" target="_blank"></a>
                         <a href=# class=twitter></a>
-                        <a href=# class=google-plus></a>
+                        <a href="https://plus.google.com/102673330329266448588/about" class=google-plus target="_blank"></a>
                     </div> 
                 </div>
             </div> 
