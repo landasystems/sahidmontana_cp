@@ -117,7 +117,7 @@ use common\models\Article;
 </section> 
 <section id=rooms class=luxury> 
     <h3>
-        <span><b>MEETINGS & BANQUET</b></span>
+        <span><b>MEETINGS </b>& BANQUET</span>
     </h3> 
     <div id=roomLoader class=container>
         <div class=loader></div>
@@ -155,7 +155,7 @@ use common\models\Article;
             <span><b>Other</b> Visitor's Experiences</span></h3> 
         <div id=testimonials-content class=container data-animation=fadeInUp> 
             <div id=testimonials-slider class="owl-carousel owl-theme"> 
-                <div class=item> 
+                <div class=item style="height:200px;"> 
                     <div class=client-pic> 
                         <img src=<?= Yii::$app->homeUrl ?>img/clients/citra.jpg width="100px" height="100px" alt="Paul Bell"> 
                     </div> 
@@ -165,7 +165,7 @@ use common\models\Article;
                     </blockquote>
 
                 </div>
-                <div class=item> 
+                <div class=item style="height:200px;"> 
                     <div class=client-pic> 
                         <img src=<?= Yii::$app->homeUrl ?>img/clients/edi.jpg width="100px" height="100px" alt="Paul Bell"> 
                     </div> 
@@ -173,7 +173,7 @@ use common\models\Article;
                     <blockquote> 
                     Berlibur dengan 4 keluarga besar di Montana saat lebaran tahun ini, merupakan suatu yang luar biasa. Apalagi kami berasal dari berbagai kota dan bertemu di Malang. Sungguh hal yang indah.
                     </blockquote> 
-                </div> <div class=item> 
+                </div> <div class=item style="height:200px;"> 
                     <div class=client-pic> 
                         <img src=<?= Yii::$app->homeUrl ?>img/clients/nur.jpg width="100px" height="100px" alt="Lili Kids"> 
                     </div> <cite>Nur I.</cite> 
@@ -181,7 +181,7 @@ use common\models\Article;
                     Dekat dengan stasiun kereta & bandara abdul rachman saleh,kamar bersih,tapi pintu kamar mandi agak rusak,makanan cukup enak,dekat dengan Batu, harga kamar terjangkau, suasana hotel nyaman.
                     </blockquote> 
                 </div> 
-                <div class=item> 
+                <div class=item style="height:200px;"> 
                     <div class=client-pic> 
                         <img src=<?= Yii::$app->homeUrl ?>img/clients/erwin.jpg width="100px" height="100px" alt="Brad Lopez">
                     </div>
@@ -190,7 +190,7 @@ use common\models\Article;
                     Secara menyeluruh, hotel ini baik.  Kelebihan lain adalah hotel ini sangat artistik pada bagian front office, cafe dengan life musik yang cukup baik.
                     </blockquote> 
                 </div> 
-                <div class=item> 
+                <div class=item style="height:200px;"> 
                     <div class=client-pic> 
                         <img src=<?= Yii::$app->homeUrl ?>img/clients/diddy.jpg  width="100px" height="100px" alt="Ryan Oswald"> 
                     </div> 
@@ -198,7 +198,7 @@ use common\models\Article;
                     <blockquote> 
                     hotel yang tenang , nyaman dan hening sehingga kita bisa lebih relax dan menikmati suasana kota malang yang sejuk dan nyaman untuk menjalankan aktivitas studi.  
                     </blockquote> 
-                </div> <div class=item> 
+                </div> <div class=item style="height:200px;"> 
                     <div class=client-pic> 
                         <img src=<?= Yii::$app->homeUrl ?>img/clients/heru.jpg width="100px" height="100px" alt="John Barry"> 
                     </div> <cite>Heru B</cite> 
@@ -206,7 +206,7 @@ use common\models\Article;
                     Pengalaman menginap di hotel ini rasanya cukup mengesankan, karena sambutan karyawan dan kebersihan serta tata letak ruangan cukup "apik". Dan enak dipandang mata
                     </blockquote> 
                 </div> 
-                <div class=item> 
+                <div class=item style="height:200px;"> 
                     <div class=client-pic> 
                         <img src=<?= Yii::$app->homeUrl ?>img/clients/ririn.jpg width="100px" height="100px"  alt="Kim Boyer"> 
                     </div> <cite>Ririn S</cite> 
@@ -229,7 +229,7 @@ use common\models\Article;
             echo '<li data-animation=flipInY data-animation-delay=.'.$delay.'>
                         <a href=#event-' . $val->id . ' data-toggle=tab> 
                             <span class=number>
-                                <img src="'.$val->imgSmall.'" alt="' . $val->title . '" style="height: 155px;">
+                                <img src="'.$val->imgMedium.'" alt="' . $val->title . '" style="height: 155px;">
                             </span>
                             <span class=title>' . $val->title . '</span>
                         </a> 

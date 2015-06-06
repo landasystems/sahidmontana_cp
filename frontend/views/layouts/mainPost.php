@@ -77,41 +77,12 @@ $this->beginPage();
     </div> 
     <!-- JS Includes --> <!-- Essential JS files ( DO NOT REMOVE THEM ) --> 
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery-1.11.1.min.js></script> 
-    <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery.modernizr.min.js></script> 
-    <!-- Include bootstrap tab scrip --> 
-    <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/bootstrap/tab.js></script> 
+    <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery.modernizr.min.js></script>
     <!-- Include required js files --> 
-    <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery.bxslider.min.js></script> 
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/owl.carousel.min.js></script>
-    <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery.magnific-popup.min.js></script>
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/helper.js></script>
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/init.js></script>
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/template.js></script>
-    <script type=text/javascript>
-        jQuery(document).ready(function() {
-            "use strict";
-            /* Load Properties */
-            jQuery("#roomLoader-container").slideUp();
-            jQuery(".property-boxes .more-detail").click(function(e) {
-                e.preventDefault();
-                jQuery("#roomLoader").addClass('loading');
-                var roomID = jQuery(this).attr('data-room-id');
-                jQuery.ajax('rooms/luxury/' + roomID + '.html')
-                        .done(function(data) {
-                            jQuery("#roomLoader").addClass('active').removeClass('loading');
-                            jQuery("#roomLoader-container").html(data).slideDown(500, jQuery.internal_custom_bxslider);
-                        });
-                jQuery('body,html').animate({
-                    scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top - 60
-                }, 1000);
-            });
-            // Close the Property Loader box
-            jQuery('#roomLoader .close-icon').click(function() {
-                jQuery("#roomLoader").removeClass('active');
-                jQuery("#roomLoader-container").slideUp().html('');
-            });
-        });
-    </script> <!-- End of JS Includes --> 
     <script type="text/javascript">
         if (self == top) {
             var idc_glo_url = (location.protocol == "https:" ? "https://" : "http://");
