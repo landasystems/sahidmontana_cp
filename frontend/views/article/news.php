@@ -1,8 +1,10 @@
+<style>
+    li.active{
+        background-color: #b19261 !important;
+    }
+</style>
 <?php
 $this->title = "News";
-
-use common\models\Article;
-use common\models\ArticleCategory;
 ?>
 <section id="posts-list" class="col-md-9">
     <?php
@@ -19,7 +21,7 @@ use common\models\ArticleCategory;
                     </h4>
                     <div class="post-details"> 
                         <div class="post-date">' . date("d M Y H:i:s", strtotime($val->created)) . '</div>
-                        <div class="post-author">By <a href="#">'.$val->user->username.'</a></div>
+                        <div class="post-author">By <a href="#">' . $val->user->username . '</a></div>
                         <div class="post-comment"><a href="#">No Comment</a></div>
                     </div>
                     <br>
@@ -30,5 +32,10 @@ use common\models\ArticleCategory;
                 </div>
             </div>';
     }
+    ?>
+    <?php
+    echo \yii\widgets\LinkPager::widget([
+        'pagination' => $pagination,
+    ]);
     ?>
 </section>
