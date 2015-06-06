@@ -4,11 +4,11 @@ return [
         'db' => [
             'class' => 'yii\db\Connection',
 //            'dsn' => 'mysql:host=localhost;dbname=landa2_cms',
-            'dsn' => 'mysql:host=localhost;dbname=landa_cms_indomobilecell',
+            'dsn' => 'mysql:host=localhost;dbname=landa_cms_sahidmontana',
             'username' => 'root',
-            'password' => 'landak',
+            'password' => 'bismillah',
             'charset' => 'utf8',
-            'tablePrefix'=>'acca_',
+            'tablePrefix'=>'',
         ],
         'db2' => [
             'class' => 'yii\db\Connection',
