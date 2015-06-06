@@ -141,7 +141,7 @@ use common\models\Article;
                             <div class=description style="color:#000">
                                 ' . substr($val->content, 0, 100) . '...
                             </div> 
-                            <a href=pages/room-detail.html data-room-id=4 class="more-detail btn colored">
+                            <a href="'.Yii::$app->urlManager->createUrl('facility/room').'" data-room-id=4 class="more-detail btn colored">
                                 Details
                             </a>
                         </div>
