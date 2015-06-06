@@ -30,7 +30,7 @@ $this->beginPage();
                             <a href=#>
                                 <br>
                                 <span style="margin-left: -10px;margin-top: -20px" class=five-stars><!-- Star Box ( you can add / remove the Stars by delete or add the "<i class="fa fa-star"></i>") --> 
-                                    <img width="120px" height="40px" src="img/text.png">
+                                    <img width="120px" height="40px" src="<?= Yii::$app->homeUrl ?>img/img/text.png">
                                 </span>
                             </a>
                         </div>
