@@ -26,30 +26,19 @@ class ArticleController extends Controller {
 
     public function actionNews() {
         $this->layout = 'mainPost';
-        $category = ArticleCategory::findAll(['parent_id' => '5']);
-        $idTag = array();
-        foreach ($category as $id) {
-            $idTag[] = $id->id;
-        }
-        $in = implode(",", $idTag);
-        $model = Article::find()->where('article_category_id IN(' . $in . ')')->all();
+        $alias = strtoupper(str_replace("-", " ", $_GET['alias']));
+        $categori = ArticleCategory::findOne(['name' => $alias]);
+//        $model = Article::findAll(['article_category_id' => $categori->id]);
+        $model = Article::find()->where('article_category_id = '.$categori->id)->orderBy('created DESC')->all();
         return $this->render('news', [
                     'model' => $model,
         ]);
     }
 
     public function actionPromotion() {
-        $this->layout = 'mainPost';
+        $this->layout = 'mainSingle';
         $model = Article::findAll(['article_category_id' => 26]);
         return $this->render('promotion', [
-                    'model' => $model,
-        ]);
-    }
-
-    public function actionRoom() {
-        $this->layout = 'mainPost';
-        $model = Article::findAll(['article_category_id' => 27]);
-        return $this->render('room', [
                     'model' => $model,
         ]);
     }
@@ -62,13 +51,8 @@ class ArticleController extends Controller {
         ]);
     }
 
-    public function addHits($model) {
-        $model->hits++;
-        $model->save();
-    }
-
     public function actionSahid() {
-        $this->layout = 'main';
+        $this->layout = 'mainSingle';
         $alias = strtoupper(str_replace("-", " ", $_GET['alias']));
         $categori = ArticleCategory::findOne(['name' => $alias]);
         $model = Article::findAll(['article_category_id' => $categori->id]);
@@ -76,6 +60,22 @@ class ArticleController extends Controller {
                     'model' => $model,
                     'group' => $alias,
         ]);
+    }
+
+    public function actionFacility() {
+        $this->layout = 'mainSingle';
+        $alias = strtoupper(str_replace("-", " ", $_GET['alias']));
+        $categori = ArticleCategory::findOne(['name' => $alias]);
+        $model = Article::findAll(['article_category_id' => $categori->id]);
+        return $this->render('facility', [
+                    'model' => $model,
+                    'group' => $alias,
+        ]);
+    }
+
+    public function addHits($model) {
+        $model->hits++;
+        $model->save();
     }
 
 }
