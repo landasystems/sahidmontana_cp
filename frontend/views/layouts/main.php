@@ -46,7 +46,7 @@ $this->beginPage();
                 <div class=menu-container>
                     <nav id=main-menu> 
                         <?php
-                         $sahid = ArticleCategory::find()->where(['parent_id' => 16])->orderBy('name ASC')->all();
+                        $sahid = ArticleCategory::find()->where(['parent_id' => 16])->orderBy('name ASC')->all();
                         echo $this->render('_menu', ['sahid' => $sahid]);
                         ?>
                     </nav>
@@ -60,7 +60,7 @@ $this->beginPage();
         <?php
         $model = Article::find()->where('article_category_id = 5')->orderBy('created DESC')->limit(3)->all();
         $popular = Article::find()->orderBy('hits DESC')->limit(3)->all();
-        echo $this->render('_footer', ['model' => $model, 'popular' => $popular]);
+        echo $this->render('_footer', ['model' => $model, 'popular' => $popular, 'sahid' => $sahid]);
         ?> 
     </div> 
     <!-- JS Includes --> <!-- Essential JS files ( DO NOT REMOVE THEM ) --> 

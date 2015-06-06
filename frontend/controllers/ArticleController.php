@@ -28,10 +28,10 @@ class ArticleController extends Controller {
         $this->layout = 'mainPost';
         $alias = strtoupper(str_replace("-", " ", $_GET['alias']));
         $categori = ArticleCategory::findOne(['name' => $alias]);
-//        $model = Article::findAll(['article_category_id' => $categori->id]);
         $model = Article::find()->where('article_category_id = '.$categori->id)->orderBy('created DESC')->all();
         return $this->render('news', [
                     'model' => $model,
+                    'alias' => $alias,
         ]);
     }
 

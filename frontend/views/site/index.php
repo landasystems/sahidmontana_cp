@@ -33,36 +33,39 @@ use common\models\Article;
 <section id=main-booking-form> 
     <div id=main-booking-form-container>
         <div class=search-row> 
-            <form class="search-form horizontal container" action=#>
+            <form class="search-form horizontal container" action="http://sahidhotels.com/home/search_hotel" method="post" target="_blank">
+                <input type="hidden" name="hotel_id" value="17">
                 <div class="search-fields col-xs-6 col-md-3"> 
-                    <input placeholder=Check-in class="datepicker-fields check-in" type=text>
+                    <input placeholder="Arrival" class="datepicker-fields check-in" type=text name="arrival_date">
                     <i class="fa fa-calendar"></i>
                 </div>
                 <div class="search-fields col-xs-6 col-md-3"> 
-                    <input placeholder=Check-Out class="datepicker-fields check-out" type=text>
+                    <input placeholder="Departure" class="datepicker-fields check-out" type=text name="depart_date">
                     <i class="fa fa-calendar"></i> 
                 </div>
-                <div class="search-fields col-xs-6 col-md-3">
-                    <select name=room-type id=search-field2> 
-                        <option value>Room Type</option>
-                        <option value=1>Single Room</option> 
-                        <option value=2>Double Room</option> 
-                        <option value=3>Deluxe One-bedroom Suite</option> 
-                        <option value=4>Deluxe Two-bedroom Suite</option>
-                        <option value=5>Royal Suite</option> 
-                        <option value=6>King Suite</option> 
+                <div class="search-fields col-xs-6 col-md-2">
+                    <select id=search-field2 name="room"> 
+                        <option value>Room</option>
+                        <option value=1>1</option> 
+                        <option value=2>2</option> 
+                        <option value=3>3</option> 
                     </select>
                 </div> 
-                <div class="search-fields col-xs-6 col-md-3"> 
-                    <select name=guest id=search-field3> 
-                        <option value=1>Guests</option>
-                        <option value=2>1</option> 
-                        <option value=3>2</option>
-                        <option value=4>3</option> 
-                        <option value=5>4</option> 
-                        <option value=6>5</option> 
-                        <option value=7>+6</option> 
-                    </select> </div> 
+                <div class="search-fields col-xs-6 col-md-2"> 
+                    <select id=search-field3 name="adult"> 
+                        <option value>Adult</option>
+                        <option value=1>1</option> 
+                        <option value=2>2</option>
+                    </select> 
+                </div> 
+                <div class="search-fields col-xs-6 col-md-2"> 
+                    <select id=search-field3 name="child"> 
+                        <option value>Child</option>
+                        <option value=0>0</option> 
+                        <option value=1>1</option> 
+                        <option value=2>2</option>
+                    </select> 
+                </div>
                 <div class=search-button-container> 
                     <input value="Book Now" type=submit>
                 </div> 

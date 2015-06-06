@@ -52,19 +52,17 @@
             </div>
         </div> 
         <div class="widget col-md-3">
-            <h4>Newsletter Subscribe</h4>
+            <h4>Sahid Group</h4>
             <div class="content-box row"> 
                 <div class=widget-content>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, at reiciendis officiis. </p> 
-                    <form class="sign-up-form clearfix" action=#> 
-                        <div class=fields> 
-                            <input placeholder=Email type=email>
-                        </div> 
-                        <div class=button-container>
-                            <input class="btn colored" value="Sign Up Now" type=submit></div> 
-                    </form> 
+                    <?php
+                    foreach ($sahid as $val) {
+                        $alias = strtolower(str_replace(" ", "-", $val->name));
+                        echo '<a href="' . Yii::$app->urlManager->createUrl('sahid/' . $alias) . '" class="tags btn colored" style="margin: 2px;">' . ucwords(strtolower($val->name)) . '</a>';
+                    }
+                    ?>
                 </div> 
-            </div> 
+            </div>  
         </div>
     </div> 
 </footer> 
@@ -78,5 +76,5 @@
         <li><a href="<?= Yii::$app->urlManager->createUrl('gallery') ?>">Gallery</a></li> 
         <li><a href="<?= Yii::$app->urlManager->createUrl('contact') ?>">Contact</a></li>
     </ul> 
-    <div class=copyright> &copy; <?php echo date("Y");?> Sahid Montana. All Rights Reserved. </div> 
+    <div class=copyright> &copy; <?php echo date("Y"); ?> Sahid Montana. All Rights Reserved. </div> 
 </footer>

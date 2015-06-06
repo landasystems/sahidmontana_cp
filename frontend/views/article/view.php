@@ -1,6 +1,14 @@
 <?php
 $this->title = $model->title;
 ?>
+<section id="internal-title" class="container" data-background="parallax" style="background-attachment: fixed; background-position: 50% 12px;"> 
+    <h1><?= $this->title;?></h1>
+    <ol class="breadcrumb">
+        <li><a href="<?= Yii::$app->urlManager->createUrl('home'); ?>">Home</a></li> 
+        <li class="active"><?php echo $this->title; ?></li> 
+    </ol> 
+</section>
+<div id="post-pages" class="container padding-bottom">
 <section id="single-post" class="col-md-9">
     <div class="post-boxes"> 
         <a href="#">

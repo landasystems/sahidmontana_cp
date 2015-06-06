@@ -55,15 +55,6 @@ $this->beginPage();
                 </div> 
             </div>
         </header>
-        <section id="internal-title" class="container" data-background="parallax" style="background-attachment: fixed; background-position: 50% 12px;"> 
-            <h1><?php echo $this->title ?></h1>
-            <ol class="breadcrumb">
-                <li><a href="../index.html">Home</a></li> 
-                <li><a href="#">Blog</a></li> 
-                <li class="active">Single Post</li> 
-            </ol> 
-        </section>
-        <div id="post-pages" class="container padding-bottom"> 
             <?= $content ?>
             <aside class="col-md-3">
                 <div class="side-boxes"> 
@@ -81,7 +72,7 @@ $this->beginPage();
         <?php
         $model = Article::find()->where('article_category_id = 5')->orderBy('created DESC')->limit(3)->all();
         $popular = Article::find()->orderBy('hits DESC')->limit(3)->all();
-        echo $this->render('_footer', ['model' => $model, 'popular' => $popular]);
+        echo $this->render('_footer', ['model' => $model, 'popular' => $popular, 'sahid' => $sahid]);
         ?> 
     </div> 
     <!-- JS Includes --> <!-- Essential JS files ( DO NOT REMOVE THEM ) --> 
