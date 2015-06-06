@@ -4,6 +4,14 @@ $this->title = ucwords(strtolower($group));
 use common\models\Article;
 use common\models\ArticleCategory;
 ?>
+<section id="internal-title" class="container" data-background="parallax" style="background-attachment: fixed; background-position: 50% 12px;"> 
+    <h1><?php echo $this->title; ?></h1>
+    <ol class="breadcrumb">
+        <li><a href="<?= Yii::$app->urlManager->createUrl('home'); ?>">Home</a></li> 
+        <li><a href="#">Facility</a></li> 
+        <li class="active"><?= $this->title; ?></li> 
+    </ol> 
+</section>
 <section id=agents-boxes class=padding-bottom>
     <h3><span><b><?php echo $this->title; ?></b></span></h3> 
     <div class=container>
@@ -18,7 +26,7 @@ use common\models\ArticleCategory;
                                 <div class=name>' . $val->title . '</div> 
 
                                 <div class=description> 
-                                    ' . $val->content. '
+                                    ' . $val->content . '
                                 </div> 
                             </div>
 

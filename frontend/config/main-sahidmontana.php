@@ -16,6 +16,7 @@ $config = [
                 'home' => 'site/index',
                 'promotion' => 'article/promotion',
                 'gallery' => 'article/gallery',
+                'gallery/<page>' => 'article/gallery',
                 'facility/<alias>' => 'article/facility',
                 'sahid/<alias>' => 'article/sahid',
                 'contact-us' => 'site/contact',
@@ -27,7 +28,7 @@ $config = [
             ]
         ],
     ],
-    'params' => ['urlImg'=>'http://192.168.1.103/landa/sahidmontana_cp/backend/www/sahidmontana/images'],
+    'params' => ['urlImg'=>'http://localhost/landa/sahidmontana_cp/backend/www/sahidmontana/images'],
 ];
 
 if (!YII_ENV_TEST) {

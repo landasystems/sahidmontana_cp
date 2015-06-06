@@ -38,7 +38,8 @@ class ArticleController extends Controller {
         $model = $query->offset($pagination->offset)->limit($pagination->limit)->all();
         return $this->render('news', [
                     'model' => $model,
-                    'pagination' => $pagination
+                    'alias' => $alias,
+                    'pagination' => $pagination,
         ]);
     }
 

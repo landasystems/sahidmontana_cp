@@ -1,6 +1,13 @@
 <?php
 $this->title = "Contact Us";
 ?>
+<section id="internal-title" class="container" data-background="parallax" style="background-attachment: fixed; background-position: 50% 12px;"> 
+    <h1><?php echo $this->title; ?></h1>
+    <ol class="breadcrumb">
+        <li><a href="<?= Yii::$app->urlManager->createUrl('home'); ?>">Home</a></li> 
+        <li class="active"><?= $this->title; ?></li> 
+    </ol> 
+</section>
 <section id=contact-page class=container> 
     <h3>
         <span><b>Contact</b> Information</span>

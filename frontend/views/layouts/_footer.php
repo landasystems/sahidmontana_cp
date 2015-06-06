@@ -6,9 +6,9 @@
                 <div class=widget-content>
                     <p> Find us on social media to get more information and update about our service </p>
                     <div class=social-icons> 
-                        <a href=# class=facebook></a>
+                        <a href="https://www.facebook.com/pages/Hotel-Sahid-Montana-Malang/530933503633338" class="facebook" target="_blank"></a>
                         <a href=# class=twitter></a>
-                        <a href=# class=google-plus></a>
+                        <a href="https://plus.google.com/102673330329266448588/about" class=google-plus target="_blank"></a>
                     </div> 
                 </div>
             </div> 
@@ -52,19 +52,17 @@
             </div>
         </div> 
         <div class="widget col-md-3">
-            <h4>Newsletter Subscribe</h4>
+            <h4>Sahid Group</h4>
             <div class="content-box row"> 
                 <div class=widget-content>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, at reiciendis officiis. </p> 
-                    <form class="sign-up-form clearfix" action=#> 
-                        <div class=fields> 
-                            <input placeholder=Email type=email>
-                        </div> 
-                        <div class=button-container>
-                            <input class="btn colored" value="Sign Up Now" type=submit></div> 
-                    </form> 
+                    <?php
+                    foreach ($sahid as $val) {
+                        $alias = strtolower(str_replace(" ", "-", $val->name));
+                        echo '<a href="' . Yii::$app->urlManager->createUrl('sahid/' . $alias) . '" class="tags btn colored" style="margin: 2px;">' . ucwords(strtolower($val->name)) . '</a>';
+                    }
+                    ?>
                 </div> 
-            </div> 
+            </div>  
         </div>
     </div> 
 </footer> 
@@ -78,5 +76,5 @@
         <li><a href="<?= Yii::$app->urlManager->createUrl('gallery') ?>">Gallery</a></li> 
         <li><a href="<?= Yii::$app->urlManager->createUrl('contact') ?>">Contact</a></li>
     </ul> 
-    <div class=copyright> &copy; <?php echo date("Y");?> Sahid Montana. All Rights Reserved. </div> 
+    <div class=copyright> &copy; <?php echo date("Y"); ?> Sahid Montana. All Rights Reserved. </div> 
 </footer>
