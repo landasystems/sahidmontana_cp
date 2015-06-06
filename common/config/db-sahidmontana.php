@@ -4,7 +4,7 @@ return [
         'db' => [
             'class' => 'yii\db\Connection',
 //            'dsn' => 'mysql:host=localhost;dbname=landa2_cms',
-            'dsn' => 'mysql:host=localhost;dbname=landa_cms_indomobilecell',
+            'dsn' => 'mysql:host=localhost;dbname=landa_cms_sahidmontana',
             'username' => 'root',
             'password' => 'landak',
             'charset' => 'utf8',
