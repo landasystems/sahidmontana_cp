@@ -8,6 +8,7 @@ use common\models\ArticleCategory;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\data\Pagination;
 
 class ArticleController extends Controller {
 
@@ -28,7 +29,13 @@ class ArticleController extends Controller {
         $this->layout = 'mainPost';
         $alias = strtoupper(str_replace("-", " ", $_GET['alias']));
         $categori = ArticleCategory::findOne(['name' => $alias]);
-        $model = Article::find()->where('article_category_id = '.$categori->id)->orderBy('created DESC')->all();
+//        $model = Article::findAll(['article_category_id' => $categori->id]);
+        $query = Article::find()->where('article_category_id = ' . $categori->id)->orderBy('created DESC');
+        $pagination = new Pagination([
+            'defaultPageSize' => 7,
+            'totalCount' => $query->count(),
+        ]);
+        $model = $query->offset($pagination->offset)->limit($pagination->limit)->all();
         return $this->render('news', [
                     'model' => $model,
                     'alias' => $alias,

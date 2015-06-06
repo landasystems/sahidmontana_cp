@@ -1,3 +1,8 @@
+<style>
+    li.active{
+        background-color: #b19261 !important;
+    }
+</style>
 <?php
 $this->title = ucwords(strtolower($alias));
 
@@ -37,6 +42,11 @@ use common\models\ArticleCategory;
                     <a class="read-more btn colored" href="' . Yii::$app->urlManager->createUrl('article/' . $val->alias) . '">Read More</a>
                 </div>
             </div>';
-        }
-        ?>
-    </section>
+    }
+    ?>
+    <?php
+    echo \yii\widgets\LinkPager::widget([
+        'pagination' => $pagination,
+    ]);
+    ?>
+</section>
