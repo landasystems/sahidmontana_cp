@@ -1,8 +1,4 @@
-<style>
-    li.active{
-        background-color: #b19261 !important;
-    }
-</style>
+
 <?php
 $this->title = ucwords(strtolower($alias));
 
@@ -16,6 +12,11 @@ use common\models\ArticleCategory;
         <li class="active"><?php echo $this->title; ?></li> 
     </ol> 
 </section>
+<style>
+/*    li.active{
+        background-color: #b19261 !important;
+    }*/
+</style>
 <div id="post-pages" class="container padding-bottom"> 
     <section id="posts-list" class="col-md-9">
         <?php
