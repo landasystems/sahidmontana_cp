@@ -26,12 +26,9 @@ $this->beginPage();
             <div id=main-header-top> 
                 <div position="center" class="main-header-top-container container">
                     <center> 
-                        <div id=top-logo data-logo-letter=>
-                            <a href=#>
+                        <div id="top-logo" data-logo-letter=>
+                            <a href="#" id="changed" class="atas">
                                 <br>
-                                <span style="margin-left: -10px;margin-top: -20px" class=five-stars><!-- Star Box ( you can add / remove the Stars by delete or add the "<i class="fa fa-star"></i>") --> 
-                                    <img width="120px" height="40px" src="<?= Yii::$app->homeUrl ?>img/text.png">
-                                </span>
                             </a>
                         </div>
                     </center> 
