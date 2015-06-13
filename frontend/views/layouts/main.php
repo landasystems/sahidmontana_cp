@@ -21,6 +21,20 @@ $this->beginPage();
         <link type="text/css" rel='stylesheet' href="<?= Yii::$app->homeUrl ?>css/styles.css">
     </head>
     <body>
+        <div class=main-wrapper>
+            <div id=main-header-top> 
+                <div position="center" class="main-header-top-container container">
+                    <center> 
+                        <div id="top-logo" data-logo-letter=>
+                            <a href="#" id="changed" class="atas">
+                                <br>
+                            </a>
+                        </div>
+                    </center> 
+                </div>
+            </div>
+        </div>
+
         <header id=main-header>
             <div class="header-content container"> 
                 <div class=menu-container>
