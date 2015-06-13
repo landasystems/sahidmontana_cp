@@ -95,5 +95,9 @@ class Article extends \yii\db\ActiveRecord {
     public function getUser() {
         return $this->hasOne(User::className(), ['id' => 'created_user_id']);
     }
+    
+    public function getCategory() {
+        return $this->hasOne(ArticleCategory::className(), ['id' => 'article_category_id']);
+    }
 
 }

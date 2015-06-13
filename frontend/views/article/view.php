@@ -1,7 +1,7 @@
 <?php
 $this->title = $model->title;
 ?>
-<section id="internal-title" class="container" data-background="parallax" style="background-attachment: fixed; background-position: 50% 12px;"> 
+<section id="internal-title" class="container" data-background="parallax" style="background-attachment: fixed; background-position: 50% 12px;">
     <h1><?= $this->title; ?></h1>
     <ol class="breadcrumb">
         <li><a href="<?= Yii::$app->urlManager->createUrl('home'); ?>">Home</a></li> 
@@ -9,17 +9,18 @@ $this->title = $model->title;
     </ol> 
 </section>
 <div id="post-pages" class="container padding-bottom">
-    <section id="single-post" class="col-md-9">
+    <section id="single-post" class="col-md-12">
         <div class="post-boxes" style="border-bottom: none;"> 
-            <a href="#">
-                <img src="<?php echo $model->imgBig; ?>" alt="<?php echo $model->title ?>" class="post-img">
-            </a>
+
             <div class="post-details"> 
                 <div class="post-date"><?php echo date("d M Y", strtotime($model->created)); ?></div>
                 <div class="post-author">By <a href="#"><?php echo $model->user->username ?></a></div>
             </div> 
             <h4 class="post-title"><a href="#"><?php echo $model->title; ?></a></h4>
-            <div class="post-short-desc"> 
+            <div class="post-short-desc" style="text-align: justify">
+                <a href="#">
+                    <img src="<?php echo $model->imgBig; ?>" alt="<?php echo $model->title ?>" class="alignleft size-full" style="max-width: 400px;">
+                </a>
                 <?php
                 echo $model->content;
                 ?>    
@@ -73,3 +74,4 @@ $this->title = $model->title;
 
             </div>
     </section>
+</div>

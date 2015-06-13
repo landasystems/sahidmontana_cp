@@ -31,7 +31,7 @@ jQuery(document).ready(function() {
         var a = jQuery("body").css("direction");
         var b = ("rtl" == a) ? "left" : "right";
         jQuery("#main-menu-handle").click(function() {
-            jQuery(this).hasClass("active") ? (jQuery(this).removeClass("active"), jQuery("#main-menu").css(b, "-180px")) : (jQuery(this).addClass("active"), jQuery("#main-menu").css(b, "0"))
+            jQuery(this).hasClass("active") ? (jQuery(this).removeClass("active"), jQuery("#main-menu").css(b, "-180px"),jQuery("#main-header .header-content #main-menu .main-menu li a").css("color","white")) : (jQuery(this).addClass("active"), jQuery("#main-menu").css(b, "0"), jQuery("#main-header .header-content #main-menu .main-menu li a").addClass("samping"))
         })
     }, jQuery.chosen_drop_down = function() {
         jQuery('.chosen-container:not(#event-booking-form .chosen-container)').each(function() {
@@ -41,10 +41,12 @@ jQuery(document).ready(function() {
     }, jQuery.run_chosen(), jQuery.smoothLoad(), jQuery.parallax_func(), jQuery.mobile_menu_active(), 992 >= win_width && jQuery.mobile_menu_height(), jQuery(document).ajaxComplete(function() {
         jQuery.run_chosen();
     })
-}), jQuery(window).scroll(function() {
+}),
+        jQuery(window).scroll(function() {
     "use strict";
     jQuery(document).scrollTop() > 122 && (jQuery("#main-header, #main-header-top").addClass("sticky"), 992 >= win_width && jQuery.mobile_menu_height()), jQuery(document).scrollTop() < 72 && (jQuery("#main-header, #main-header-top").removeClass("sticky"), 992 >= win_width && jQuery.mobile_menu_height()), jQuery.parallax_func(), jQuery.chosen_drop_down()
-}), jQuery(window).resize(function() {
+}),
+        jQuery(window).resize(function() {
     "use strict";
     window_width = jQuery(window).width(), 992 >= window_width && jQuery.mobile_menu_height()
 }), jQuery(window).load(function() {
