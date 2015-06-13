@@ -23,7 +23,7 @@ use common\models\ArticleCategory;
             echo '<div class="post-boxes row"> 
               <div class="col-lg-4">
                     <a href="' . Yii::$app->urlManager->createUrl('article/' . $val->alias) . '">
-                        <img src="' . $val->imgMedium . '" alt="' . $val->title . '" class="post-img">
+                        <img src="' . $val->imgMedium . '" alt="' . $val->title . '" class="img-polaroid" style="width:350px; height:350px;">
                     </a>
                </div>
                <div class="col-lg-8">

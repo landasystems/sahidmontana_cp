@@ -21,12 +21,12 @@ use common\models\ArticleCategory;
             echo '<div class="agent-boxes expand" data-animation=fadeInUp>
                         <div class="agent-box clearfix"> 
                             <div class="agent-pic col-xs-5 col-md-4"> 
-                                <img src="' . $val->imgMedium . '" alt="' . $val->title . '" style="max-width: 300px; margin-top:15px;"> 
+                                <img src="' . $val->imgMedium . '" alt="' . $val->title . '" style="width: 350px; margin-top:15px;"> 
                             </div> 
                             <div class="agent-details col-xs-7 col-md-8"> 
                                 <div class=name>' . $val->title . '</div> 
 
-                                <div class=description> 
+                                <div class=description align="justify"> 
                                     ' . $val->content . '
                                 </div> 
                             </div>
