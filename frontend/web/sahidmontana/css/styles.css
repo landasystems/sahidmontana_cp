@@ -904,9 +904,9 @@ nav#main-menu{
     float: left;
     background-color: white;
     height: 110px;
-   border-right: solid 5px #645E50;
-border-left: solid 5px #645E50;
-border-bottom: solid 5px #645E50;
+   border-right: solid 3px #645E50;
+border-left: solid 3px #645E50;
+border-bottom: solid 3px #645E50;
 }
 
 .main-logo img{
