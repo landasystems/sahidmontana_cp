@@ -13,7 +13,7 @@ $this->beginPage();
 <html> 
     <head>
         <meta charset=utf-8>
-        <title>Sahid Montana | <?= Html::encode($this->title) ?></title>
+        <title><?= Html::encode($this->title) ?> | Sahid Montana</title>
         <meta name=description content="Sahid Montana Hotel">
         <meta name=keywords content=Responsive,HTML5,CSS3,XML,JavaScript>
         <meta name=author content="Joseph a, ravistheme@gmail.com"><!-- End of Meta tags -->
