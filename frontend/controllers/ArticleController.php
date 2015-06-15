@@ -29,10 +29,10 @@ class ArticleController extends Controller {
         $this->layout = 'mainSingle';
         $alias = strtoupper(str_replace("-", " ", $_GET['alias']));
         if ($alias == "NEWS AND EVENT") {
-            $query = Article::find()->where('article_category_id = 32 or article_category_id = 5')->orderBy('created DESC');
+            $query = Article::find()->where('article_category_id = 32 or article_category_id = 5 and publish = 1')->orderBy('created DESC');
         } else {
             $categori = ArticleCategory::findOne(['name' => $alias]);
-            $query = Article::find()->where('article_category_id = ' . $categori->id)->orderBy('created DESC');
+            $query = Article::find()->where('article_category_id = ' . $categori->id.' and publish = 1')->orderBy('created DESC');
         }
         $pagination = new Pagination([
             'defaultPageSize' => 7,
@@ -48,7 +48,7 @@ class ArticleController extends Controller {
 
     public function actionPromotion() {
         $this->layout = 'mainSingle';
-        $model = Article::findAll(['article_category_id' => 26]);
+        $model = Article::findAll(['article_category_id' => 26, 'publish' => 1]);
         return $this->render('promotion', [
                     'model' => $model,
         ]);
@@ -64,7 +64,7 @@ class ArticleController extends Controller {
         $this->layout = 'mainSingle';
         $alias = strtoupper(str_replace("-", " ", $_GET['alias']));
         $categori = ArticleCategory::findOne(['name' => $alias]);
-        $model = Article::findAll(['article_category_id' => $categori->id]);
+        $model = Article::findAll(['article_category_id' => $categori->id, 'publish' => 1]);
         return $this->render('sahid', [
                     'model' => $model,
                     'group' => $alias,
@@ -75,7 +75,7 @@ class ArticleController extends Controller {
         $this->layout = 'mainPost';
         $alias = strtoupper(str_replace("-", " ", $_GET['alias']));
         $categori = ArticleCategory::findOne(['name' => $alias]);
-        $model = Article::findAll(['article_category_id' => $categori->id]);
+        $model = Article::findAll(['article_category_id' => $categori->id, 'publish' => 1]);
         return $this->render('facility', [
                     'model' => $model,
                     'group' => $alias,
