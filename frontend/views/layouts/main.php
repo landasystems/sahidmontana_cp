@@ -20,7 +20,7 @@ $this->beginPage();
         <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700%7cDroid+Serif:400,700,400italic,700italic%7cYellowtail%7cGreat+Vibes" rel=stylesheet type=text/css>
         <link type="text/css" rel='stylesheet' href="<?= Yii::$app->homeUrl ?>css/styles.css">
     </head>
-    <body>
+    <body class="pattern-2">
         <header id=main-header>
             <div class="header-content container"> 
                 <div class=menu-container>
@@ -41,9 +41,7 @@ $this->beginPage();
         </header>
             <?= $content ?>
         <?php
-        $model = Article::find()->where('article_category_id = 5')->orderBy('created DESC')->limit(3)->all();
-        $popular = Article::find()->orderBy('hits DESC')->limit(3)->all();
-        echo $this->render('_footer', ['model' => $model, 'popular' => $popular, 'sahid' => $sahid]);
+        echo $this->render('_footer');
         ?> 
     </div> 
     <!-- JS Includes --> <!-- Essential JS files ( DO NOT REMOVE THEM ) --> 
