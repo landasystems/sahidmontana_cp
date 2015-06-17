@@ -14,9 +14,9 @@ $this->beginPage();
     <head>
         <meta charset=utf-8>
         <title><?= Html::encode($this->title) ?> | Sahid Montana</title>
-        <meta name=description content="Sahid Montana Hotel">
-        <meta name=keywords content=Responsive,HTML5,CSS3,XML,JavaScript>
-        <meta name=author content="Joseph a, ravistheme@gmail.com"><!-- End of Meta tags -->
+         <meta name=description content="Sahid Montana Hotel">
+        <meta name=keywords content="Hotel Sahid Montana Malang">
+        <meta name=author content="Wahyu Agung T., agung@landa.co.id">
         <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700%7cDroid+Serif:400,700,400italic,700italic%7cYellowtail%7cGreat+Vibes" rel=stylesheet type=text/css>
         <link type="text/css" rel='stylesheet' href="<?= Yii::$app->homeUrl ?>css/styles.css">
     </head>
