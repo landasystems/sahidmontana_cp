@@ -28,7 +28,7 @@ $config = [
             ]
         ],
     ],
-    'params' => ['urlImg'=>'http://localhost/landa/sahidmontana_cp/backend/www/sahidmontana/images'],
+    'params' => ['urlImg'=>'http://localhost/cms/sahidmontana_cp/backend/www/sahidmontana/images'],
 ];
 
 if (!YII_ENV_TEST) {
