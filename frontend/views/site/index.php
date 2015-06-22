@@ -7,24 +7,27 @@ use common\models\Article;
     <ul class=bxslider> 
         <li> 
             <div class=items> 
-                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/2.jpg" alt=2> 
+                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Slider_1.jpg" alt=2> 
                 <div class=caption-box>
-                    <h4> Be <b>Happy</b> in Our Luxury Rooms</h4> 
+                    <h4> <b>Relax</b> in Comfortable Environment</h4> 
                 </div> 
             </div>
         </li> 
         <li> 
             <div class=items> 
-                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/3.jpg" alt=3> 
-                <div class=caption-box><h4> <b>Enjoy</b> the Sea &amp; Sky
-                    </h4>
+                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Slider_2.jpg" alt=3> 
+               
+                <div class=caption-box>
+                    <h4> Be <b>Happy</b> in Our Luxury Rooms</h4> 
+<!--                    <h4> <b>Enjoy</b> the Sea &amp; Sky
+                    </h4>-->
                 </div> 
             </div>
         </li> 
         <li> <div class=items> 
-                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/4.jpg" alt=4> 
+                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Slider_3.jpg" alt=4> 
                 <div class=caption-box>
-                    <h4> <b>Relax</b> in Comfortable Environment</h4> 
+                    <h4> Choose your <b>travel partner</b> wisely</h4> 
                 </div> 
             </div>
         </li>

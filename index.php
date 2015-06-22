@@ -12,13 +12,23 @@
                 background-color: #f1e9da;
                 background-image: url("img/left.png"), url("img/right.png");
                 background-repeat: no-repeat;
-                background-position: left bottom , right bottom;
+                background-position: left bottom,right bottom;
                 margin: 0px;
                 margin-bottom: 0px;
             }
         </style>
     </head>
     <body>
-    <center><a href="sahid/"><img src="img/back.png"></a></center>
+    <center>
+      <div >
+         
+  <img src="img/sahid1.png">
+  <img src="img/sahid2.png">
+            
+            
+        </div>
+        <!--<img src="img/back.png">-->
+    
+    </center>
 </body>
 </html>
