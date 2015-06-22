@@ -20,14 +20,12 @@
     </head>
     <body>
     <center>
-      <div >
-         
-  <img src="img/sahid1.png">
-  <img src="img/sahid2.png">
-            
-            
-        </div>
-        <!--<img src="img/back.png">-->
+     
+        <a href="sahid/"><img src="img/SahidMontana1.png" style="position:absolute; margin-left: 205px;"></a>
+          
+        <a href="sahid2/"><img src="img/SahidMontana2.png" style="position:absolute; margin-left: 550px;"></a>
+        
+        <img src="img/back.png">
     
     </center>
 </body>
