@@ -6,16 +6,16 @@ use common\models\Article;
 <section id=slider>
     <ul class=bxslider> 
         <li> 
-            <div class=items> 
-                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Slider_1.jpg" alt=2> 
+            <div class=items style='width:1920px; height:400px;'> 
+                <img src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Sliders_1.jpg" alt=2> 
                 <div class=caption-box>
                     <h4> <b>Relax</b> in Comfortable Environment</h4> 
                 </div> 
             </div>
         </li> 
         <li> 
-            <div class=items> 
-                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Slider_2.jpg" alt=3> 
+          <div class=items style='width:1920px; height:400px;'> 
+                <img src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Sliders_2.jpg" alt=3> 
                
                 <div class=caption-box>
                     <h4> Be <b>Happy</b> in Our Luxury Rooms</h4> 
@@ -24,8 +24,9 @@ use common\models\Article;
                 </div> 
             </div>
         </li> 
-        <li> <div class=items> 
-                <img width="1920px" height="400px" src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Slider_3.jpg" alt=4> 
+        <li> 
+            <div class=items style='width:1920px; height:400px;'> 
+                <img src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Sliders_3.jpg" alt=4> 
                 <div class=caption-box>
                     <h4> Choose your <b>travel partner</b> wisely</h4> 
                 </div> 
@@ -82,10 +83,10 @@ use common\models\Article;
             <b>Welcome</b> to Sahid Montana Hotel</span>
     </h3>
     <div class=container> 
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-4 col-xs-12">
             <center><img style="max-width: 300px;" src="<?= Yii::$app->homeUrl ?>img/topeng.png"></center>
         </div> 
-        <div class="service-boxes welcome-text col-md-6 col-xs-12" data-animation=fadeInUp style="color: #000;">
+        <div class="service-boxes welcome-text col-md-8 col-xs-12" data-animation=fadeInUp style="color: #000;">
             <?php
             $welcome = Article::find()->where(['id' => '54'])->one();
             echo $welcome->content;

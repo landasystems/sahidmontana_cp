@@ -25,7 +25,7 @@ $this->beginPage();
             <div class="header-content container"> 
                 <div class=menu-container>
                     <div class="main-logo">
-                        <img style="max-width: 130px;" src="<?= Yii::$app->homeUrl ?>img/logo.png">
+                        <img style="max-width: 230px;" src="<?= Yii::$app->homeUrl ?>img/logo.png">
                     </div>
                     <nav id=main-menu> 
                         <?php

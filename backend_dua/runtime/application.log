@@ -1,0 +1,1277 @@
+2015/05/31 08:21:02 [error] [php] include(LoginForm.php): failed to open stream: No such file or directory (/var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:427)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(78): spl_autoload_call()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): SiteController->runAction()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): SiteController->run()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+in /var/www/cms/tamanharapan/backend/controllers/SiteController.php (78)
+in /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php (16)
+2015/05/31 08:21:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php:483
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(270): CController->missingAction('images')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('images')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('site/images/fav...')
+#3 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/site/images/favicon.ico
+---
+2015/05/31 08:21:42 [error] [exception.CException] exception 'CException' with message 'UserIdentity and its behaviors do not have a method or closure named "authenticateMember".' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:266
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/models/LoginForm.php(54): CComponent->__call('authenticateMem...', Array)
+#1 /var/www/cms/tamanharapan/backend/models/LoginForm.php(54): UserIdentity->authenticateMember()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/validators/CInlineValidator.php(42): LoginForm->authenticateMember('password', Array)
+#3 /var/www/cms/tamanharapan/backend/lib/yii/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 /var/www/cms/tamanharapan/backend/lib/yii/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(90): CModel->validate()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('login')
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#17 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#19 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+---
+2015/05/31 08:22:01 [error] [exception.CException] exception 'CException' with message 'UserIdentity and its behaviors do not have a method or closure named "authenticateMember".' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:266
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/models/LoginForm.php(54): CComponent->__call('authenticateMem...', Array)
+#1 /var/www/cms/tamanharapan/backend/models/LoginForm.php(54): UserIdentity->authenticateMember()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/validators/CInlineValidator.php(42): LoginForm->authenticateMember('password', Array)
+#3 /var/www/cms/tamanharapan/backend/lib/yii/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 /var/www/cms/tamanharapan/backend/lib/yii/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(90): CModel->validate()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('login')
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#17 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#19 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+---
+2015/05/31 08:25:12 [error] [exception.CException] exception 'CException' with message 'UserIdentity and its behaviors do not have a method or closure named "authenticateMember".' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:266
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/models/LoginForm.php(54): CComponent->__call('authenticateMem...', Array)
+#1 /var/www/cms/tamanharapan/backend/models/LoginForm.php(54): UserIdentity->authenticateMember()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/validators/CInlineValidator.php(42): LoginForm->authenticateMember('password', Array)
+#3 /var/www/cms/tamanharapan/backend/lib/yii/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 /var/www/cms/tamanharapan/backend/lib/yii/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(90): CModel->validate()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('login')
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#17 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#19 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+---
+2015/05/31 08:26:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'landa_cms_tamanharapan.acca_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `acca_user`.
+in /var/www/cms/tamanharapan/backend/components/UserIdentity.php (13)
+in /var/www/cms/tamanharapan/backend/models/LoginForm.php (57)
+in /var/www/cms/tamanharapan/backend/controllers/SiteController.php (90)
+2015/05/31 08:26:12 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{user}}" for active record class "User" cannot be found in the database.' in /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
+#1 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#4 /var/www/cms/tamanharapan/backend/components/UserIdentity.php(13): CActiveRecord->find(Array)
+#5 /var/www/cms/tamanharapan/backend/models/LoginForm.php(57): UserIdentity->authenticate()
+#6 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(90): LoginForm->login()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('login')
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#18 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#20 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+---
+2015/05/31 08:27:06 [error] [exception.CException] exception 'CException' with message 'Property "User.code" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:130
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(145): CComponent->__get('code')
+#1 /var/www/cms/tamanharapan/backend/components/UserIdentity.php(26): CActiveRecord->__get('code')
+#2 /var/www/cms/tamanharapan/backend/models/LoginForm.php(57): UserIdentity->authenticate()
+#3 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(90): LoginForm->login()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('login')
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#17 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+---
+2015/05/31 08:27:43 [error] [exception.CException] exception 'CException' with message 'Property "User.code" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:130
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(145): CComponent->__get('code')
+#1 /var/www/cms/tamanharapan/backend/components/UserIdentity.php(26): CActiveRecord->__get('code')
+#2 /var/www/cms/tamanharapan/backend/models/LoginForm.php(57): UserIdentity->authenticate()
+#3 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(90): LoginForm->login()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('login')
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#17 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+---
+2015/05/31 08:28:15 [error] [php] include(UserLog.php): failed to open stream: No such file or directory (/var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:427)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(97): spl_autoload_call()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): SiteController->runAction()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): SiteController->run()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+in /var/www/cms/tamanharapan/backend/controllers/SiteController.php (97)
+in /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php (16)
+2015/05/31 08:28:51 [error] [php] include(SiteConfig.php): failed to open stream: No such file or directory (/var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:427)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/views/site/index.php(4): spl_autoload_call()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require()
+#2 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): SiteController->renderInternal()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): SiteController->renderPartial()
+#6 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(42): SiteController->render()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): SiteController->runAction()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): SiteController->runActionWithFilters()
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): SiteController->run()
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/
+in /var/www/cms/tamanharapan/backend/views/site/index.php (4)
+in /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php (40)
+in /var/www/cms/tamanharapan/backend/controllers/SiteController.php (42)
+2015/05/31 08:31:07 [error] [php] in_array() expects parameter 2 to be array, null given (/var/www/cms/tamanharapan/backend/views/site/index.php:8)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): SiteController->renderInternal()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): SiteController->renderFile()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): SiteController->renderPartial()
+#4 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(42): SiteController->render()
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): SiteController->runAction()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): SiteController->runActionWithFilters()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): SiteController->run()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/
+in /var/www/cms/tamanharapan/backend/views/site/index.php (8)
+in /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php (40)
+in /var/www/cms/tamanharapan/backend/controllers/SiteController.php (42)
+2015/05/31 08:31:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'landa_cms_tamanharapan.article' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `article`.
+in /var/www/cms/tamanharapan/backend/views/site/index.php (27)
+in /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php (40)
+in /var/www/cms/tamanharapan/backend/controllers/SiteController.php (42)
+2015/05/31 08:31:30 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{article}}" for active record class "Article" cannot be found in the database.' in /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Article))
+#1 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/cms/tamanharapan/backend/views/site/index.php(27): CActiveRecord->findAll(Array)
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#6 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', NULL, true)
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(SiteController), '/var/www/cms/ta...', NULL, true)
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', NULL, true)
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#10 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(42): CController->render('index')
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#19 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#21 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('')
+#22 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#24 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+---
+2015/05/31 08:32:06 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.landa" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:130
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/base/CModule.php(105): CComponent->__get('landa')
+#1 /var/www/cms/tamanharapan/backend/globals.php(17): CModule->__get('landa')
+#2 /var/www/cms/tamanharapan/backend/themes/backend/spr/views/layouts/main.php(16): landa()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#4 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(SiteController), '/var/www/cms/ta...', Array, true)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(784): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#7 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(42): CController->render('index')
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('')
+#19 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#21 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/
+---
+2015/05/31 08:33:27 [error] [php] include(SiteConfig.php): failed to open stream: No such file or directory (/var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:427)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/themes/backend/spr/views/layouts/main.php(46): spl_autoload_call()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require()
+#2 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): SiteController->renderInternal()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(784): SiteController->renderFile()
+#5 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(42): SiteController->render()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): SiteController->runAction()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/
+in /var/www/cms/tamanharapan/backend/themes/backend/spr/views/layouts/main.php (46)
+in /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php (40)
+in /var/www/cms/tamanharapan/backend/controllers/SiteController.php (42)
+2015/05/31 08:34:41 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.isSuperUser" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:130
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/auth/CWebUser.php(146): CComponent->__get('isSuperUser')
+#1 /var/www/cms/tamanharapan/backend/themes/backend/spr/views/layouts/main.php(52): CWebUser->__get('isSuperUser')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#3 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(SiteController), '/var/www/cms/ta...', Array, true)
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(784): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#6 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(42): CController->render('index')
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('')
+#18 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#20 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/
+---
+2015/05/31 08:36:03 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.avatar_img" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:130
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/auth/CWebUser.php(146): CComponent->__get('avatar_img')
+#1 /var/www/cms/tamanharapan/backend/themes/backend/spr/views/layouts/main.php(54): CWebUser->__get('avatar_img')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#3 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(SiteController), '/var/www/cms/ta...', Array, true)
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(784): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#6 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(42): CController->render('index')
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('')
+#18 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#20 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/
+---
+2015/05/31 08:44:06 [error] [exception.CException] exception 'CException' with message 'Property "User.Roles" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:130
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(145): CComponent->__get('Roles')
+#1 /var/www/cms/tamanharapan/backend/themes/backend/spr/views/layouts/main.php(67): CActiveRecord->__get('Roles')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#3 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(SiteController), '/var/www/cms/ta...', Array, true)
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(784): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#6 /var/www/cms/tamanharapan/backend/controllers/SiteController.php(35): CController->render('index')
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('')
+#18 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#20 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/site/login.html
+---
+2015/05/31 08:44:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/logo.jpg
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/
+---
+2015/05/31 08:44:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/logo.jpg
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/dashboard.html
+---
+2015/05/31 08:44:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/cms/tamanharapan/backend/components/Controller.php:61
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/components/Controller.php(49): Controller->accessDenied()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php(612) : eval()'d code(1): Controller->isValidAccess('ArticleCategory', 'r')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php(612): eval()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/auth/CAccessControlFilter.php(392): CComponent->evaluateExpression('app()->controll...', Array)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/auth/CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/auth/CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(ArticleCategoryController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('articleCategory')
+#14 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/articleCategory.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/dashboard.html
+---
+2015/05/31 08:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/images/favicon.ico
+---
+2015/05/31 08:45:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/cms/tamanharapan/backend/lib/yii/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('articleCategory')
+#9 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/articleCategory.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/dashboard.html
+---
+2015/05/31 08:46:01 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.NestedSetBehavior.NestedSetBehavior" is invalid. Make sure it points to an existing directory or file.' in /var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:347
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php(196): YiiBase::import('common.extensio...', true)
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php(329): YiiBase::createComponent(Array)
+#2 /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php(298): CComponent->attachBehavior('nestedSetBehavi...', Array)
+#3 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(83): CComponent->attachBehaviors(Array)
+#4 /var/www/cms/tamanharapan/backend/controllers/ArticleCategoryController.php(160): CActiveRecord->__construct('search')
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): ArticleCategoryController->actionIndex()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('articleCategory')
+#16 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#18 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/articleCategory.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/dashboard.html
+---
+2015/05/31 08:47:08 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.NestedSetBehavior.NestedSetBehavior" is invalid. Make sure it points to an existing directory or file.' in /var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:347
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php(196): YiiBase::import('common.extensio...', true)
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php(329): YiiBase::createComponent(Array)
+#2 /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php(298): CComponent->attachBehavior('nestedSetBehavi...', Array)
+#3 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(83): CComponent->attachBehaviors(Array)
+#4 /var/www/cms/tamanharapan/backend/controllers/ArticleCategoryController.php(159): CActiveRecord->__construct('search')
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): ArticleCategoryController->actionIndex()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('articleCategory')
+#16 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#18 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/articleCategory.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/dashboard.html
+---
+2015/05/31 08:47:31 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.roles" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:130
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/auth/CWebUser.php(146): CComponent->__get('roles')
+#1 /var/www/cms/tamanharapan/backend/components/LandaCore.php(208): CWebUser->__get('roles')
+#2 /var/www/cms/tamanharapan/backend/views/articleCategory/index.php(30): LandaCore->checkAccess('ArticleCategory', 'c')
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#4 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ArticleCategoryController), '/var/www/cms/ta...', Array, true)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('index', Array, true)
+#8 /var/www/cms/tamanharapan/backend/controllers/ArticleCategoryController.php(178): CController->render('index', Array)
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): ArticleCategoryController->actionIndex()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#19 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('articleCategory')
+#20 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/articleCategory.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/dashboard.html
+---
+2015/05/31 08:48:35 [error] [exception.CException] exception 'CException' with message 'LandaCore and its behaviors do not have a method or closure named "checkAccess".' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:266
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/views/articleCategory/index.php(30): CComponent->__call('checkAccess', Array)
+#1 /var/www/cms/tamanharapan/backend/views/articleCategory/index.php(30): LandaCore->checkAccess('ArticleCategory', 'c')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#3 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ArticleCategoryController), '/var/www/cms/ta...', Array, true)
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('index', Array, true)
+#7 /var/www/cms/tamanharapan/backend/controllers/ArticleCategoryController.php(178): CController->render('index', Array)
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): ArticleCategoryController->actionIndex()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('articleCategory')
+#19 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#21 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/articleCategory.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/dashboard.html
+---
+2015/05/31 08:54:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/logo.jpg
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/
+---
+2015/05/31 08:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/logo.jpg
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/
+---
+2015/05/31 08:58:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fileManager".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('fileManager')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/fileManager.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/
+---
+2015/05/31 08:58:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fileManagers".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('fileManagers')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/fileManagers.html
+---
+2015/05/31 08:58:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "fileManagers".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php:483
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(270): CController->missingAction('fileManagers')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('fileManagers')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('site/fileManage...')
+#3 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/site/fileManagers.html
+---
+2015/05/31 08:59:21 [error] [exception.CException] exception 'CException' with message 'FileManagerController cannot find the requested view "index".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php:878
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/cms/tamanharapan/backend/controllers/FileManagerController.php(26): CController->render('index', Array)
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): FileManagerController->actionIndex()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('fileManager')
+#8 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/fileManager.html
+---
+2015/05/31 08:59:42 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.ezzeelfinder.ElFinderWidget" is invalid. Make sure it points to an existing directory or file.' in /var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:347
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWidgetFactory.php(146): YiiBase::import('common.extensio...', true)
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(FileManagerController), 'common.extensio...', Array)
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(172): CBaseController->createWidget('common.extensio...', Array)
+#3 /var/www/cms/tamanharapan/backend/views/fileManager/index.php(30): CBaseController->widget('common.extensio...', Array)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#5 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(FileManagerController), '/var/www/cms/ta...', Array, true)
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('index', Array, true)
+#9 /var/www/cms/tamanharapan/backend/controllers/FileManagerController.php(26): CController->render('index', Array)
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): FileManagerController->actionIndex()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('fileManager')
+#16 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#18 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/fileManager.html
+---
+2015/05/31 09:00:02 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.ezzeelfinder.ElFinderWidget" is invalid. Make sure it points to an existing directory or file.' in /var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:347
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWidgetFactory.php(146): YiiBase::import('common.extensio...', true)
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(FileManagerController), 'common.extensio...', Array)
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(172): CBaseController->createWidget('common.extensio...', Array)
+#3 /var/www/cms/tamanharapan/backend/views/fileManager/index.php(30): CBaseController->widget('common.extensio...', Array)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#5 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(FileManagerController), '/var/www/cms/ta...', Array, true)
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('index', Array, true)
+#9 /var/www/cms/tamanharapan/backend/controllers/FileManagerController.php(26): CController->render('index', Array)
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): FileManagerController->actionIndex()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('fileManager')
+#16 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#18 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/fileManager.html
+---
+2015/05/31 09:00:05 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.ezzeelfinder.ElFinderWidget" is invalid. Make sure it points to an existing directory or file.' in /var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:347
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWidgetFactory.php(146): YiiBase::import('common.extensio...', true)
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(FileManagerController), 'common.extensio...', Array)
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(172): CBaseController->createWidget('common.extensio...', Array)
+#3 /var/www/cms/tamanharapan/backend/views/fileManager/index.php(30): CBaseController->widget('common.extensio...', Array)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#5 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(FileManagerController), '/var/www/cms/ta...', Array, true)
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('index', Array, true)
+#9 /var/www/cms/tamanharapan/backend/controllers/FileManagerController.php(26): CController->render('index', Array)
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): FileManagerController->actionIndex()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('fileManager')
+#16 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#18 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/fileManager.html
+---
+2015/05/31 09:00:27 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.ezzeelfinder.ElFinderConnectorAction" is invalid. Make sure it points to an existing directory or file.' in /var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:347
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/extensions/ezzeelfinder/ElFinderWidget.php(3): YiiBase::import('common.extensio...')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php(320): require('/var/www/cms/ta...')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CWidgetFactory.php(146): YiiBase::import('application.ext...', true)
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(FileManagerController), 'application.ext...', Array)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#5 /var/www/cms/tamanharapan/backend/views/fileManager/index.php(30): CBaseController->widget('application.ext...', Array)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#7 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(FileManagerController), '/var/www/cms/ta...', Array, true)
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('index', Array, true)
+#11 /var/www/cms/tamanharapan/backend/controllers/FileManagerController.php(26): CController->render('index', Array)
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): FileManagerController->actionIndex()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('fileManager')
+#18 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#20 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/fileManager.html
+---
+2015/05/31 09:02:05 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.ezzeelfinder.ElFinderConnectorAction" is invalid. Make sure it points to an existing directory or file.' in /var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:347
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/extensions/ezzeelfinder/ElFinderWidget.php(3): YiiBase::import('common.extensio...')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php(320): require('/var/www/cms/ta...')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CWidgetFactory.php(146): YiiBase::import('application.ext...', true)
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(FileManagerController), 'application.ext...', Array)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#5 /var/www/cms/tamanharapan/backend/views/fileManager/index.php(30): CBaseController->widget('application.ext...', Array)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#7 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(FileManagerController), '/var/www/cms/ta...', Array, true)
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('index', Array, true)
+#11 /var/www/cms/tamanharapan/backend/controllers/FileManagerController.php(26): CController->render('index', Array)
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): FileManagerController->actionIndex()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('fileManager')
+#18 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#20 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/fileManager.html
+---
+2015/05/31 09:04:01 [error] [exception.CException] exception 'CException' with message 'Property "User.code" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:130
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(145): CComponent->__get('code')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/helpers/CHtml.php(2529): CActiveRecord->__get('code')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(User), 'code')
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(User), 'code', Array)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(User), 'code', Array)
+#5 /var/www/cms/tamanharapan/backend/extensions/bootstrap/widgets/input/TbInputVertical.php(213): CActiveForm->textField(Object(User), 'code', Array)
+#6 /var/www/cms/tamanharapan/backend/extensions/bootstrap/widgets/input/TbInput.php(291): TbInputVertical->textField()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(173): TbInput->run()
+#8 /var/www/cms/tamanharapan/backend/extensions/bootstrap/widgets/TbActiveForm.php(1096): CBaseController->widget('bootstrap.widge...', Array)
+#9 /var/www/cms/tamanharapan/backend/extensions/bootstrap/widgets/TbActiveForm.php(278): TbActiveForm->inputRow('text', Object(User), 'code', NULL, Array)
+#10 /var/www/cms/tamanharapan/backend/views/user/_search.php(9): TbActiveForm->textFieldRow(Object(User), 'code', Array)
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#12 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(UserController), '/var/www/cms/ta...', Array, true)
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#15 /var/www/cms/tamanharapan/backend/views/user/index.php(46): CController->renderPartial('_search', Array)
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#17 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(UserController), '/var/www/cms/ta...', Array, true)
+#19 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#20 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('index', Array, true)
+#21 /var/www/cms/tamanharapan/backend/controllers/UserController.php(320): CController->render('index', Array)
+#22 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): UserController->actionIndex()
+#23 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#24 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#25 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#26 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#27 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#28 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#29 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#30 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#32 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('user')
+#33 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#34 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#35 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/user.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/articleCategory.html
+---
+2015/05/31 09:04:51 [error] [exception.CException] exception 'CException' with message 'Property "User.code" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:130
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(145): CComponent->__get('code')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/helpers/CHtml.php(2529): CActiveRecord->__get('code')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(User), 'code')
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(User), 'code', Array)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(User), 'code', Array)
+#5 /var/www/cms/tamanharapan/backend/extensions/bootstrap/widgets/input/TbInputVertical.php(213): CActiveForm->textField(Object(User), 'code', Array)
+#6 /var/www/cms/tamanharapan/backend/extensions/bootstrap/widgets/input/TbInput.php(291): TbInputVertical->textField()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(173): TbInput->run()
+#8 /var/www/cms/tamanharapan/backend/extensions/bootstrap/widgets/TbActiveForm.php(1096): CBaseController->widget('bootstrap.widge...', Array)
+#9 /var/www/cms/tamanharapan/backend/extensions/bootstrap/widgets/TbActiveForm.php(278): TbActiveForm->inputRow('text', Object(User), 'code', NULL, Array)
+#10 /var/www/cms/tamanharapan/backend/views/user/_search.php(9): TbActiveForm->textFieldRow(Object(User), 'code', Array)
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#12 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(UserController), '/var/www/cms/ta...', Array, true)
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#15 /var/www/cms/tamanharapan/backend/views/user/index.php(46): CController->renderPartial('_search', Array)
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#17 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(UserController), '/var/www/cms/ta...', Array, true)
+#19 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#20 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('index', Array, true)
+#21 /var/www/cms/tamanharapan/backend/controllers/UserController.php(320): CController->render('index', Array)
+#22 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): UserController->actionIndex()
+#23 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#24 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#25 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#26 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#27 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#28 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#29 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#30 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('')
+#32 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('user')
+#33 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#34 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#35 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/user.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/articleCategory.html
+---
+2015/05/31 09:06:44 [error] [php] include(Roles.php): failed to open stream: No such file or directory (/var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:427)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/controllers/UserController.php(48): spl_autoload_call()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): UserController->runAction()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): UserController->runActionWithFilters()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): UserController->run()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/user/create.html?type=user
+in /var/www/cms/tamanharapan/backend/controllers/UserController.php (48)
+in /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php (16)
+2015/05/31 10:37:26 [error] [php] include(Roles.php): failed to open stream: No such file or directory (/var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:427)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/controllers/UserController.php(48): spl_autoload_call()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): UserController->runAction()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): UserController->runActionWithFilters()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): UserController->run()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/user/create.html?type=user
+in /var/www/cms/tamanharapan/backend/controllers/UserController.php (48)
+in /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php (16)
+2015/05/31 10:37:54 [error] [php] include(Roles.php): failed to open stream: No such file or directory (/var/www/cms/tamanharapan/backend/lib/yii/YiiBase.php:427)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/views/user/_form.php(34): spl_autoload_call()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require()
+#2 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): UserController->renderInternal()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): UserController->renderFile()
+#5 /var/www/cms/tamanharapan/backend/views/user/create.php(26): UserController->renderPartial()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require()
+#7 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): UserController->renderInternal()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): UserController->renderFile()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): UserController->renderPartial()
+#11 /var/www/cms/tamanharapan/backend/controllers/UserController.php(86): UserController->render()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): UserController->runAction()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#20 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): UserController->runActionWithFilters()
+#21 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): UserController->run()
+#22 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/user/create.html?type=user
+in /var/www/cms/tamanharapan/backend/views/user/_form.php (34)
+in /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php (40)
+in /var/www/cms/tamanharapan/backend/views/user/create.php (26)
+2015/05/31 10:42:30 [error] [php] in_array() expects parameter 2 to be array, null given (/var/www/cms/tamanharapan/backend/views/user/_form.php:35)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): UserController->renderInternal()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): UserController->renderFile()
+#3 /var/www/cms/tamanharapan/backend/views/user/create.php(26): UserController->renderPartial()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require()
+#5 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): UserController->renderInternal()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): UserController->renderFile()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): UserController->renderPartial()
+#9 /var/www/cms/tamanharapan/backend/controllers/UserController.php(86): UserController->render()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): UserController->runAction()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): UserController->runActionWithFilters()
+#19 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): UserController->run()
+#20 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/user/create.html?type=user
+in /var/www/cms/tamanharapan/backend/views/user/_form.php (35)
+in /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php (40)
+in /var/www/cms/tamanharapan/backend/views/user/create.php (26)
+2015/05/31 10:43:42 [error] [php] in_array() expects parameter 2 to be array, null given (/var/www/cms/tamanharapan/backend/views/user/_form.php:33)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): UserController->renderInternal()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): UserController->renderFile()
+#3 /var/www/cms/tamanharapan/backend/views/user/create.php(26): UserController->renderPartial()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require()
+#5 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): UserController->renderInternal()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): UserController->renderFile()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): UserController->renderPartial()
+#9 /var/www/cms/tamanharapan/backend/controllers/UserController.php(86): UserController->render()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): UserController->runAction()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): UserController->runActionWithFilters()
+#19 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): UserController->run()
+#20 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/user/create.html?type=user
+in /var/www/cms/tamanharapan/backend/views/user/_form.php (33)
+in /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php (40)
+in /var/www/cms/tamanharapan/backend/views/user/create.php (26)
+2015/05/31 10:43:44 [error] [php] in_array() expects parameter 2 to be array, null given (/var/www/cms/tamanharapan/backend/views/user/_form.php:33)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): UserController->renderInternal()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): UserController->renderFile()
+#3 /var/www/cms/tamanharapan/backend/views/user/create.php(26): UserController->renderPartial()
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require()
+#5 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): UserController->renderInternal()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): UserController->renderFile()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): UserController->renderPartial()
+#9 /var/www/cms/tamanharapan/backend/controllers/UserController.php(86): UserController->render()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): UserController->runAction()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): UserController->runActionWithFilters()
+#19 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): UserController->run()
+#20 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/user/create.html?type=user
+in /var/www/cms/tamanharapan/backend/views/user/_form.php (33)
+in /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php (40)
+in /var/www/cms/tamanharapan/backend/views/user/create.php (26)
+2015/05/31 10:44:21 [warning] [application] Failed to set unsafe attribute "avatar_img" of "User".
+in /var/www/cms/tamanharapan/backend/controllers/UserController.php (58)
+in /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php (16)
+2015/05/31 10:44:21 [warning] [application] Failed to set unsafe attribute "email" of "User".
+in /var/www/cms/tamanharapan/backend/controllers/UserController.php (58)
+in /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php (16)
+2015/05/31 10:44:21 [error] [exception.CException] exception 'CException' with message 'Property "User.saldo" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:130
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(145): CComponent->__get('saldo')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/validators/CNumberValidator.php(78): CActiveRecord->__get('saldo')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/validators/CValidator.php(213): CNumberValidator->validateAttribute(Object(User), 'saldo')
+#3 /var/www/cms/tamanharapan/backend/lib/yii/base/CModel.php(159): CValidator->validate(Object(User), NULL)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(805): CModel->validate(NULL)
+#5 /var/www/cms/tamanharapan/backend/controllers/UserController.php(69): CActiveRecord->save()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('create')
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#17 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#19 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/user/create.html?type=user
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/user/create.html?type=user
+---
+2015/05/31 10:45:17 [error] [exception.CException] exception 'CException' with message 'Property "User.Roles" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:130
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(145): CComponent->__get('Roles')
+#1 /var/www/cms/tamanharapan/backend/views/user/view.php(96): CActiveRecord->__get('Roles')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(126): require('/var/www/cms/ta...')
+#3 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): CBaseController->renderInternal('/var/www/cms/ta...', Array, true)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(UserController), '/var/www/cms/ta...', Array, true)
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): CBaseController->renderFile('/var/www/cms/ta...', Array, true)
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /var/www/cms/tamanharapan/backend/controllers/UserController.php(39): CController->render('view', Array)
+#8 [internal function]: UserController->actionView('2')
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('view')
+#20 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('user/view')
+#21 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/user/2.html?type=user
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/user/create.html?type=user
+---
+2015/05/31 10:47:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/logo.jpg
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/
+---
+2015/05/31 10:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/logo.jpg
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/dashboard.html
+---
+2015/05/31 10:53:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/logo.jpg
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/dashboard.html
+---
+2015/05/31 10:53:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/logo.jpg
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/dashboard.html
+---
+2015/05/31 10:58:00 [error] [php] in_array() expects parameter 2 to be array, null given (/var/www/cms/tamanharapan/backend/views/user/update.php:8)
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php(40): UserController->renderInternal()
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(869): UserController->renderFile()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(782): UserController->renderPartial()
+#4 /var/www/cms/tamanharapan/backend/controllers/UserController.php(135): UserController->render()
+#5 /var/www/cms/tamanharapan/backend/controllers/UserController.php(38): UserController->actionUpdate()
+#6 unknown(0): UserController->actionView()
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): UserController->runAction()
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#14 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#16 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): UserController->runActionWithFilters()
+#17 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): UserController->run()
+#18 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CWebApplication->run()
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/user/3.html?type=user
+in /var/www/cms/tamanharapan/backend/views/user/update.php (8)
+in /var/www/cms/tamanharapan/backend/extensions/yii-debug-toolbar/YiiDebugViewRenderer.php (40)
+in /var/www/cms/tamanharapan/backend/controllers/UserController.php (135)
+2015/05/31 11:00:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/logo.jpg
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/
+---
+2015/05/31 11:02:26 [error] [exception.CException] exception 'CException' with message 'Property "ArticleCategory.alias" is not defined.' in /var/www/cms/tamanharapan/backend/lib/yii/base/CComponent.php:173
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/db/ar/CActiveRecord.php(161): CComponent->__set('alias', 'aaa')
+#1 /var/www/cms/tamanharapan/backend/controllers/ArticleCategoryController.php(63): CActiveRecord->__set('alias', 'aaa')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/actions/CInlineAction.php(49): ArticleCategoryController->actionCreate()
+#3 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/cms/tamanharapan/backend/lib/yii/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(291): CFilterChain->run()
+#10 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('articleCategory...')
+#13 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/articleCategory/create.html
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/articleCategory/create.html
+---
+2015/05/31 18:45:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php:483
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CController.php(270): CController->missingAction('images')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(282): CController->run('images')
+#2 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('site/images/fav...')
+#3 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/site/images/favicon.ico
+---
+2015/05/31 18:45:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/cms/tamanharapan/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/cms/tamanharapan/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/cms/tamanharapan/backend/www/tamanharapan/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/tamanharapan/backend/www/tamanharapan/logo.jpg
+HTTP_REFERER=http://localhost/cms/tamanharapan/backend/www/tamanharapan/
+---
+2015/06/06 11:19:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CController.php:483
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CController.php(270): CController->missingAction('images')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php(282): CController->run('images')
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('site/images/fav...')
+#3 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/site/images/favicon.ico
+---
+2015/06/06 11:21:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/logo.jpg
+HTTP_REFERER=http://localhost/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/
+---
+2015/06/22 09:24:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slider/slider_1.jpg".' in /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('images/slider/s...')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/images/slider/slider_1.jpg
+HTTP_REFERER=http://localhost/ProjectKerja/sahidmontana_cp/frontend/web/sahidmontana/
+---
+2015/06/22 09:24:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slider/slider_2.jpg".' in /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('images/slider/s...')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/images/slider/slider_2.jpg
+HTTP_REFERER=http://localhost/ProjectKerja/sahidmontana_cp/frontend/web/sahidmontana/
+---
+2015/06/22 09:24:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slider/slider_3.jpg".' in /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('images/slider/s...')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/images/slider/slider_3.jpg
+HTTP_REFERER=http://localhost/ProjectKerja/sahidmontana_cp/frontend/web/sahidmontana/
+---
+2015/06/22 09:24:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slider/slider_1.jpg".' in /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('images/slider/s...')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/images/slider/slider_1.jpg
+HTTP_REFERER=http://localhost/ProjectKerja/sahidmontana_cp/frontend/web/sahidmontana/
+---
+2015/06/22 09:24:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slider/slider_2.jpg".' in /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('images/slider/s...')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/images/slider/slider_2.jpg
+HTTP_REFERER=http://localhost/ProjectKerja/sahidmontana_cp/frontend/web/sahidmontana/
+---
+2015/06/22 09:24:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slider/slider_3.jpg".' in /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('images/slider/s...')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend/www/sahidmontana/images/slider/slider_3.jpg
+HTTP_REFERER=http://localhost/ProjectKerja/sahidmontana_cp/frontend/web/sahidmontana/
+---
+2015/06/22 19:27:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/web/CController.php:483
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/web/CController.php(270): CController->missingAction('images')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/web/CWebApplication.php(282): CController->run('images')
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('site/images/fav...')
+#3 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/www/sahidmontana/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend_dua/www/sahidmontana/site/images/favicon.ico
+---
+2015/06/22 19:27:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/www/sahidmontana/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend_dua/www/sahidmontana/logo.jpg
+HTTP_REFERER=http://localhost/ProjectKerja/sahidmontana_cp/backend_dua/www/sahidmontana/
+---
+2015/06/22 19:28:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/www/sahidmontana/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend_dua/www/sahidmontana/logo.jpg
+HTTP_REFERER=http://localhost/ProjectKerja/sahidmontana_cp/backend_dua/www/sahidmontana/
+---
+2015/06/22 19:28:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logo.jpg".' in /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/web/CWebApplication.php(141): CWebApplication->runController('logo.jpg')
+#1 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/lib/yii/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/ProjectKerja/sahidmontana_cp/backend_dua/www/sahidmontana/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProjectKerja/sahidmontana_cp/backend_dua/www/sahidmontana/logo.jpg
+HTTP_REFERER=http://localhost/ProjectKerja/sahidmontana_cp/backend_dua/www/sahidmontana/
+---

@@ -9,9 +9,9 @@ require(__DIR__ . '/../frontend/config/bootstrap.php');
 
 $config = yii\helpers\ArrayHelper::merge(
     require(__DIR__ . '/../common/config/main.php'),
-    require(__DIR__ . '/../common/config/db-sahidmontana.php'),
+    require(__DIR__ . '/../common/config/db-sahidmontana2.php'),
     require(__DIR__ . '/../frontend/config/main.php'),
-    require(__DIR__ . '/../frontend/config/main-sahidmontana.php')
+    require(__DIR__ . '/../frontend/config/main-sahidmontana2.php')
 );
 
 $application = new yii\web\Application($config);

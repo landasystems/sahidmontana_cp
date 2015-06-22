@@ -20,10 +20,10 @@
     </head>
     <body>
     <center>
-     
-        <a href="sahid/"><img src="img/SahidMontana1.png" style="position:absolute; margin-left: 205px;"></a>
+       
+        <a href="satu/"><img src="img/Sahids1-WHITE.png" style="position:absolute; margin-left: 255px; margin-top: 35px"></a>
           
-        <a href="sahid2/"><img src="img/SahidMontana2.png" style="position:absolute; margin-left: 550px;"></a>
+        <a href="dua/"><img src="img/Sahids2-WHITE.png" style="position:absolute; margin-left: 550px; margin-top: 35px""></a>
         
         <img src="img/back.png">
     
