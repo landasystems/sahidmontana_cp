@@ -13,37 +13,20 @@ $this->beginPage();
 <html> 
     <head>
         <meta charset=utf-8>
-        <title>Sahid Montana | <?= Html::encode($this->title) ?></title>
+        <title><?= Html::encode($this->title) ?> | Sahid Montana</title>
         <meta name=description content="Sahid Montana Hotel">
-        <meta name=keywords content=Responsive,HTML5,CSS3,XML,JavaScript>
-        <meta name=author content="Joseph a, ravistheme@gmail.com"><!-- End of Meta tags -->
+        <meta name=keywords content="Hotel Sahid Montana Malang">
+        <meta name=author content="Wahyu Agung T., agung@landa.co.id">
         <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700%7cDroid+Serif:400,700,400italic,700italic%7cYellowtail%7cGreat+Vibes" rel=stylesheet type=text/css>
-        <link rel=stylesheet id=main-style-file type=text/css href=<?= Yii::$app->homeUrl ?>css/styles.css>
         <link type="text/css" rel='stylesheet' href="<?= Yii::$app->homeUrl ?>css/styles.css">
     </head>
-    <body>
-        <div class=main-wrapper>
-            <div id=main-header-top> 
-                <div position="center" class="main-header-top-container container">
-                    <center> 
-                        <div id=top-logo data-logo-letter=>
-                            <a href=#><span class="s">Sahid</span><span class="m">Montana</span>
-                                <span class=five-stars>
-                                    <i class="fa fa-star"></i> 
-                                    <i class="fa fa-star"></i> 
-                                    <i class="fa fa-star"></i> 
-
-                                </span>
-                            </a>
-                        </div>
-                    </center> 
-                </div>
-            </div>
-        </div>
-
+    <body class="pattern-2">
         <header id=main-header>
             <div class="header-content container"> 
                 <div class=menu-container>
+                    <div class="main-logo">
+                        <img style="max-width: 130px;" src="<?= Yii::$app->homeUrl ?>img/logo.png">
+                    </div>
                     <nav id=main-menu> 
                         <?php
                         $sahid = ArticleCategory::find()->where(['parent_id' => 16])->orderBy('name ASC')->all();
@@ -56,11 +39,9 @@ $this->beginPage();
                 </div> 
             </div>
         </header>
-        <?= $content ?>
+            <?= $content ?>
         <?php
-        $model = Article::find()->where('article_category_id = 5')->orderBy('created DESC')->limit(3)->all();
-        $popular = Article::find()->orderBy('hits DESC')->limit(3)->all();
-        echo $this->render('_footer', ['model' => $model, 'popular' => $popular, 'sahid' => $sahid]);
+        echo $this->render('_footer');
         ?> 
     </div> 
     <!-- JS Includes --> <!-- Essential JS files ( DO NOT REMOVE THEM ) --> 
@@ -71,66 +52,9 @@ $this->beginPage();
     <!-- Include required js files --> 
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery.bxslider.min.js></script> 
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/owl.carousel.min.js></script>
-    <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/jquery.magnific-popup.min.js></script>
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/helper.js></script>
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/init.js></script>
     <script type=text/javascript src=<?= Yii::$app->homeUrl ?>js/template.js></script>
-    <script type=text/javascript src=http://maps.googleapis.com/maps/api/js?sensor=false></script>
-    <script>
-        function initialize() {
-            var myLatLng = new google.maps.LatLng(-7.976965, 112.632215);
-            var mapOptions = {
-                zoom: 12,
-                center: myLatLng,
-                // This is where you would paste any style found on Snazzy Maps.
-                styles: [{featureType: "landscape", stylers: [{saturation: -100}, {lightness: 65}, {visibility: "on"}]}, {featureType: "poi", stylers: [{saturation: -100}, {lightness: 51}, {visibility: "simplified"}]}, {featureType: "road.highway", stylers: [{saturation: -100}, {visibility: "simplified"}]}, {featureType: "road.arterial", stylers: [{saturation: -100}, {lightness: 30}, {visibility: "on"}]}, {featureType: "road.local", stylers: [{saturation: -100}, {lightness: 40}, {visibility: "on"}]}, {featureType: "transit", stylers: [{saturation: -100}, {visibility: "simplified"}]}, {featureType: "administrative.province", stylers: [{visibility: "off"}]}, {featureType: "administrative.locality", stylers: [{visibility: "off"}]}, {featureType: "administrative.neighborhood", stylers: [{visibility: "on"}]}, {featureType: "water", elementType: "labels", stylers: [{visibility: "off"}, {lightness: -25}, {saturation: -100}]}, {featureType: "water", elementType: "geometry", stylers: [{hue: "#ffff00"}, {lightness: -25}, {saturation: -97}]}],
-                // Extra options
-                scrollwheel: false,
-                mapTypeControl: false,
-                panControl: false,
-                zoomControlOptions: {
-                    style: google.maps.ZoomControlStyle.SMALL,
-                    position: google.maps.ControlPosition.LEFT_BOTTOM
-                }
-            }
-            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-            var image = '../assets/img/marker.png';
-
-            var beachMarker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                icon: image
-            });
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-    <script type=text/javascript>
-        jQuery(document).ready(function() {
-            "use strict";
-            /* Load Properties */
-            jQuery("#roomLoader-container").slideUp();
-            jQuery(".property-boxes .more-detail").click(function(e) {
-                e.preventDefault();
-                jQuery("#roomLoader").addClass('loading');
-                var roomID = jQuery(this).attr('data-room-id');
-                jQuery.ajax('rooms/luxury/' + roomID + '.html')
-                        .done(function(data) {
-                            jQuery("#roomLoader").addClass('active').removeClass('loading');
-                            jQuery("#roomLoader-container").html(data).slideDown(500, jQuery.internal_custom_bxslider);
-                        });
-                jQuery('body,html').animate({
-                    scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top - 60
-                }, 1000);
-            });
-            // Close the Property Loader box
-            jQuery('#roomLoader .close-icon').click(function() {
-                jQuery("#roomLoader").removeClass('active');
-                jQuery("#roomLoader-container").slideUp().html('');
-            });
-        });
-    </script> <!-- End of JS Includes --> 
     <script type="text/javascript">
         if (self == top) {
             var idc_glo_url = (location.protocol == "https:" ? "https://" : "http://");
