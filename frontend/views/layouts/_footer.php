@@ -1,80 +1,20 @@
-<footer id=top-footer> 
-    <div id=top-footer-content class=container>
-        <div class="widget col-md-3">
-            <h4>Find Us</h4>
-            <div class="content-box row"> 
-                <div class=widget-content>
-                    <p> Find us on social media to get more information and update about our service </p>
-                    <div class=social-icons> 
-                        <a href="https://www.facebook.com/pages/Hotel-Sahid-Montana-Malang/530933503633338" class="facebook" target="_blank"></a>
-                        <a href=# class=twitter></a>
-                        <a href="https://plus.google.com/102673330329266448588/about" class=google-plus target="_blank"></a>
-                    </div> 
-                </div>
-            </div> 
-        </div> 
-        <div class="widget col-md-3">
-            <h4>Recent News</h4>
-            <div class="content-box row"> 
-                <div class=widget-content>
-                    <ul> 
-                        <?php
-                        foreach ($model as $val) {
-                            echo '<li>
-                                    <a href="#">
-                                        <img src="' . $val->imgSmall . '" alt="' . $val->title . '" class="post-img" height="80"></a>
-                                    <a href="#" class="post-title">' . $val->title . '</a> 
-                                    <div class=date>' . date("d M Y H:i:s", strtotime($val->created)) . '</div> 
-                                </li>';
-                        }
-                        ?>
-                    </ul> 
-                </div>
-            </div>
-        </div> 
-        <div class="widget col-md-3">
-            <h4>Popular Post</h4>
-            <div class="content-box row"> 
-                <div class=widget-content>
-                    <ul> 
-                        <?php
-                        foreach ($popular as $val) {
-                            echo '<li>
-                                    <a href="#">
-                                        <img src="' . $val->imgSmall . '" alt="' . $val->title . '" class="post-img" height="80"></a>
-                                    <a href="#" class="post-title">' . $val->title . '</a> 
-                                    <div class=date>' . date("d M Y H:i:s", strtotime($val->created)) . '</div> 
-                                </li>';
-                        }
-                        ?>
-                    </ul> 
-                </div>
-            </div>
-        </div> 
-        <div class="widget col-md-3">
-            <h4>Sahid Group</h4>
-            <div class="content-box row"> 
-                <div class=widget-content>
-                    <?php
-                    foreach ($sahid as $val) {
-                        $alias = strtolower(str_replace(" ", "-", $val->name));
-                        echo '<a href="' . Yii::$app->urlManager->createUrl('sahid/' . $alias) . '" class="tags btn colored" style="margin: 2px;">' . ucwords(strtolower($val->name)) . '</a>';
-                    }
-                    ?>
-                </div> 
-            </div>  
-        </div>
-    </div> 
-</footer> 
 <footer id=footer>
-    <div id=go-up></div>
-    <ul class="footer-menu container"> 
-        <li><a href="<?= Yii::$app->urlManager->createUrl('home') ?>">Home</a></li> 
-        <li><a href="<?= Yii::$app->urlManager->createUrl('facility/room') ?>">Room</a></li> 
-        <li><a href="<?= Yii::$app->urlManager->createUrl('facility/restaurant') ?>">Restaurant</a></li> 
-        <li><a href="<?= Yii::$app->urlManager->createUrl('facility/meeting-and-banquest') ?>">Meeting Room</a></li>
-        <li><a href="<?= Yii::$app->urlManager->createUrl('gallery') ?>">Gallery</a></li> 
-        <li><a href="<?= Yii::$app->urlManager->createUrl('contact') ?>">Contact</a></li>
-    </ul> 
-    <div class=copyright> &copy; <?php echo date("Y"); ?> Sahid Montana. All Rights Reserved. </div> 
+    <div class="container" style="margin-bottom: 15px;">
+        <div class="row">
+            <div class="col-md-3">
+                <h5 style="color:#edead9; margin-top: 15px;"><i>Don't Forget To Follow Us</i></h5>
+            </div>
+            <div class="col-md-3">
+                <div class=social-icons style="margin-top: 15px;"> 
+                    <a title="Facebook" href="https://www.facebook.com/pages/Hotel-Sahid-Montana-Malang/530933503633338" class="facebook" target="_blank"></a>
+                    <a title="Twitter" href=# class=twitter></a>
+                    <a title="Instagram" href=# class=instagram></a>
+                    <a title="Google Plus" href="https://plus.google.com/102673330329266448588/about" class=google-plus target="_blank"></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div style="margin-top: 5px;"><img src="<?= Yii::$app->homeUrl ?>img/foot.jpg"></div>
+            </div>
+        </div>
+    </div>
 </footer>

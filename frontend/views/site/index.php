@@ -73,53 +73,28 @@ use common\models\Article;
         </div>
     </div> 
 </section>
+<div class="background">
 <section id=welcome> 
     <h3><span>
             <b>Welcome</b> to Sahid Montana Hotel</span>
     </h3>
     <div class=container> 
-        <div class="service-boxes welcome-text col-md-7 col-xs-12" data-animation=fadeInUp style="color: #000;">
+        <div class="col-md-6 col-xs-12">
+            <center><img style="max-width: 300px;" src="<?= Yii::$app->homeUrl ?>img/topeng.png"></center>
+        </div> 
+        <div class="service-boxes welcome-text col-md-6 col-xs-12" data-animation=fadeInUp style="color: #000;">
             <?php
-            $welcome = Article::find()->where(['article_category_id' => '2'])->one();
+            $welcome = Article::find()->where(['id' => '54'])->one();
             echo $welcome->content;
             ?>
-        </div> 
-        <div class="service-boxes welcome-gallery col-md-5 col-xs-12" data-animation=fadeInUp> <!-- Welcome Slider --> 
-            <ul class=bxslider-welcome> 
-                <li> 
-                    <div class=items>
-                        <img src="<?php echo Yii::$app->params['urlImg'] ?>/service/1.jpg" alt=1>
-                    </div>
-                </li> 
-                <li> 
-                    <div class=items>
-                        <img src="<?php echo Yii::$app->params['urlImg'] ?>/service/2.jpg" alt=2>
-                    </div> 
-                </li> 
-                <li> 
-                    <div class=items>
-                        <img src="<?php echo Yii::$app->params['urlImg'] ?>/service/3.jpg" alt=3>
-                    </div> 
-                </li> 
-                <li> 
-                    <div class=items>
-                        <img src="<?php echo Yii::$app->params['urlImg'] ?>/service/4.jpg" alt=4>
-                    </div> 
-                </li> 
-                <li> 
-                    <div class=items>
-                        <img src="<?php echo Yii::$app->params['urlImg'] ?>/service/5.jpg" alt=5>
-                    </div> 
-                </li> 
-            </ul> 
         </div> 
     </div> 
 </section> 
 <section id=rooms class=luxury> 
-    <h3>
-        <span><b>MEETINGS </b>& BANQUET</span>
+    <h3 style="margin-bottom: 10px;">
+        Promotion
     </h3> 
-    <div id=roomLoader class=container>
+    <div id=roomLoader class=container style="margin-top:0px;">
         <div class=loader></div>
         <div class=close-icon></div>
         <div id=roomLoader-container></div>
@@ -127,12 +102,11 @@ use common\models\Article;
     </div>
     <ul class="property-container container"> 
         <?php
-        $meet = Article::find()->where(['article_category_id' => '4'])->orderBy('rand()')->limit(3)->all();
+        $meet = Article::find()->where(['article_category_id' => '34'])->orderBy('id DESC')->limit(3)->all();
         foreach ($meet as $val) {
             echo '<li class="property-boxes col-xs-6 col-md-4" data-animation=fadeInLeft data-animation-delay=.2> 
                         <div class=prp-img>
-                            <img src="' . $val->imgMedium . '" alt="' . $val->title . '">
-
+                            <img src="' . $val->imgMedium . '" alt="' . $val->title . '" style="height:240px;">
                         </div> 
                         <div class=prp-detail> 
                             <div class=title>
@@ -141,7 +115,7 @@ use common\models\Article;
                             <div class=description style="color:#000">
                                 ' . substr($val->content, 0, 100) . '...
                             </div> 
-                            <a href=pages/room-detail.html data-room-id=4 class="more-detail btn colored">
+                            <a href="' . Yii::$app->urlManager->createUrl('facility/room') . '" data-room-id=4 class="more-detail btn colored">
                                 Details
                             </a>
                         </div>
@@ -150,9 +124,10 @@ use common\models\Article;
         ?>
     </ul> 
 </section> 
+</div>
 <section id=testimonials data-background=parallax> 
     <div id=testimonials-container> <h3>
-            <span><b>Other</b> Visitor's Experiences</span></h3> 
+            <span><b>What</b> They Say</span></h3> 
         <div id=testimonials-content class=container data-animation=fadeInUp> 
             <div id=testimonials-slider class="owl-carousel owl-theme"> 
                 <div class=item style="height:200px;"> 
@@ -161,7 +136,7 @@ use common\models\Article;
                     </div> 
                     <cite>Citra I.</cite>
                     <blockquote> 
-                    Sangat menyenangkan karena staff nya sangat membantu dan letaknya strategis. Hotel nya tidak terlalu mahal, rapi dan bagus.
+                        Sangat menyenangkan karena staff nya sangat membantu dan letaknya strategis. Hotel nya tidak terlalu mahal, rapi dan bagus.
                     </blockquote>
 
                 </div>
@@ -171,14 +146,14 @@ use common\models\Article;
                     </div> 
                     <cite>Eddy R.</cite> 
                     <blockquote> 
-                    Berlibur dengan 4 keluarga besar di Montana saat lebaran tahun ini, merupakan suatu yang luar biasa. Apalagi kami berasal dari berbagai kota dan bertemu di Malang. Sungguh hal yang indah.
+                        Berlibur dengan 4 keluarga besar di Montana saat lebaran tahun ini, merupakan suatu yang luar biasa. Apalagi kami berasal dari berbagai kota dan bertemu di Malang. Sungguh hal yang indah.
                     </blockquote> 
                 </div> <div class=item style="height:200px;"> 
                     <div class=client-pic> 
                         <img src=<?= Yii::$app->homeUrl ?>img/clients/nur.jpg width="100px" height="100px" alt="Lili Kids"> 
                     </div> <cite>Nur I.</cite> 
                     <blockquote>
-                    Dekat dengan stasiun kereta & bandara abdul rachman saleh,kamar bersih,tapi pintu kamar mandi agak rusak,makanan cukup enak,dekat dengan Batu, harga kamar terjangkau, suasana hotel nyaman.
+                        Dekat dengan stasiun kereta & bandara abdul rachman saleh,kamar bersih,tapi pintu kamar mandi agak rusak,makanan cukup enak,dekat dengan Batu, harga kamar terjangkau, suasana hotel nyaman.
                     </blockquote> 
                 </div> 
                 <div class=item style="height:200px;"> 
@@ -187,7 +162,7 @@ use common\models\Article;
                     </div>
                     <cite>Erwin H.</cite> 
                     <blockquote> 
-                    Secara menyeluruh, hotel ini baik.  Kelebihan lain adalah hotel ini sangat artistik pada bagian front office, cafe dengan life musik yang cukup baik.
+                        Secara menyeluruh, hotel ini baik.  Kelebihan lain adalah hotel ini sangat artistik pada bagian front office, cafe dengan life musik yang cukup baik.
                     </blockquote> 
                 </div> 
                 <div class=item style="height:200px;"> 
@@ -196,14 +171,14 @@ use common\models\Article;
                     </div> 
                     <cite>Diddy B</cite> 
                     <blockquote> 
-                    hotel yang tenang , nyaman dan hening sehingga kita bisa lebih relax dan menikmati suasana kota malang yang sejuk dan nyaman untuk menjalankan aktivitas studi.  
+                        hotel yang tenang , nyaman dan hening sehingga kita bisa lebih relax dan menikmati suasana kota malang yang sejuk dan nyaman untuk menjalankan aktivitas studi.  
                     </blockquote> 
                 </div> <div class=item style="height:200px;"> 
                     <div class=client-pic> 
                         <img src=<?= Yii::$app->homeUrl ?>img/clients/heru.jpg width="100px" height="100px" alt="John Barry"> 
                     </div> <cite>Heru B</cite> 
                     <blockquote> 
-                    Pengalaman menginap di hotel ini rasanya cukup mengesankan, karena sambutan karyawan dan kebersihan serta tata letak ruangan cukup "apik". Dan enak dipandang mata
+                        Pengalaman menginap di hotel ini rasanya cukup mengesankan, karena sambutan karyawan dan kebersihan serta tata letak ruangan cukup "apik". Dan enak dipandang mata
                     </blockquote> 
                 </div> 
                 <div class=item style="height:200px;"> 
@@ -211,63 +186,11 @@ use common\models\Article;
                         <img src=<?= Yii::$app->homeUrl ?>img/clients/ririn.jpg width="100px" height="100px"  alt="Kim Boyer"> 
                     </div> <cite>Ririn S</cite> 
                     <blockquote> 
-                    saya menginap di Hotel Sahid Montana selama 3Hari 2Malam, Tempatnya sangat strategis karena dekat dengan pasar burung dan pasar bunga, di parkiran belakang banyak kuliner yang dapat kita tetemukan
+                        saya menginap di Hotel Sahid Montana selama 3Hari 2Malam, Tempatnya sangat strategis karena dekat dengan pasar burung dan pasar bunga, di parkiran belakang banyak kuliner yang dapat kita tetemukan
                     </blockquote> 
                 </div> 
-               
+
             </div> 
         </div> 
     </div> 
 </section> 
-<section id=events class=container> 
-    <h3><span><b>Sahid</b> Events</span></h3> 
-    <ul class="nav nav-tabs nav-justified" id=tab-type-1>
-        <?php
-        $event = Article::find()->where('article_category_id = 32')->orderBy('created DESC')->limit(4)->all();
-        $delay = 2;
-        foreach ($event as $val) {
-            echo '<li data-animation=flipInY data-animation-delay=.'.$delay.'>
-                        <a href=#event-' . $val->id . ' data-toggle=tab> 
-                            <span class=number>
-                                <img src="'.$val->imgMedium.'" alt="' . $val->title . '" style="height: 155px;">
-                            </span>
-                            <span class=title>' . $val->title . '</span>
-                        </a> 
-                    </li>';
-            $delay += 2;
-        }
-        ?>
-    </ul>
-    <div id=event-tab-contents class=tab-content data-animation=fadeInUp>
-        <?php
-        $no = 1;
-        foreach ($event as $val) {
-            if($no == 1){
-                $class = "tab-pane fade in active";
-            }else{
-                $class = "tab-pane fade";
-            }
-            echo '<div class="'.$class.'" id=event-' . $val->id . '> 
-                    <div class=event-boxes> 
-                        <div class="event-box clearfix">
-                            <div class="event-pic col-xs-4 col-md-3"> 
-                                <img src="'.$val->imgMedium.'" alt="'.$val->title.'">
-                            </div>
-                            <div class="event-right col-xs-8 col-md-9" style="padding-top:10px;">
-                                <div class=name>'.$val->title.'</div>
-                                <div class=date></div> 
-                                <div class=description> 
-                                    ' . strip_tags(substr($val->content, 0, 200)) . '...
-                                </div> 
-                                <div align="right">
-                                <a href="'.Yii::$app->urlManager->createUrl('article/'.$val->alias).'" class="read-more btn colored">More Details</a>
-                                </div>
-                            </div> 
-                        </div> 
-                    </div> 
-                </div>';
-            $no++;
-        }
-        ?>
-    </div> 
-</section>

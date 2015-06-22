@@ -13,39 +13,23 @@ $this->beginPage();
 <html> 
     <head>
         <meta charset=utf-8>
-        <title>Sahid Montana | <?= Html::encode($this->title) ?></title>
-        <meta name=description content="Sahid Montana Hotel">
-        <meta name=keywords content=Responsive,HTML5,CSS3,XML,JavaScript>
-        <meta name=author content="Joseph a, ravistheme@gmail.com"><!-- End of Meta tags -->
+        <title><?= Html::encode($this->title) ?> | Sahid Montana</title>
+         <meta name=description content="Sahid Montana Hotel">
+        <meta name=keywords content="Hotel Sahid Montana Malang">
+        <meta name=author content="Wahyu Agung T., agung@landa.co.id">
         <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700%7cDroid+Serif:400,700,400italic,700italic%7cYellowtail%7cGreat+Vibes" rel=stylesheet type=text/css>
-        <link rel=stylesheet id=main-style-file type=text/css href=<?= Yii::$app->homeUrl ?>css/styles.css>
         <link type="text/css" rel='stylesheet' href="<?= Yii::$app->homeUrl ?>css/styles.css">
     </head>
-    <body class="inner-page agents">
-        <div class=main-wrapper>
-            <div id=main-header-top> 
-                <div position="center" class="main-header-top-container container">
-                    <center> 
-                        <div id=top-logo data-logo-letter=>
-                            <a href=#><span class="s">Sahid</span><span class="m">Montana</span>
-                                <span class=five-stars>
-                                    <i class="fa fa-star"></i> 
-                                    <i class="fa fa-star"></i> 
-                                    <i class="fa fa-star"></i> 
-                                </span>
-                            </a>
-                        </div>
-                    </center> 
-                </div>
-            </div>
-        </div>
-
+    <body class="inner-page agents pattern-2">
         <header id=main-header>
             <div class="header-content container"> 
                 <div class=menu-container>
+                    <div class="main-logo">
+                        <img style="max-width: 130px;" src="<?= Yii::$app->homeUrl ?>img/logo.png">
+                    </div>
                     <nav id=main-menu> 
                         <?php
-                          $sahid = ArticleCategory::find()->where(['parent_id' => 16])->orderBy('name ASC')->all();
+                        $sahid = ArticleCategory::find()->where(['parent_id' => 16])->orderBy('name ASC')->all();
                         echo $this->render('_menu', ['sahid' => $sahid]);
                         ?>
                     </nav>
@@ -55,11 +39,11 @@ $this->beginPage();
                 </div> 
             </div>
         </header>
+        <div class="background">
         <?= $content ?>
+        </div>
         <?php
-        $model = Article::find()->where('article_category_id = 5')->orderBy('created DESC')->limit(3)->all();
-        $popular = Article::find()->orderBy('hits DESC')->limit(3)->all();
-        echo $this->render('_footer', ['model' => $model, 'popular' => $popular, 'sahid' => $sahid]);
+        echo $this->render('_footer');
         ?>  
     </div> 
     <!-- JS Includes --> <!-- Essential JS files ( DO NOT REMOVE THEM ) --> 

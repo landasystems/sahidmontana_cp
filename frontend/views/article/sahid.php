@@ -10,8 +10,8 @@ $this->title = "Sahid Group";
     </ol> 
 </section>
 <section id="agents-boxes" class="padding-bottom">
-    <h3><span><b>Sahid Group</b> <?php echo ucwords(strtolower($group)); ?></span></h3> 
-    <div class="container"> 
+    <!--<h3><span><b>Sahid Group</b> <?php echo ucwords(strtolower($group)); ?></span></h3>--> 
+    <div class="container" style="padding:0px;"> 
         <?php
         foreach ($model as $val) {
             echo '<div class="agent-boxes minimal col-xs-6 appear-animation fadeInUp appear-animation-visible" data-animation="fadeInUp">

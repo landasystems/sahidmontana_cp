@@ -12,20 +12,21 @@ use common\models\ArticleCategory;
         <li class="active"><?= $this->title; ?></li> 
     </ol> 
 </section>
-<section id=agents-boxes class=padding-bottom>
-    <h3><span><b><?php echo $this->title; ?></b></span></h3> 
-    <div class=container>
+<div id="post-pages" class="container padding-bottom"> 
+<section id=agents-boxes class="padding-bottom col-md-9" style="margin-left:-15px; padding-bottom: 0px">
+    <!--<h3><span><b><?php echo $this->title; ?></b></span></h3>--> 
+    <!--<div class=container>-->
         <?php
         foreach ($model as $val) {
             echo '<div class="agent-boxes expand" data-animation=fadeInUp>
                         <div class="agent-box clearfix"> 
-                            <div class="agent-pic col-xs-5 col-md-3"> 
-                                <img src="' . $val->imgMedium . '" alt="' . $val->title . '" height="250" width="450"> 
+                            <div class="agent-pic col-xs-5 col-md-4"> 
+                                <img src="' . $val->imgMedium . '" alt="' . $val->title . '" style="width: 350px; margin-top:15px;"> 
                             </div> 
-                            <div class="agent-details col-xs-7 col-md-9"> 
+                            <div class="agent-details col-xs-7 col-md-8"> 
                                 <div class=name>' . $val->title . '</div> 
 
-                                <div class=description> 
+                                <div class=description align="justify"> 
                                     ' . $val->content . '
                                 </div> 
                             </div>
@@ -34,6 +35,5 @@ use common\models\ArticleCategory;
                     </div>';
         }
         ?>
-
-    </div>
+    <!--</div>-->
 </section>
