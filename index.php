@@ -23,7 +23,7 @@
        
         <a href="satu/"><img src="img/Sahids1-WHITE.png" style="position:absolute; margin-left: 255px; margin-top: 35px"></a>
           
-        <a href="dua/"><img src="img/Sahids2-WHITE.png" style="position:absolute; margin-left: 550px; margin-top: 35px""></a>
+        <a href="dua/"><img src="img/Sahids2-WHITE.png" style="position:absolute; margin-left: 550px; margin-top: 35px;width:230px;height:130px"></a>
         
         <img src="img/back.png">
     

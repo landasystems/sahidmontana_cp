@@ -16,7 +16,6 @@ $this->beginPage();
         <title><?= Html::encode($this->title) ?> | Sahid Montana</title>
         <meta name=description content="Sahid Montana Hotel">
         <meta name=keywords content="Hotel Sahid Montana Malang">
-        <meta name=author content="Wahyu Agung T., agung@landa.co.id">
         <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700%7cDroid+Serif:400,700,400italic,700italic%7cYellowtail%7cGreat+Vibes" rel=stylesheet type=text/css>
         <link type="text/css" rel='stylesheet' href="<?= Yii::$app->homeUrl ?>css/styles.css">
     </head>
@@ -25,7 +24,7 @@ $this->beginPage();
             <div class="header-content container"> 
                 <div class=menu-container>
                     <div class="main-logo">
-                        <img style="max-width: 130px;" src="<?= Yii::$app->homeUrl ?>img/logo.png">
+                        <img src="<?= Yii::$app->homeUrl ?>img/logo.png">
                     </div>
                     <nav id=main-menu> 
                         <?php
