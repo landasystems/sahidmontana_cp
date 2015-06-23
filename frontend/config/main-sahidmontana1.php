@@ -28,7 +28,8 @@ $config = [
             ]
         ],
     ],
-    'params' => ['urlImg'=>'http://localhost/cms/sahidmontana_cp/backend/www/sahidmontana/images'],
+    'params' => ['urlImg' => 'http://localhost/ProjectKerja/sahidmontana_cp/backend/www/satu/images',
+        'galleryImg' => '../backend/www/satu/images/gallery/'],
 ];
 
 if (!YII_ENV_TEST) {

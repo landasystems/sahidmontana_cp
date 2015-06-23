@@ -14,7 +14,7 @@ $this->title = "Gallery";
 <section id="gallery-page" style="margin-top: 0px;" class="container">
     <ul class="gallery-img-container clearfix">
         <?php
-        $files = \yii\helpers\FileHelper::findFiles('../../../backend/www/sahidmontana/images/gallery/');
+        $files = \yii\helpers\FileHelper::findFiles(Yii::$app->params['galleryImg']);
         $gallery = array();
         foreach ($files as $index => $file) {
             $name = substr($file, strrpos($file, '/') + 1);
