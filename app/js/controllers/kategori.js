@@ -1,6 +1,8 @@
 app.controller('kategoriCtrl', function ($scope, Data, toaster) {
     //init data
     var tableStateRef;
+    var DirUrl ='ProjectKerja/sahidmontana_cp/satu/';
+    var Exten='.html';
     $scope.displayed = [];
     $scope.is_edit = false;
     $scope.is_view = false;
@@ -20,7 +22,7 @@ app.controller('kategoriCtrl', function ($scope, Data, toaster) {
             param['filter'] = tableState.search.predicateObject;
         }
 
-        Data.get('kategori', param).then(function (data) {
+        Data.get(DirUrl+'category'+Exten, param).then(function (data) {
             $scope.displayed = data.data;
             tableState.pagination.numberOfPages = Math.round(data.totalItems / limit);
         });
@@ -47,7 +49,7 @@ app.controller('kategoriCtrl', function ($scope, Data, toaster) {
         $scope.form = form;
     };
     $scope.save = function (form) {
-        var url = (form.id > 0) ? 'kategori/update/' + form.id : 'kategori/create';
+        var url = (form.id > 0) ? DirUrl+'category/update/' + form.id+Exten : DirUrl+'category/create/'+Exten;
         Data.post(url, form).then(function (result) {
             if (result.status == 0) {
                 toaster.pop('error', "Terjadi Kesalahan", result.errors);
@@ -63,25 +65,10 @@ app.controller('kategoriCtrl', function ($scope, Data, toaster) {
         $scope.is_view = false;
     };
 
-    $scope.trash = function (row) {
-        if (confirm("Apa anda yakin akan MENGHAPUS item ini ?")) {
-            row.is_deleted = 1;
-            Data.post('kategori/update/' + row.id, row).then(function (result) {
-                $scope.displayed.splice($scope.displayed.indexOf(row), 1);
-            });
-        }
-    };
-    $scope.restore = function (row) {
-        if (confirm("Apa anda yakin akan MERESTORE item ini ?")) {
-            row.is_deleted = 0;
-            Data.post('kategori/update/' + row.id, row).then(function (result) {
-                $scope.displayed.splice($scope.displayed.indexOf(row), 1);
-            });
-        }
-    };
+
     $scope.delete = function (row) {
         if (confirm("Apa anda yakin akan MENGHAPUS PERMANENT item ini ?")) {
-            Data.delete('kategori/delete/' + row.id).then(function (result) {
+            Data.delete(DirUrl+'category/delete/' + row.id+Exten).then(function (result) {
                 $scope.displayed.splice($scope.displayed.indexOf(row), 1);
             });
         }
