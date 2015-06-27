@@ -9,6 +9,26 @@ angular.module('app')
                     function ($rootScope, $state, $stateParams) {
                         $rootScope.$state = $state;
                         $rootScope.$stateParams = $stateParams;
+                        //pengecekan login
+                        $rootScope.$on("$stateChangeStart", function (event, toState) {
+                            var globalmenu = ['app.dashboard'];
+                            Data.get('site/session').then(function (results) {
+                                if (typeof results.data.user != "undefined") {
+                                    $rootScope.user = results.data.user;
+                                    if (results.data.user.akses[(toState.name).replace(".", "_")]) { // jika punya hak akses, return true
+
+                                    } else {
+                                        if (globalmenu.indexOf(toState.name) >= 0) { //menu global menu tidak di redirect
+
+                                        } else {
+                                            $state.go("access.forbidden");
+                                        }
+                                    }
+                                } else {
+                                    $state.go("access.signin");
+                                }
+                            });
+                        });
                     }
                 ]
                 )
