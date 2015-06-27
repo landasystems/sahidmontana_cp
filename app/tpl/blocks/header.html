@@ -17,6 +17,8 @@
 
 <!-- navbar collapse -->
 <div class="collapse pos-rlt navbar-collapse box-shadow {{app.settings.navbarCollapseColor}}">
+    
+    <!--end button-->
     <!-- link and dropdown -->
     <ul class="nav navbar-nav hidden-sm">
         <li class="dropdown pos-stc" dropdown>
@@ -30,147 +32,33 @@
                         <div class="row">
                             <div class="col-xs-6">
                                 <ul class="list-unstyled l-h-2x">
+                                    
                                     <li>
-                                        <a ui-sref="master.klinik"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Klinik</a>
-                                    </li>
-                                    <li>
-                                        <a ui-sref="master.customer"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Customer</a>
-                                    </li>
-                                    <li>
-                                        <a ui-sref="master.supplier"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Supplier</a>
-                                    </li>
-                                    <li>
-                                        <a ui-sref="master.pegawai"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Karyawan</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-6">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="m-l-xs m-t-xs m-b-xs font-bold">Inventory</div>
-                                <ul class="list-unstyled l-h-2x">
-                                    <li>
-                                        <a ui-sref="master.satuan"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Satuan</a>
+                                        <a ui-sref="master.apparticle"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Article</a>
                                     </li>
                                     <li>
                                         <a ui-sref="master.kategori"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Kategori</a>
                                     </li>
-                                    <li>
-                                        <a ui-sref="master.barang"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Barang</a>
-                                    </li>
+                                    
+                                    
                                 </ul>
                             </div>
-                            <div class="col-xs-6">
-                                <div class="m-l-xs m-t-xs m-b-xs font-bold">Pengguna</div>
-                                <ul class="list-unstyled l-h-2x">
-                                    <li>
-                                        <a ui-sref="master.pengguna"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>User</a>
-                                    </li>
-                                    <li>
-                                        <a ui-sref="master.roles"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Hak Akses</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </li>
-        <li class="dropdown pos-stc" dropdown>
-            <a href class="dropdown-toggle" dropdown-toggle>
-                <span>Transaksi</span> 
-                <span class="caret"></span>
-            </a>
-            <div class="dropdown-menu wrapper w-full bg-white">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="m-l-xs m-t-xs m-b-xs font-bold">Persediaan</div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <ul class="list-unstyled l-h-2x">
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Keluar</a>
-                                    </li>
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Masuk</a>
-                                    </li>
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Transfer</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="m-l-xs m-t-xs m-b-xs font-bold">Pembelian</div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <ul class="list-unstyled l-h-2x">
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Pembelian</a>
-                                    </li>
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Pembayaran Hutang</a>
-                                    </li>
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Retur</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="m-l-xs m-t-xs m-b-xs font-bold">Penjualan</div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <ul class="list-unstyled l-h-2x">
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Penjualan</a>
-                                    </li>
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Pembayaran Piutang</a>
-                                    </li>
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Retur</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </li>
-        <li class="dropdown pos-stc" dropdown>
-            <a href class="dropdown-toggle" dropdown-toggle>
-                <span>Laporan</span> 
-                <span class="caret"></span>
-            </a>
-            <div class="dropdown-menu wrapper w-full bg-white">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <ul class="list-unstyled l-h-2x">
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Kartu Stok</a>
-                                    </li>
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Bonus Karyawan</a>
-                                    </li>
-                                    <li>
-                                        <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Laba/ Rugi</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
+        <!--finish-->
+        
     </ul>
+    <!--button-->
+    <div class="nav navbar-nav hidden-xs">
+        <a ui-sref="master.filemanager" class="btn no-shadow navbar-btn" ui-toggle-class="show">
+            <i class="fa fa-file text-muted m-r-xs"></i>File Manager
+          </a>
+    </div>
     <!-- / link and dropdown -->
 
     <!-- search form -->
