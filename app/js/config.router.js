@@ -75,6 +75,16 @@ angular.module('app')
                                             }]
                                     }
                                 })
+                                .state('master.pengguna', {
+                                    url: '/pengguna',
+                                    templateUrl: 'tpl/m_user/index.html',
+                                    resolve: {
+                                        deps: ['$ocLazyLoad',
+                                            function($ocLazyLoad) {
+                                                return $ocLazyLoad.load('js/controllers/pengguna.js');
+                                            }]
+                                    }
+                                })
                                
                                 .state('master.kategori', {
                                     url: '/kategori',

@@ -28,7 +28,7 @@ $this->beginPage();
                     </div>
                     <nav id=main-menu> 
                         <?php
-                        $sahid = ArticleCategory::find()->where(['parent_id' => 16])->orderBy('name ASC')->all();
+                        $sahid = ArticleCategory::find()->where(['id' => 16])->orderBy('name ASC')->all();
                         echo $this->render('_menu', ['sahid' => $sahid]);
                         ?>
                     </nav>

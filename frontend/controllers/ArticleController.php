@@ -75,7 +75,7 @@ class ArticleController extends Controller {
         $this->layout = 'mainPost';
         $alias = strtoupper(str_replace("-", " ", $_GET['alias']));
         $categori = ArticleCategory::findOne(['name' => $alias]);
-        $model = Article::findAll(['article_category_id' => $categori->id, 'publish' => 1]);
+        $model = Article::findAll(['article_category_id' => 4, 'publish' => 1]);
         return $this->render('facility', [
                     'model' => $model,
                     'group' => $alias,

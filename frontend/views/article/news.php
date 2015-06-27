@@ -31,8 +31,8 @@ use common\models\ArticleCategory;
                         <a href="' . Yii::$app->urlManager->createUrl('article/' . $val->alias) . '">' . $val->title . '</a>
                     </h4>
                     <div class="post-details"> 
-                        <div class="post-date">' . date("d M Y H:i:s", strtotime($val->created)) . '</div>
-                        <div class="post-author">By <a href="#">' . $val->user->username . '</a></div>
+                      <div class="post-date">' ./*date("d M Y H:i:s", strtotime($val->created)) .*/ '</div>
+                        <div class="post-author">By <a href="#">' . $val->user->username  . '</a></div>
                         <div class="post-comment"><a href="#">No Comment</a></div>
                     </div>
                     <br>
