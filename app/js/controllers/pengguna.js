@@ -1,7 +1,7 @@
 app.controller('penggunaCtrl', function ($scope, Data, toaster) {
     //init data
     var tableStateRef;
-    var DirUrl ='ProjectKerja/sahidmontana_cp/satu/';
+    var DirUrl ='ProjectKerja/sahidmontana_cp/dua/';
     var Exten='.html';
     $scope.displayed = [];
     $scope.is_edit = false;

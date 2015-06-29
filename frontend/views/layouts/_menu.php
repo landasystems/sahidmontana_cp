@@ -15,8 +15,8 @@
         <ul>
             <?php
             foreach ($sahid as $val) {
-                $alias = strtolower(str_replace(" ", "-", $val->name));
-                echo '<li align="left"><a href="' . Yii::$app->urlManager->createUrl('sahid/' . $alias) . '">' . ucwords(strtolower($val->name)) . '</a></li>';
+                $alias = strtolower(str_replace(" ", "-", $val->alias));
+                echo '<li align="left"><a href="' . Yii::$app->urlManager->createUrl('sahid/' . $alias) . '">' . ucwords(strtolower($val->title)) . '</a></li>';
             }
             ?>
         </ul>

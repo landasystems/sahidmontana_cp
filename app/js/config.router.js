@@ -12,18 +12,12 @@ angular.module('app')
                         //pengecekan login
                         $rootScope.$on("$stateChangeStart", function (event, toState) {
                             var globalmenu = ['app.dashboard'];
-                            Data.get('site/session').then(function (results) {
+                            var DirUrl = 'ProjectKerja/sahidmontana_cp/satu/';
+                            var Exten = '.html';
+                            Data.get(DirUrl+'appsite/session/'+Exten).then(function (results) {
                                 if (typeof results.data.user != "undefined") {
                                     $rootScope.user = results.data.user;
-                                    if (results.data.user.akses[(toState.name).replace(".", "_")]) { // jika punya hak akses, return true
 
-                                    } else {
-                                        if (globalmenu.indexOf(toState.name) >= 0) { //menu global menu tidak di redirect
-
-                                        } else {
-                                            $state.go("access.forbidden");
-                                        }
-                                    }
                                 } else {
                                     $state.go("access.signin");
                                 }
@@ -54,7 +48,7 @@ angular.module('app')
                                             }]
                                     }
                                 })
-                                
+
                                 // others
                                 .state('access', {
                                     url: '/access',
@@ -79,7 +73,7 @@ angular.module('app')
                                     url: '/master',
                                     templateUrl: 'tpl/app.html'
                                 })
-                                
+
                                 .state('master.apparticle', {
                                     url: '/article',
                                     templateUrl: 'tpl/m_apparticle/index.html',
@@ -100,12 +94,12 @@ angular.module('app')
                                     templateUrl: 'tpl/m_user/index.html',
                                     resolve: {
                                         deps: ['$ocLazyLoad',
-                                            function($ocLazyLoad) {
+                                            function ($ocLazyLoad) {
                                                 return $ocLazyLoad.load('js/controllers/pengguna.js');
                                             }]
                                     }
                                 })
-                               
+
                                 .state('master.kategori', {
                                     url: '/kategori',
                                     templateUrl: 'tpl/m_kategori/index.html',
@@ -116,13 +110,12 @@ angular.module('app')
                                             }]
                                     }
                                 })
-                                
+
                                 .state('master.filemanager', {
                                     url: '/filemanager',
                                     templateUrl: 'tpl/filemanager/index.html',
-                                   
                                 })
-                                
+
                     }
                 ]
                 );
