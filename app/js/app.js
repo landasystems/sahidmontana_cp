@@ -3,16 +3,13 @@
 
 angular.module('app', [
     'ngAnimate',
-    'ngCookies',
-    'ngResource',
     'ngSanitize',
-    'ngTouch',
-    'ngStorage',
     'ui.router',
     'ui.bootstrap',
-    'ui.load',
-    'ui.validate',
     'oc.lazyLoad',
     'smart-table',
     'toaster',
+    'ui.select',
+    'angular-loading-bar',
 ]);
+
