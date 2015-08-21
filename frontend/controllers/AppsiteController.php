@@ -1,14 +1,15 @@
 <?php
 
-namespace  frontend\controllers;
+namespace frontend\controllers;
 
 use Yii;
-use app\models\Pengguna;
+use common\models\User;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\db\Query;
+
 
 class AppsiteController extends Controller {
 
@@ -59,18 +60,17 @@ class AppsiteController extends Controller {
     
     public function actionLogin() {
         $params = json_decode(file_get_contents("php://input"), true);
-        $model = Pengguna::find()->where(['username' => $params['username'], 'password' => sha1($params['password'])])->one();
+        $model = User::find()->where(['username' => $params['username'], 'password' => sha1($params['password'])])->one();
 
         if (!empty($model)) {
             session_start();
             $_SESSION['user']['id'] = $model->id;
             $_SESSION['user']['username'] = $model->username;
-            $_SESSION['user']['name'] = $model->name;
-//            $akses = (isset($model->roles->akses)) ? $model->roles->akses : [];
-//            $_SESSION['user']['akses'] = json_decode($akses);
+            $_SESSION['user']['nama'] = $model->nama;
+            $_SESSION['user']['settings'] = json_decode($model->settings);
             
             $this->setHeader(200);
-            echo json_encode(array('status' => 1, 'data' => array_filter($model->attributes)), JSON_PRETTY_PRINT);
+            echo json_encode(array('status' => 1, 'data' => array_filter($_SESSION)), JSON_PRETTY_PRINT);
         } else {
             $this->setHeader(400);
             echo json_encode(array('status' => 0, 'error_code' => 400, 'errors' => "Authentication Systems gagal, Username atau password Anda salah."), JSON_PRETTY_PRINT);
@@ -84,7 +84,6 @@ class AppsiteController extends Controller {
 
         header($status_header);
         header('Content-type: ' . $content_type);
-        header('X-Powered-By: ' . "Nintriva <nintriva.com>");
     }
 
     private function _getStatusCodeMessage($status) {
