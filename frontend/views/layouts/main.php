@@ -28,7 +28,8 @@ $this->beginPage();
                     </div>
                     <nav id=main-menu> 
                         <?php
-                        $sahid = ArticleCategory::find()->where(['parent_id' => 16])->orderBy('name ASC')->all();
+                        $sahid = Article::find()->where(['article_category_id' => 16, 'publish'=>1])->orderBy('title ASC')->all();
+//                        $sahid = Article::findall(['article_category_id' => 16,'publish' => 1, 'order' =>'title asc']);
                         echo $this->render('_menu', ['sahid' => $sahid]);
                         ?>
                     </nav>
