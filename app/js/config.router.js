@@ -5,8 +5,8 @@
  */
 angular.module('app')
         .run(
-                ['$rootScope', '$state', '$stateParams',
-                    function ($rootScope, $state, $stateParams) {
+                ['$rootScope', '$state', '$stateParams','Data',
+                    function ($rootScope, $state, $stateParams, Data) {
                         $rootScope.$state = $state;
                         $rootScope.$stateParams = $stateParams;
                         //pengecekan login

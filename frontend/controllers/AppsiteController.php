@@ -10,7 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\db\Query;
 
-class SitesController extends Controller {
+class AppsiteController extends Controller {
 
     public function behaviors() {
         return [
