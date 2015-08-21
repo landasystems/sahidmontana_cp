@@ -22,14 +22,13 @@ $config = [
                 'contact-us' => 'site/contact',
                 'news/<alias>' => 'article/news',
                 'article/<alias>' => 'article/view',
-                '<controller:\w+>/<id:\d+>' => '<controller>/view',
-                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>/<id:\w+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ]
         ],
-    ],
-    'params' => ['urlImg' => 'http://localhost/ProjectKerja/sahidmontana_cp/backend/www/satu/images',
-        'galleryImg' => '../backend/www/satu/images/gallery/'],
+    ],   
+    'params' => ['urlImg'=>'http://localhost/cms/sahidmontana_cp/backend/www/satu/images','galleryImg' => '../backend/www/satu/images/gallery/'],
+    
 ];
 
 if (!YII_ENV_TEST) {
