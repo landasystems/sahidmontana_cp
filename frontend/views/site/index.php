@@ -7,7 +7,7 @@ use common\models\Article;
     <ul class=bxslider> 
         <li> 
             <div class=items style='width:1920px; height:400px;'> 
-                <img src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Sliders_1.jpg" alt=2> 
+                <img src="<?php echo Yii::$app->params['sliderImg'] ?>Sliders_1.jpg" alt=2> 
                 <div class=caption-box>
                     <h4> <b>Relax</b> in Comfortable Environment</h4> 
                 </div> 
@@ -15,7 +15,7 @@ use common\models\Article;
         </li> 
         <li> 
           <div class=items style='width:1920px; height:400px;'> 
-                <img src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Sliders_2.jpg" alt=3> 
+                <img src="<?php echo Yii::$app->params['sliderImg'] ?>Sliders_2.jpg" alt=3> 
                
                 <div class=caption-box>
                     <h4> Be <b>Happy</b> in Our Luxury Rooms</h4> 
@@ -26,7 +26,7 @@ use common\models\Article;
         </li> 
         <li> 
             <div class=items style='width:1920px; height:400px;'> 
-                <img src="<?php echo Yii::$app->params['urlImg'] ?>/slider/Sliders_3.jpg" alt=4> 
+                <img src="<?php echo Yii::$app->params['sliderImg'] ?>Sliders_3.jpg" alt=4> 
                 <div class=caption-box>
                     <h4> Choose your <b>travel partner</b> wisely</h4> 
                 </div> 

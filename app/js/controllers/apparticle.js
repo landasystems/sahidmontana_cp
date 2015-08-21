@@ -4,12 +4,12 @@ app.controller('apparticleCtrl', function ($scope, Data, toaster) {
     
     //init data
     var tableStateRef;
-    var DirUrl ='ProjectKerja/sahidmontana_cp/satu/';
-    var Exten='.html';
+
     $scope.displayed = [];
+    $scope.form = {};
     $scope.is_edit = false;
     $scope.is_view = false;
-    Data.get(DirUrl+'apparticle/kategories'+Exten).then(function(data) {
+    Data.get('apparticle/kategories').then(function(data) {
         $scope.kategories = data.kategori;
     });
 
@@ -28,7 +28,7 @@ app.controller('apparticleCtrl', function ($scope, Data, toaster) {
             param['filter'] = tableState.search.predicateObject;
         }
 
-        Data.get(DirUrl+'apparticle'+Exten, param).then(function (data) {
+        Data.get('apparticle', param).then(function (data) {
             $scope.displayed = data.data;
             tableState.pagination.numberOfPages = Math.round(data.totalItems / limit);
         });
@@ -56,7 +56,7 @@ app.controller('apparticleCtrl', function ($scope, Data, toaster) {
     };
     $scope.save = function (form) {
         
-        var url = (form.id > 0) ? DirUrl+'apparticle/update/' + form.id+Exten : DirUrl+'apparticle/create/'+Exten;
+        var url = (form.id > 0) ? 'apparticle/update/' + form.id : 'apparticle/create/'+form.id;
         Data.post(url, form).then(function (result) {
             if (result.status == 0) {
                 toaster.pop('error', "Terjadi Kesalahan", result.errors);
@@ -75,7 +75,7 @@ app.controller('apparticleCtrl', function ($scope, Data, toaster) {
 
     $scope.delete = function (row) {
         if (confirm("Apa anda yakin akan MENGHAPUS PERMANENT item ini ?")) {
-            Data.delete(DirUrl+'apparticle/delete/' + row.id+Exten).then(function (result) {
+            Data.delete('apparticle/delete/' + row.id).then(function (result) {
                 $scope.displayed.splice($scope.displayed.indexOf(row), 1);
             });
         }

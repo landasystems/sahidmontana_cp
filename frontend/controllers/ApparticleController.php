@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use app\models\Apparticle;
+use common\models\Article;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -136,7 +136,7 @@ class ApparticleController extends Controller {
 
     public function actionCreate() {
         $params = json_decode(file_get_contents("php://input"), true);
-        $model = new Apparticle();
+        $model = new Article();
         $model->attributes = $params;
         $model->alias = Yii::$app->landa->urlParsing($model->title);
         
@@ -178,7 +178,7 @@ class ApparticleController extends Controller {
     }
 
     protected function findModel($id) {
-        if (($model = Apparticle::findOne($id)) !== null) {
+        if (($model = Article::findOne($id)) !== null) {
             return $model;
         } else {
 

@@ -21,160 +21,39 @@
             </a>
             <div class="dropdown-menu wrapper w-full bg-white">
                 <div class="row">
-                    <div class="col-sm-4 b-l b-light" ng-show="user.akses.master_cabang || user.akses.master_customer || user.akses.master_supplier || user.akses.master_pegawai">
+                    <div class="col-sm-4 b-l b-light">
                         <div class="row">
                             <div class="col-xs-6">
                                 <ul class="list-unstyled l-h-2x">
-                                    <li ng-show="user.akses.master_cabang">
-                                        <a ui-sref="master.cabang"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Cabang</a>
+
+                                    <li>
+                                        <a ui-sref="master.pengguna"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>User</a>
                                     </li>
-                                    <li ng-show="user.akses.master_customer">
-                                        <a ui-sref="master.customer"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Customer</a>
+                                    <li>
+                                        <a ui-sref="master.apparticle"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Article</a>
                                     </li>
-                                    <li ng-show="user.akses.master_supplier">
-                                        <a ui-sref="master.supplier"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Supplier</a>
-                                    </li>
-                                    <li ng-show="user.akses.master_pegawai">
-                                        <a ui-sref="master.pegawai"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Karyawan</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-6">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="m-l-xs m-t-xs m-b-xs font-bold">Inventory</div>
-                                <ul class="list-unstyled l-h-2x">
-                                    <li ng-show="user.akses.master_satuan">
-                                        <a ui-sref="master.satuan"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Satuan</a>
-                                    </li>
-                                    <li ng-show='user.akses.master_kategori'>
+<!--                                    <li>
                                         <a ui-sref="master.kategori"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Kategori</a>
-                                    </li>
-                                    <li ng-show='user.akses.master_barang'>
-                                        <a ui-sref="master.barang"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Barang</a>
-                                    </li>
+                                    </li>-->
+
+
                                 </ul>
                             </div>
-                            <div class="col-xs-6">
-                                <div class="m-l-xs m-t-xs m-b-xs font-bold">Pengguna</div>
-                                <ul class="list-unstyled l-h-2x">
-                                    <li ng-show='user.akses.master_user'>
-                                        <a ui-sref="master.user"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>User</a>
-                                    </li>
-                                    <li ng-show='user.akses.master_roles'>
-                                        <a ui-sref="master.roles"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Hak Akses</a>
-                                    </li>
-                                </ul>
-                            </div>
+
                         </div>
                     </div>
+
                 </div>
             </div>
         </li>
-        <li class="dropdown pos-stc" dropdown>
-            <a href class="dropdown-toggle" dropdown-toggle>
-                <span>Transaksi</span> 
-                <span class="caret"></span>
-            </a>
-            <div class="dropdown-menu wrapper w-full bg-white">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="m-l-xs m-t-xs m-b-xs font-bold">Persediaan</div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <ul class="list-unstyled l-h-2x">
-                                    <li ng-show="user.akses.transaksi_stokkeluar">
-                                        <a ui-sref='transaksi.stokkeluar'><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Barang Keluar</a>
-                                    </li>
-                                    <li ng-show="user.akses.transaksi_stokmasuk">
-                                        <a ui-sref='transaksi.stokmasuk'><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Barang Masuk</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="m-l-xs m-t-xs m-b-xs font-bold">Pembelian</div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <ul class="list-unstyled l-h-2x">
-                                    <li ng-show="user.akses.transaksi_pembelian">
-                                        <a ui-sref='transaksi.pembelian'><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Pembelian</a>
-                                    </li>
-                                    <li ng-show="user.akses.transaksi_bayarhutang">
-                                        <a ui-sref='transaksi.bayarhutang'><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Pembayaran Hutang</a>
-                                    </li>
-                                    <li ng-show="user.akses.transaksi_returpembelian">
-                                        <a ui-sref='transaksi.returpembelian'><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Retur Pembelian</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="m-l-xs m-t-xs m-b-xs font-bold">Penjualan</div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <ul class="list-unstyled l-h-2x">
-                                    <li ng-show="user.akses.transaksi_penjualan">
-                                        <a ui-sref="transaksi.penjualan"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Penjualan</a>
-                                    </li>
-                                    <li ng-show="user.akses.transaksi_bayarpiutang">
-                                        <a ui-sref="transaksi.bayarpiutang"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Pembayaran Piutang</a>
-                                    </li>
-                                    <li ng-show="user.akses.transaksi_returpenjualan">
-                                        <a ui-sref="transaksi.returpenjualan"><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Retur Penjualan</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </li>
-        <li class="dropdown pos-stc" dropdown>
-            <a href class="dropdown-toggle" dropdown-toggle>
-                <span>Laporan</span> 
-                <span class="caret"></span>
-            </a>
-            <div class="dropdown-menu wrapper w-full bg-white">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <ul class="list-unstyled l-h-2x">
-                                    <li ng-show="user.akses.laporan_kartustok">
-                                        <a ui-sref='laporan.kartustok'><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Kartu Stok</a>
-                                    </li>
-                                    <li ng-show='user.akses.laporan_bonuskaryawan'>
-                                        <a ui-sref='laporan.bonuskaryawan'><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Bonus Karyawan</a>
-                                    </li>
-                                    <li ng-show='user.akses.laporan_labarugi'>
-                                        <a ui-sref='laporan.labarugi'><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Omset</a>
-                                    </li>
-                                    <li ng-show='user.akses.laporan_kartustatus'>
-                                        <a ui-sref='laporan.kartustatus'><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Kartu Status</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-6">
-                                <ul class="list-unstyled l-h-2x">
-                                    <li ng-show="user.akses.laporan_penjualan">
-                                        <a ui-sref='laporan.penjualan'><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Penjualan</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
+
     </ul>
     <!-- / link and dropdown -->
-
+    <div class="nav navbar-nav hidden-xs">
+        <a ui-sref="master.filemanager" class="btn no-shadow navbar-btn" ui-toggle-class="show">
+            <i class="fa fa-file text-muted m-r-xs"></i>File Manager
+        </a>
+    </div> 
     <!-- search form -->
     <form class="navbar-form navbar-form-sm navbar-left shift hidden-sm" id="pencarian">
         <div class="form-group">

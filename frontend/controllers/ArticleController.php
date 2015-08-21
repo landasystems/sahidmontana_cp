@@ -18,7 +18,7 @@ class ArticleController extends Controller {
         if (empty($model)) {
             throw new NotFoundHttpException('The requested page does not exist.');
         } else {
-            $this->addHits($model);
+            $this->sel_Arthits($model->id);
             return $this->render('view', [
                         'model' => $model,
             ]);
@@ -49,6 +49,7 @@ class ArticleController extends Controller {
     public function actionPromotion() {
         $this->layout = 'mainSingle';
         $model = Article::findAll(['article_category_id' => 26, 'publish' => 1]);
+         
         return $this->render('promotion', [
                     'model' => $model,
         ]);
@@ -87,6 +88,13 @@ class ArticleController extends Controller {
     public function addHits($model) {
         $model->hits++;
         $model->save();
+    }
+    
+    public function sel_Arthits($id){
+        $add_hits = Article::findOne([
+                    'id' => $id
+        ]);
+        $this->addHits($add_hits);
     }
 
 }

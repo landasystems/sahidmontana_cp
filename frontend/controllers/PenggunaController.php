@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use app\models\Pengguna;
+use common\models\User;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -23,6 +23,7 @@ class PenggunaController extends Controller {
                     'update' => ['post'],
                     'delete' => ['delete'],
                     'roles' => ['get'],
+                    'profile' => ['get'],
                 ],
             ]
         ];
@@ -103,6 +104,7 @@ class PenggunaController extends Controller {
     public function actionView($id) {
 
         $model = $this->findModel($id);
+        unset($model->password);
 
         $this->setHeader(200);
         echo json_encode(array('status' => 1, 'data' => array_filter($model->attributes)), JSON_PRETTY_PRINT);
@@ -110,8 +112,9 @@ class PenggunaController extends Controller {
 
     public function actionCreate() {
         $params = json_decode(file_get_contents("php://input"), true);
-        $model = new Pengguna();
+        $model = new User();
         $model->attributes = $params;
+        $model->email = $params['email'];
         $model->password = sha1($model['password']);
 //        Yii::error(sha1($model->password));
 //        Yii::error($model);
@@ -124,24 +127,30 @@ class PenggunaController extends Controller {
         }
     }
 
-//    public function actionRoles() {
-//        $query = new Query;
-//        $query->from('m_roles')
-//                ->select('*');
-//
-//        $command = $query->createCommand();
-//        $models = $command->queryAll();
-//
-//        $this->setHeader(200);
-//
-//        echo json_encode(array('status' => 1, 'roles' => $models));
-//    }
+    public function actionProfile() {
+        session_start();
+        $id = $_SESSION['user']['id'];
+        $model = $this->findModel($id);
+        unset($model->password);
+
+        $this->setHeader(200);
+        echo json_encode(array('status' => 1, 'data' => array_filter($model->attributes)), JSON_PRETTY_PRINT);
+    }
 
     public function actionUpdate($id) {
         $params = json_decode(file_get_contents("php://input"), true);
         $model = $this->findModel($id);
         $model->attributes = $params;
-        $model->password = sha1($model['password']);
+        $model->email = $params['email'];
+        if (!empty($params['password'])) {
+            $model->password = sha1($model['password']);
+        } else {
+            unset($model->password);
+        }
+
+        if (isset($params['settings'])) {
+            $model->settings = json_encode($params['settings']);
+        }
 
         if ($model->save()) {
             $this->setHeader(200);
@@ -166,7 +175,7 @@ class PenggunaController extends Controller {
     }
 
     protected function findModel($id) {
-        if (($model = Pengguna::findOne($id)) !== null) {
+        if (($model = User::findOne($id)) !== null) {
             return $model;
         } else {
 
