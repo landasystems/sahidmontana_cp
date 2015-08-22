@@ -36,8 +36,8 @@ $this->title = "Gallery";
                     $name = $gallery[$i];
                     $title = ucwords(strtolower(str_replace("-", " ", substr($gallery[$i], 0, -4))));
                     echo '<li class="col-xs-6 col-md-3 suite"> 
-                            <a href="' . Yii::$app->params['urlImg'] . '/gallery/' . $name . '" title="' . $title . '">
-                                <img src="' . Yii::$app->params['urlImg'] . '/gallery/' . $name . '" alt="' . $title . '">
+                            <a href="' . Yii::$app->params['urlImg'] . $name . '" title="' . $title . '">
+                                <img src="' . Yii::$app->params['urlImg'] . $name . '" alt="' . $title . '">
                                 <div class=caption>
                                     <span>' . $title . '</span>
                                 </div> 
