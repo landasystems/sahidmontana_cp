@@ -20,10 +20,8 @@ use common\models\ArticleCategory;
         foreach ($model as $val) {
             echo '<div class="agent-boxes expand" data-animation=fadeInUp>
                         <div class="agent-box clearfix"> 
-                            <div class="agent-pic col-xs-5 col-md-4"> 
-                                <img src="' . $val->imgMedium . '" alt="' . $val->title . '" style="width: 350px; margin-top:15px;"> 
-                            </div> 
-                            <div class="agent-details col-xs-7 col-md-8"> 
+                             
+                            <div class="agent-details col-xs-7 col-md-12"> 
                                 <div class=name>' . $val->title . '</div> 
 
                                 <div class=description align="justify"> 
